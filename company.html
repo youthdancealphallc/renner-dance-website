@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -29,7 +29,24 @@
               <a href="about.html#alumni" class="nav-dropdown-item">Notable Alumni</a>
             </div>
           </div>
-          <a href="recreational.html" class="nav-link">Recreational</a>
+          <div class="nav-dropdown">
+            <a href="recreational.html" class="nav-link">Recreational</a>
+            <div class="nav-dropdown-menu">
+              <div class="nav-dropdown-group-label">Recreational Classes</div>
+              <a href="recreational.html#overview" class="nav-dropdown-item">Overview</a>
+              <a href="recreational.html#ballet" class="nav-dropdown-item">Ballet</a>
+              <a href="recreational.html#jazz" class="nav-dropdown-item">Jazz</a>
+              <a href="recreational.html#tap" class="nav-dropdown-item">Tap</a>
+              <a href="recreational.html#hiphop" class="nav-dropdown-item">Hip Hop</a>
+              <a href="recreational.html#contemporary" class="nav-dropdown-item">Contemporary</a>
+              <a href="recreational.html#acro" class="nav-dropdown-item">Acro</a>
+              <a href="recreational.html#lyrical" class="nav-dropdown-item">Lyrical</a>
+              <a href="recreational.html#combo" class="nav-dropdown-item">Combo Classes</a>
+              <div class="nav-dropdown-divider"></div>
+              <div class="nav-dropdown-group-label">Summer Programs</div>
+              <a href="summer-camps.html" class="nav-dropdown-item nav-dropdown-item--camps">Summer Camps</a>
+            </div>
+          </div>
           <div class="nav-dropdown">
             <a href="company.html" class="nav-link">Company</a>
             <div class="nav-dropdown-menu">
@@ -41,7 +58,6 @@
             </div>
           </div>
           <a href="ballet-academy.html" class="nav-link">Ballet Academy</a>
-          <a href="summer-camps.html" class="nav-link" role="menuitem">Summer Camps</a>
           <a href="why-dance.html" class="nav-link">Why Dance</a>
           <a href="contact.html" class="nav-link">Contact</a>
         </div>
@@ -59,9 +75,10 @@
     <a href="index.html" class="mobile-nav-link">Home</a>
     <a href="about.html" class="mobile-nav-link">About</a>
     <a href="recreational.html" class="mobile-nav-link">Recreational Classes</a>
+    <a href="summer-camps.html" class="mobile-nav-sub">Summer Camps</a>
     <a href="company.html" class="mobile-nav-link">Company Programs</a>
     <a href="ballet-academy.html" class="mobile-nav-link">Ballet Academy</a>
-    <a href="summer-camps.html" class="mobile-nav-link">Summer Camps</a>
+    <a href="why-dance.html" class="mobile-nav-link">Why Dance</a>
     <a href="contact.html" class="mobile-nav-link">Contact</a>
     <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3)">
       <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-primary" target="_blank" rel="noopener" style="justify-content:center">Parent Portal / Register</a>
@@ -156,7 +173,7 @@
           <h2 class="heading-1" style="margin-bottom:var(--space-4)">The Renner Way</h2>
           <p class="lead" style="margin-bottom:var(--space-6)">RDC&hellip; Count On Me. It is more than a motto. It is a standard we hold ourselves to every day — as dancers, as teammates, and as people.</p>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5);margin-top:var(--space-6)" class="reveal">
+        <div class="grid-3col reveal" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5);margin-top:var(--space-6)">
           <div style="padding:var(--space-6);background:var(--surface);border-radius:var(--radius-lg);border:1px solid var(--border)">
             <div style="display:flex;align-items:center;gap:var(--space-3);margin-bottom:var(--space-4)">
               <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-dark));display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--white);flex-shrink:0">R</div>
@@ -194,7 +211,7 @@
           <h2 class="heading-1">What We Expect</h2>
           <p class="lead">Our standards are high, because we believe in your dancer's potential.</p>
         </div>
-        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5);margin-top:var(--space-7)">
+        <div class="grid-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5);margin-top:var(--space-7)">
           <div class="reveal" style="padding:var(--space-6);background:var(--surface);border-radius:var(--radius-lg);border:1px solid var(--border);border-top:4px solid var(--gold)">
             <div style="font-size:1.75rem;margin-bottom:var(--space-4)" aria-hidden="true">📅</div>
             <h3 style="font-family:var(--font-display);font-size:1.1rem;margin-bottom:var(--space-3);color:var(--ink)">Full Attendance</h3>
@@ -429,7 +446,7 @@
     ====================================================== -->
     <section class="section section-surface" id="express-interest">
       <div class="container">
-        <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:var(--space-10);align-items:start">
+        <div class="grid-2col" style="display:grid;grid-template-columns:1fr 1.5fr;gap:var(--space-10);align-items:start">
 
           <!-- Left: context panel -->
           <div class="reveal">
@@ -686,6 +703,11 @@
   </script>
 </body>
 </html>
+
+
+
+
+
 
 
 
