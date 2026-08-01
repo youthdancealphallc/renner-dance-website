@@ -1,0 +1,419 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summer Dance Camps — Renner Dance Company | Chapel Hill, NC</title>
+  <meta name="description" content="Renner Dance Company's summer camps in Chapel Hill, NC offer week-long themed dance experiences for children ages 4–12. No experience required. Register online today.">
+  <link rel="canonical" href="https://www.rennerdance.com/summer-camps">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    .camp-card {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      transition: all var(--dur-slow) var(--ease);
+    }
+    .camp-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-xl); border-color: transparent; }
+    .camp-card-header {
+      padding: var(--space-6);
+      position: relative;
+    }
+    .camp-card-week { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: var(--space-2); }
+    .camp-card-name { font-family: var(--font-display); font-size: 1.6rem; font-weight: 400; color: var(--ink); line-height: 1.2; margin-bottom: var(--space-2); }
+    .camp-card-ages { display: inline-block; background: var(--blue); color: white; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; padding: 4px 12px; border-radius: var(--radius-full); margin-bottom: var(--space-4); }
+    .camp-card-body { padding: 0 var(--space-6) var(--space-6); flex: 1; display: flex; flex-direction: column; }
+    .camp-card-desc { font-size: 0.9rem; color: var(--ink-soft); line-height: 1.7; margin-bottom: var(--space-4); flex: 1; }
+    .camp-card-details { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-5); }
+    .camp-detail-item { display: flex; align-items: center; gap: var(--space-2); font-size: 0.82rem; color: var(--ink-soft); }
+    .camp-detail-icon { width: 20px; text-align: center; flex-shrink: 0; }
+    .camp-price { font-family: var(--font-display); font-size: 1.8rem; font-weight: 300; color: var(--blue-dark); margin-bottom: 4px; }
+    .camp-price-note { font-size: 0.75rem; color: var(--ink-muted); margin-bottom: var(--space-4); }
+    .included-tag { display: inline-block; background: rgba(34,197,94,0.1); color: #16a34a; font-size: 0.72rem; font-weight: 600; padding: 3px 10px; border-radius: var(--radius-full); }
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item summary { padding: var(--space-4) 0; font-size: 0.95rem; font-weight: 600; color: var(--ink); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+    .faq-item summary::after { content: '+'; font-size: 1.2rem; color: var(--gold); transition: transform var(--dur-base) var(--ease); flex-shrink: 0; }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-body { padding: 0 0 var(--space-4); font-size: 0.9rem; color: var(--ink-soft); line-height: 1.7; }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar" class="transparent" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo" aria-label="Renner Dance Company home">
+          <span class="nav-logo-name">Renner Dance</span>
+          <span class="nav-logo-sub">Chapel Hill, NC</span>
+        </a>
+        <div class="nav-links" role="menubar">
+          <div class="nav-dropdown" role="menuitem">
+            <a href="about.html" class="nav-link">About</a>
+            <div class="nav-dropdown-menu">
+              <a href="about.html#story" class="nav-dropdown-item">Our Story</a>
+              <a href="about.html#mission" class="nav-dropdown-item">Mission &amp; Culture</a>
+              <a href="about.html#accomplishments" class="nav-dropdown-item">Accomplishments</a>
+              <a href="about.html#staff" class="nav-dropdown-item">Our Team</a>
+              <a href="about.html#alumni" class="nav-dropdown-item">Notable Alumni</a>
+              <a href="about.html#careers" class="nav-dropdown-item">Join Our Faculty</a>
+            </div>
+          </div>
+          <div class="nav-dropdown" role="menuitem">
+            <a href="recreational.html" class="nav-link">Recreational</a>
+            <div class="nav-dropdown-menu">
+              <a href="recreational.html#ballet" class="nav-dropdown-item">Ballet</a>
+              <a href="recreational.html#jazz" class="nav-dropdown-item">Jazz</a>
+              <a href="recreational.html#tap" class="nav-dropdown-item">Tap</a>
+              <a href="recreational.html#hiphop" class="nav-dropdown-item">Hip Hop</a>
+              <a href="recreational.html#contemporary" class="nav-dropdown-item">Contemporary</a>
+              <a href="recreational.html#acro" class="nav-dropdown-item">Acro</a>
+              <a href="recreational.html#lyrical" class="nav-dropdown-item">Lyrical</a>
+            </div>
+          </div>
+          <div class="nav-dropdown" role="menuitem">
+            <a href="company.html" class="nav-link">Company</a>
+            <div class="nav-dropdown-menu">
+              <a href="company.html#overview" class="nav-dropdown-item">Overview</a>
+              <a href="company.html#excel" class="nav-dropdown-item">Excel</a>
+              <a href="company.html#extreme" class="nav-dropdown-item">Extreme</a>
+              <a href="company.html#edge" class="nav-dropdown-item">Edge</a>
+              <a href="company.html#elite" class="nav-dropdown-item">Elite</a>
+            </div>
+          </div>
+          <a href="ballet-academy.html" class="nav-link" role="menuitem">Ballet Academy</a>
+          <a href="summer-camps.html" class="nav-link" role="menuitem">Summer Camps</a>
+          <a href="why-dance.html" class="nav-link" role="menuitem">Why Dance</a>
+          <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-portal btn-sm" target="_blank" rel="noopener" id="nav-portal-btn">Parent Portal</a>
+          <a href="trial-class.html" class="btn btn-gold btn-sm" id="nav-cta-btn">Try a Free Class</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="recreational.html" class="mobile-nav-link">Recreational Classes</a>
+    <a href="company.html" class="mobile-nav-link">Company Programs</a>
+    <a href="ballet-academy.html" class="mobile-nav-link">Ballet Academy</a>
+    <a href="summer-camps.html" class="mobile-nav-link">Summer Camps</a>
+    <a href="why-dance.html" class="mobile-nav-link">Why Dance</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3)">
+      <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-primary" target="_blank" rel="noopener" style="justify-content:center">Parent Portal / Register</a>
+      <a href="trial-class.html" class="btn btn-gold" style="justify-content:center">Try a Free Class</a>
+    </div>
+  </nav>
+
+  <main id="content">
+
+    <!-- HERO -->
+    <header class="page-header">
+      <div class="container">
+        <div class="page-header-content">
+          <p class="overline">Summer 2026 · Limited Spots</p>
+          <h1 class="display-2">Summer Dance<br><em style="color:var(--gold-light)">Camps.</em></h1>
+          <p class="lead">A week of movement, music, and memories. Renner Dance Company's summer camps are designed for young dancers ages 4–12 who want to explore dance in a fun, structured, and inspiring environment.</p>
+          <div style="margin-top:var(--space-6);display:flex;gap:var(--space-3);flex-wrap:wrap">
+            <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-gold" target="_blank" rel="noopener" id="camps-hero-register">Register on Dance Studio Pro</a>
+            <a href="#camp-weeks" class="btn btn-outline-white" id="camps-hero-view">View Camp Weeks</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- WHAT TO EXPECT -->
+    <section class="section">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:center">
+          <div class="reveal-left">
+            <p class="overline">What to Expect</p>
+            <h2 class="heading-1" style="margin-bottom:var(--space-5)">More Than a Camp.<br>A Dance Experience.</h2>
+            <p class="body-lg" style="margin-bottom:var(--space-5)">
+              Our summer camps are thoughtfully designed week-long programs that give young dancers a taste of what it's like to train, create, and perform — all in a warm, encouraging environment led by our professional faculty.
+            </p>
+            <p class="body-lg" style="margin-bottom:var(--space-6)">
+              Each camp week has a theme, daily classes across multiple dance styles, age-appropriate choreography, and a mini showcase performance at the end of the week for family and friends.
+            </p>
+            <div class="trust-items">
+              <div class="trust-item">
+                <div class="trust-icon" aria-hidden="true">👧</div>
+                <div><div class="trust-text-title">Ages 4–12</div><div class="trust-text-desc">Grouped by age for appropriate instruction and interaction</div></div>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon" aria-hidden="true">📅</div>
+                <div><div class="trust-text-title">Full-day &amp; Half-day options</div><div class="trust-text-desc">Flexible scheduling to fit your family's summer</div></div>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon" aria-hidden="true">🎭</div>
+                <div><div class="trust-text-title">End-of-week showcase</div><div class="trust-text-desc">Mini performance for parents and family on Friday</div></div>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon" aria-hidden="true">✅</div>
+                <div><div class="trust-text-title">No experience required</div><div class="trust-text-desc">Perfect for first-time dancers and returning students alike</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal-right">
+            <div style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl)">
+              <img src="images/ballet-class.jpg" alt="Young dancers in a summer camp class" width="600" height="700" loading="lazy" style="width:100%;object-fit:cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAMP WEEKS -->
+    <section class="section section-surface" id="camp-weeks">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="overline">Summer 2026 Schedule</p>
+          <h2 class="heading-1">Camp Weeks</h2>
+          <p class="lead">Each week is a complete, self-contained dance experience. Campers can attend one week or multiple — every week has a unique theme and fresh choreography.</p>
+          <div style="margin-top:var(--space-5);background:rgba(201,168,76,0.1);border:1px solid var(--gold);border-radius:var(--radius-md);padding:var(--space-3) var(--space-5);display:inline-block">
+            <span style="font-size:0.85rem;color:var(--ink-soft)">⚡ <strong style="color:var(--ink)">Spots fill fast.</strong> Registration is open now on Dance Studio Pro.</span>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5)">
+
+          <div class="camp-card reveal">
+            <div class="camp-card-header" style="background:linear-gradient(135deg,rgba(15,61,107,0.06),rgba(201,168,76,0.08))">
+              <div class="camp-card-week">Week 1</div>
+              <div class="camp-card-name">Princess &amp; Superhero Dance Camp</div>
+              <div class="camp-card-ages">Ages 4–6</div>
+            </div>
+            <div class="camp-card-body">
+              <p class="camp-card-desc">Dancers dress up, learn themed choreography, and bring their favorite characters to life through movement. Ballet, creative movement, and imagination are the stars of this magical week.</p>
+              <div class="camp-card-details">
+                <div class="camp-detail-item"><span class="camp-detail-icon">📅</span> Mon–Fri, 9:00 AM – 12:00 PM</div>
+                <div class="camp-detail-item"><span class="camp-detail-icon">💃</span> Ballet, Creative Movement, Acro</div>
+                <div class="camp-detail-item"><span class="camp-detail-icon">🎭</span> Friday mini showcase included</div>
+                <div class="camp-detail-item"><span class="camp-detail-icon">👕</span> Camp t-shirt included</div>
+              </div>
+              <div class="camp-price">$249</div>
+              <div class="camp-price-note">Per camper, per week · <span class="included-tag">T-shirt included</span></div>
+              <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-primary btn-sm" target="_blank" rel="noopener" id="camp1-register" style="justify-content:center;width:100%">Register on Dance Studio Pro</a>
+            </div>
+          </div>
+
+          <div class="camp-card reveal reveal-delay-1">
+            <div class="camp-card-header" style="background:linear-gradient(135deg,rgba(15,61,107,0.08),rgba(15,61,107,0.04))">
+              <div class="camp-card-week">Week 2</div>
+              <div class="camp-card-name">Broadway Bound Camp</div>
+              <div class="camp-card-ages">Ages 6–9</div>
+            </div>
+            <div class="camp-card-body">
+              <p class="camp-card-desc">This camp brings musical theatre to life! Campers learn jazz, musical theatre dance, and performance skills inspired by Broadway shows. Expect big energy, bold choreography, and a show-stopping Friday finale.</p>
+              <div class="camp-card-details">
+                <div class="camp-detail-item"><span class="camp-detail-icon">📅</span> Mon–Fri, 9:00 AM – 12:00 PM</div>
+                <div class="camp-detail-item"><span class="camp-detail-icon">💃</span> Jazz, Musical Theatre, Tap</div>
+                <div class="camp-detail-item"><span class="camp-detail-icon">🎭</span> Friday mini showcase included</div>
+                <div class="camp-detail-item"><span class="camp-detail-icon">👕</span> Camp t-shirt included</div>
+              </div>
+              <div class="camp-price">$249</div>
+              <div class="camp-price-note">Per camper, per week · <span class="included-tag">T-shirt included</span></div>
+              <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-primary btn-sm" target="_blank" rel="noopener" id="camp2-register" style="justify-content:center;width:100%">Register on Dance Studio Pro</a>
+            </div>
+          </div>
+
+          <div class="camp-card reveal reveal-delay-2">
+            <div class="camp-card-header" style="background:linear-gradient(135deg,rgba(201,168,76,0.1),rgba(201,168,76,0.04))">
+              <div class="camp-card-week">Week 3</div>
+              <div class="camp-card-name">Street to Stage Camp</div>
+              <div class="camp-card-ages">Ages 8–12</div>
+            </div>
+            <div class="camp-card-body">
+              <p class="camp-card-desc">Hip hop, contemporary, and lyrical come together in this high-energy camp for older kids. Dancers learn to move with confidence and self-expression, combining technical foundation with creative freedom.</p>
+              <div class="camp-card-details">
+                <div class="camp-detail-item"><span class="camp-detail-icon">📅</span> Mon–Fri, 9:00 AM – 12:00 PM</div>
+                <div class="camp-detail-item"><span class="camp-detail-icon">💃</span> Hip Hop, Contemporary, Lyrical</div>
+                <div class="camp-detail-item"><span class="camp-detail-icon">🎭</span> Friday mini showcase included</div>
+                <div class="camp-detail-item"><span class="camp-detail-icon">👕</span> Camp t-shirt included</div>
+              </div>
+              <div class="camp-price">$249</div>
+              <div class="camp-price-note">Per camper, per week · <span class="included-tag">T-shirt included</span></div>
+              <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-primary btn-sm" target="_blank" rel="noopener" id="camp3-register" style="justify-content:center;width:100%">Register on Dance Studio Pro</a>
+            </div>
+          </div>
+
+          <div class="camp-card reveal" style="grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:0">
+            <div class="camp-card-header" style="background:linear-gradient(135deg,var(--blue-dark),var(--blue));display:flex;flex-direction:column;justify-content:center">
+              <div class="camp-card-week" style="color:var(--gold-light)">Week 4 · Premium</div>
+              <div class="camp-card-name" style="color:white">Junior Company Intensive</div>
+              <div class="camp-card-ages" style="background:var(--gold)">Ages 7–14 · All Levels</div>
+              <p style="color:rgba(255,255,255,0.7);font-size:0.875rem;line-height:1.65;margin-top:var(--space-4)">Our flagship summer experience — a full week of intensive training across all major styles, taught by our full faculty. Ideal for dancers who want a deep-dive into their technique before audition season.</p>
+            </div>
+            <div class="camp-card-body" style="padding:var(--space-6)">
+              <div class="camp-card-details" style="margin-top:0">
+                <div class="camp-detail-item"><span class="camp-detail-icon">📅</span> Mon–Fri, 9:00 AM – 3:00 PM (Full Day)</div>
+                <div class="camp-detail-item"><span class="camp-detail-icon">💃</span> Ballet, Jazz, Tap, Hip Hop, Contemporary, Lyrical</div>
+                <div class="camp-detail-item"><span class="camp-detail-icon">🎭</span> Full Friday evening showcase performance</div>
+                <div class="camp-detail-item"><span class="camp-detail-icon">🍽️</span> Lunch break included (bring your own)</div>
+                <div class="camp-detail-item"><span class="camp-detail-icon">👕</span> Camp t-shirt + dance bag included</div>
+                <div class="camp-detail-item"><span class="camp-detail-icon">📸</span> Professional photo session included</div>
+              </div>
+              <div class="camp-price" style="color:var(--gold-dark)">$449</div>
+              <div class="camp-price-note" style="margin-bottom:var(--space-5)">Per camper · Full day intensive · <span class="included-tag">All materials included</span></div>
+              <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-gold" target="_blank" rel="noopener" id="camp4-register" style="justify-content:center;width:100%">Register on Dance Studio Pro</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MULTI-WEEK DISCOUNT -->
+    <section class="section">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8);align-items:center">
+          <div class="reveal-left">
+            <p class="overline">Save More, Dance More</p>
+            <h2 class="heading-1" style="margin-bottom:var(--space-4)">Multi-Week Discounts</h2>
+            <p class="body-lg" style="margin-bottom:var(--space-6)">Can't choose just one camp week? We don't blame you. Register for multiple weeks and save — the more weeks your dancer attends, the more they save.</p>
+            <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-4);background:var(--surface);border-radius:var(--radius-md);border:1px solid var(--border)">
+                <span style="font-size:0.9rem;font-weight:500">1 camp week</span>
+                <span style="font-family:var(--font-display);font-size:1.2rem;color:var(--ink)">Full price</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-4);background:var(--surface);border-radius:var(--radius-md);border:1px solid var(--border)">
+                <span style="font-size:0.9rem;font-weight:500">2 camp weeks</span>
+                <span style="font-family:var(--font-display);font-size:1.2rem;color:var(--blue)">5% off</span>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-4);background:var(--surface);border-radius:var(--radius-md);border:1px solid var(--gold)">
+                <span style="font-size:0.9rem;font-weight:500">3+ camp weeks</span>
+                <span style="font-family:var(--font-display);font-size:1.2rem;color:var(--gold-dark)">10% off</span>
+              </div>
+            </div>
+            <p style="font-size:0.8rem;color:var(--ink-muted);margin-top:var(--space-4)">Discounts applied automatically at checkout on Dance Studio Pro.</p>
+          </div>
+          <div class="reveal-right">
+            <div style="background:linear-gradient(135deg,var(--blue-dark),var(--blue));border-radius:var(--radius-xl);padding:var(--space-8);color:white;text-align:center">
+              <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:var(--space-5)">Still Have Questions?</p>
+              <p style="font-family:var(--font-display);font-size:1.5rem;color:white;line-height:1.4;margin-bottom:var(--space-4)">We're happy to help you find the right camp week for your dancer.</p>
+              <a href="contact.html" class="btn btn-outline-white" id="camps-contact-link" style="margin-bottom:var(--space-3);width:100%;justify-content:center">Contact Us</a>
+              <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-gold" target="_blank" rel="noopener" id="camps-dsp-link" style="width:100%;justify-content:center">Register Online</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="section section-surface">
+      <div class="container" style="max-width:720px">
+        <div class="section-header reveal" style="text-align:left;max-width:none">
+          <p class="overline">Common Questions</p>
+          <h2 class="heading-1">Camp FAQs</h2>
+        </div>
+        <div class="reveal">
+          <details class="faq-item">
+            <summary>Do campers need prior dance experience?</summary>
+            <p class="faq-body">No experience is required for any of our camp weeks (except the Junior Company Intensive, which recommends at least 1 year of dance experience). Our camps are welcoming to first-time dancers and returning students alike.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What should my child wear to camp?</summary>
+            <p class="faq-body">Comfortable, form-fitting clothing is best — leggings or dance shorts, a fitted top, and hair pulled back away from the face. Dance shoes are ideal but not required for the first day. We'll send specific guidance when you register.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What is the cancellation policy?</summary>
+            <p class="faq-body">Registrations cancelled more than 14 days before the camp start date receive a full credit toward another camp week or class registration. Cancellations within 14 days are non-refundable but may be transferred to another week or another dancer in the same household.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Will there be a performance at the end of the week?</summary>
+            <p class="faq-body">Yes! Every camp week ends with a mini showcase on Friday afternoon where campers perform the choreography they learned during the week. Family and friends are warmly invited to attend.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Are the camp spots limited?</summary>
+            <p class="faq-body">Yes — each camp week has a maximum enrollment to ensure every dancer receives proper attention and instruction. We recommend registering early to secure your child's spot.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I register?</summary>
+            <p class="faq-body">All camp registration is done through Dance Studio Pro, our online registration and payment platform. Click any "Register on Dance Studio Pro" button on this page to get started.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content reveal">
+          <p class="overline" style="color:var(--gold-light)">Spots Fill Fast — Register Early</p>
+          <h2 class="heading-1 text-white">Make This Summer Unforgettable.</h2>
+          <p class="lead" style="color:rgba(255,255,255,0.7)">Give your dancer a week — or a whole summer — of memories, movement, and joy at Renner Dance Company.</p>
+          <div class="cta-actions">
+            <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-gold" target="_blank" rel="noopener" id="camps-cta-register">Register on Dance Studio Pro</a>
+            <a href="contact.html" class="btn btn-outline-white" id="camps-cta-contact">Ask a Question</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Renner Dance</div>
+          <div class="footer-brand-sub">Chapel Hill, NC</div>
+          <p class="footer-brand-desc">Premier youth dance education in Chapel Hill, NC. Recreational classes, competitive programs, Ballet Academy, and summer camps.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Programs</div>
+          <nav class="footer-links">
+            <a href="recreational.html" class="footer-link">Recreational Classes</a>
+            <a href="summer-camps.html" class="footer-link">Summer Camps</a>
+            <a href="company.html" class="footer-link">Company Programs</a>
+            <a href="ballet-academy.html" class="footer-link">Ballet Academy</a>
+          </nav>
+        </div>
+        <div>
+          <div class="footer-col-title">Studio</div>
+          <nav class="footer-links">
+            <a href="about.html#story" class="footer-link">Our Story</a>
+            <a href="about.html#staff" class="footer-link">Our Team</a>
+            <a href="about.html#alumni" class="footer-link">Notable Alumni</a>
+            <a href="why-dance.html" class="footer-link">Why Dance</a>
+          </nav>
+        </div>
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <nav class="footer-links">
+            <a href="contact.html" class="footer-link">Contact Us</a>
+            <a href="https://app.gostudiopro.com/online/rennerdance" class="footer-link" target="_blank" rel="noopener">Register / Parent Portal</a>
+            <a href="https://www.instagram.com/rennerdance" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+            <a href="mailto:admin@rennerdance.com" class="footer-link">admin@rennerdance.com</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Renner Dance Company. All rights reserved.</span>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/rennerdance" class="footer-social" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+

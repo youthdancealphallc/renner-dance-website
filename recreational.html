@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recreational Classes — Renner Dance Company | Ballet, Jazz, Tap, Hip Hop &amp; More</title>
+  <meta name="description" content="Recreational dance classes for children ages 2–18 in Chapel Hill, NC. Ballet, jazz, tap, hip hop, acro, lyrical, and contemporary. No audition required. Try a free class today.">
+  <link rel="canonical" href="https://www.rennerdance.com/recreational">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    .style-card {
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: all var(--dur-slow) var(--ease);
+      background: var(--white);
+    }
+    .style-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .style-card-img { aspect-ratio: 16/9; overflow: hidden; }
+    .style-card-img img { width:100%;height:100%;object-fit:cover;transition:transform 0.5s var(--ease); }
+    .style-card:hover .style-card-img img { transform: scale(1.04); }
+    .style-card-body { padding: var(--space-6); }
+    .style-card-name { font-family: var(--font-display); font-size:1.5rem;font-weight:400;color:var(--ink);margin-bottom:var(--space-3); }
+    .style-card-desc { font-size:0.875rem;line-height:1.7;color:var(--ink-soft);margin-bottom:var(--space-4); }
+    .style-card-approach { font-size:0.85rem;line-height:1.65;color:var(--ink-muted);padding:var(--space-3) var(--space-4);background:var(--surface);border-radius:var(--radius-md);margin-bottom:var(--space-5); }
+    .style-card-approach strong { color:var(--ink-soft);display:block;margin-bottom:4px;font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase; }
+    .style-card-actions { display:flex;gap:var(--space-3);flex-wrap:wrap; }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar" class="transparent" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">
+          <span class="nav-logo-name">Renner Dance</span>
+          <span class="nav-logo-sub">Chapel Hill, NC</span>
+        </a>
+        <div class="nav-links">
+          <div class="nav-dropdown">
+            <a href="about.html" class="nav-link">About</a>
+            <div class="nav-dropdown-menu">
+              <a href="about.html#story" class="nav-dropdown-item">Our Story</a>
+              <a href="about.html#mission" class="nav-dropdown-item">Mission &amp; Culture</a>
+              <a href="about.html#accomplishments" class="nav-dropdown-item">Accomplishments</a>
+              <a href="about.html#staff" class="nav-dropdown-item">Our Team</a>
+              <a href="about.html#alumni" class="nav-dropdown-item">Notable Alumni</a>
+              <a href="about.html#careers" class="nav-dropdown-item">Join Our Faculty</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <a href="recreational.html" class="nav-link">Recreational</a>
+            <div class="nav-dropdown-menu">
+              <a href="#ballet" class="nav-dropdown-item">Ballet</a>
+              <a href="#jazz" class="nav-dropdown-item">Jazz</a>
+              <a href="#tap" class="nav-dropdown-item">Tap</a>
+              <a href="#hiphop" class="nav-dropdown-item">Hip Hop</a>
+              <a href="#contemporary" class="nav-dropdown-item">Contemporary</a>
+              <a href="#acro" class="nav-dropdown-item">Acro</a>
+              <a href="#lyrical" class="nav-dropdown-item">Lyrical</a>
+              <a href="#combo" class="nav-dropdown-item">Combo Classes</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <a href="company.html" class="nav-link">Company</a>
+            <div class="nav-dropdown-menu">
+              <a href="company.html#overview" class="nav-dropdown-item">Overview</a>
+              <a href="company.html#excel" class="nav-dropdown-item">Excel</a>
+              <a href="company.html#extreme" class="nav-dropdown-item">Extreme</a>
+              <a href="company.html#edge" class="nav-dropdown-item">Edge</a>
+              <a href="company.html#elite" class="nav-dropdown-item">Elite</a>
+            </div>
+          </div>
+          <a href="ballet-academy.html" class="nav-link">Ballet Academy</a>
+          <a href="summer-camps.html" class="nav-link">Summer Camps</a>
+          <a href="why-dance.html" class="nav-link">Why Dance</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-portal btn-sm" target="_blank" rel="noopener" id="nav-portal-btn">Parent Portal</a>
+          <a href="trial-class.html" class="btn btn-gold btn-sm" id="nav-cta-btn">Try a Free Class</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link">About</a>
+    <a href="recreational.html" class="mobile-nav-link">Recreational Classes</a>
+    <a href="company.html" class="mobile-nav-link">Company Programs</a>
+    <a href="ballet-academy.html" class="mobile-nav-link">Ballet Academy</a>
+    <a href="summer-camps.html" class="mobile-nav-link">Summer Camps</a>
+    <a href="why-dance.html" class="mobile-nav-link">Why Dance</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3)">
+      <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-primary" target="_blank" rel="noopener" style="justify-content:center">Parent Portal / Register</a>
+      <a href="trial-class.html" class="btn btn-gold" style="justify-content:center">Try a Free Class</a>
+    </div>
+  </nav>
+
+  <main id="content">
+
+    <header class="page-header" id="overview">
+      <div class="container">
+        <div class="page-header-content">
+          <p class="overline">Open Year-Round · No Audition Required</p>
+          <h1 class="display-2">Recreational<br><em style="color:var(--gold-light)">Classes.</em></h1>
+          <p class="lead">Fun. Confidence. A strong foundation. Our recreational program is ideal for families seeking high-quality instruction without the demands of competition — for ages 2 through 18.</p>
+          <div style="margin-top:var(--space-6);display:flex;gap:var(--space-3);flex-wrap:wrap">
+            <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-gold" target="_blank" rel="noopener" id="rec-register-hero">Register Online</a>
+            <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-outline-white" target="_blank" rel="noopener" id="rec-view-schedule">View Schedule &amp; Pricing</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- OVERVIEW -->
+    <section class="section">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8);align-items:center">
+          <div class="reveal-left">
+            <p class="overline">What to Expect</p>
+            <h2 class="heading-2" style="margin-bottom:var(--space-5)">Dance for the Love of It</h2>
+            <p style="font-size:1rem;color:var(--ink-soft);line-height:1.8;margin-bottom:var(--space-5)">
+              Our Recreational Program offers high-quality instruction in a welcoming environment that encourages socialization, teamwork, and lasting friendships. With a low weekly commitment, it fits easily into your family's schedule.
+            </p>
+            <div class="trust-items">
+              <div class="trust-item">
+                <div class="trust-icon">📅</div>
+                <div><div class="trust-text-title">Once per week</div><div class="trust-text-desc">Flexible scheduling across age groups and styles</div></div>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon">🎭</div>
+                <div><div class="trust-text-title">Year-end recital</div><div class="trust-text-desc">Every dancer performs. Every family celebrates.</div></div>
+              </div>
+              <div class="trust-item">
+                <div class="trust-icon">🤝</div>
+                <div><div class="trust-text-title">Welcoming for all</div><div class="trust-text-desc">Beginners and returning dancers alike, ages 2–18</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="reveal-right">
+            <div style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-xl)">
+              <img src="images/ballet-class.jpg" alt="Young students in a ballet class" width="600" height="500" loading="lazy" style="width:100%;height:auto;object-fit:cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="overline">Simple, Transparent Pricing</p>
+          <h2 class="heading-1">What Does It Cost?</h2>
+          <p class="lead">Our recreational tuition is straightforward — each class is once per week, same day every week, and billed monthly. The more classes your dancer takes, the better the value.</p>
+        </div>
+        <div style="max-width:800px;margin:0 auto">
+          <!-- Pricing table -->
+          <div class="reveal" style="border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-lg);border:1px solid var(--border)">
+            <div style="background:var(--blue-dark);padding:var(--space-5) var(--space-7);display:flex;justify-content:space-between;align-items:center">
+              <span style="color:white;font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase">Classes per Week</span>
+              <span style="color:white;font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase">Monthly Tuition</span>
+            </div>
+            <div style="background:white">
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-5) var(--space-7);border-bottom:1px solid var(--border)">
+                <div>
+                  <div style="font-family:var(--font-display);font-size:1.3rem;color:var(--ink)">1 class per week</div>
+                  <div style="font-size:0.8rem;color:var(--ink-muted);margin-top:2px">Same day, same time, every week</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:var(--font-display);font-size:2rem;font-weight:300;color:var(--blue-dark)">$89<span style="font-size:1rem;color:var(--ink-muted)">/mo</span></div>
+                </div>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-5) var(--space-7);border-bottom:1px solid var(--border)">
+                <div>
+                  <div style="font-family:var(--font-display);font-size:1.3rem;color:var(--ink)">2 classes per week</div>
+                  <div style="font-size:0.8rem;color:var(--ink-muted);margin-top:2px">Mix and match any two styles</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:var(--font-display);font-size:2rem;font-weight:300;color:var(--blue-dark)">$120<span style="font-size:1rem;color:var(--ink-muted)">/mo</span></div>
+                </div>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-5) var(--space-7);border-bottom:1px solid var(--border)">
+                <div>
+                  <div style="font-family:var(--font-display);font-size:1.3rem;color:var(--ink)">3 classes per week</div>
+                  <div style="font-size:0.8rem;color:var(--ink-muted);margin-top:2px">Great for dedicated recreational dancers</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:var(--font-display);font-size:2rem;font-weight:300;color:var(--blue-dark)">$140<span style="font-size:1rem;color:var(--ink-muted)">/mo</span></div>
+                </div>
+              </div>
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-5) var(--space-7);background:linear-gradient(135deg,rgba(15,61,107,0.04),rgba(201,168,76,0.06))">
+                <div>
+                  <div style="font-family:var(--font-display);font-size:1.3rem;color:var(--ink)">4+ classes per week</div>
+                  <div style="font-size:0.8rem;color:var(--ink-muted);margin-top:2px">Maximum value — unlimited styles</div>
+                </div>
+                <div style="text-align:right">
+                  <div style="font-family:var(--font-display);font-size:2rem;font-weight:300;color:var(--gold-dark)">$160+<span style="font-size:1rem;color:var(--ink-muted)">/mo</span></div>
+                  <div style="font-size:0.72rem;color:var(--gold);font-weight:600">Best value</div>
+                </div>
+              </div>
+             </div>
+            </div>
+
+          <!-- Notes -->
+          <div class="reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-4);margin-top:var(--space-5)">
+            <div style="background:var(--surface);border-radius:var(--radius-lg);padding:var(--space-5);border:1px solid var(--border)">
+              <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-4)">
+                <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--blue-dark),var(--blue));display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                </div>
+                <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink)">What's Included</div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+                <div style="display:flex;align-items:flex-start;gap:var(--space-3)">
+                  <div style="width:18px;height:18px;border-radius:50%;background:rgba(15,61,107,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--blue-dark)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span style="font-size:0.85rem;color:var(--ink-soft);line-height:1.5">Weekly 45&ndash;60 min class (age dependent)</span>
+                </div>
+                <div style="display:flex;align-items:flex-start;gap:var(--space-3)">
+                  <div style="width:18px;height:18px;border-radius:50%;background:rgba(15,61,107,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--blue-dark)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span style="font-size:0.85rem;color:var(--ink-soft);line-height:1.5">Year-end recital participation</span>
+                </div>
+                <div style="display:flex;align-items:flex-start;gap:var(--space-3)">
+                  <div style="width:18px;height:18px;border-radius:50%;background:rgba(15,61,107,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--blue-dark)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span style="font-size:0.85rem;color:var(--ink-soft);line-height:1.5">Professional instruction by our faculty</span>
+                </div>
+                <div style="display:flex;align-items:flex-start;gap:var(--space-3)">
+                  <div style="width:18px;height:18px;border-radius:50%;background:rgba(15,61,107,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--blue-dark)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  </div>
+                  <span style="font-size:0.85rem;color:var(--ink-soft);line-height:1.5">Access to all studio events</span>
+                </div>
+              </div>
+            </div>
+            <div style="background:var(--surface);border-radius:var(--radius-lg);padding:var(--space-5);border:1px solid var(--border)">
+              <div style="display:flex;align-items:center;gap:var(--space-2);margin-bottom:var(--space-4)">
+                <div style="width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--gold-dark),var(--gold));display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                </div>
+                <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink)">Good to Know</div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+                <div style="display:flex;align-items:flex-start;gap:var(--space-3)">
+                  <div style="width:18px;height:18px;border-radius:50%;background:rgba(201,168,76,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </div>
+                  <span style="font-size:0.85rem;color:var(--ink-soft);line-height:1.5">Tuition billed monthly via Dance Studio Pro</span>
+                </div>
+                <div style="display:flex;align-items:flex-start;gap:var(--space-3)">
+                  <div style="width:18px;height:18px;border-radius:50%;background:rgba(201,168,76,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </div>
+                  <span style="font-size:0.85rem;color:var(--ink-soft);line-height:1.5">Registration fee applies (one-time, per season)</span>
+                </div>
+                <div style="display:flex;align-items:flex-start;gap:var(--space-3)">
+                  <div style="width:18px;height:18px;border-radius:50%;background:rgba(201,168,76,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </div>
+                  <span style="font-size:0.85rem;color:var(--ink-soft);line-height:1.5">Costumes for recital are billed separately</span>
+                </div>
+                <div style="display:flex;align-items:flex-start;gap:var(--space-3)">
+                  <div style="width:18px;height:18px;border-radius:50%;background:rgba(201,168,76,0.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="var(--gold-dark)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  </div>
+                  <span style="font-size:0.85rem;color:var(--ink-soft);line-height:1.5">Questions? <a href="contact.html" style="color:var(--blue);font-weight:600">Contact us</a></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal" style="text-align:center;margin-top:var(--space-6)">
+            <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-gold" target="_blank" rel="noopener" id="pricing-register-btn">Register &amp; Enroll on Dance Studio Pro</a>
+            <p style="font-size:0.78rem;color:var(--ink-muted);margin-top:var(--space-3)">All registration and payment is handled securely through Dance Studio Pro.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DANCE STYLES -->
+    <section class="section section-surface">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="overline">Our Class Offerings</p>
+          <h2 class="heading-1">Our Class Offerings.</h2>
+          <p class="lead">Explore all our class offerings. Each style is taught with passion, technique, and care by our experienced faculty.</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-5)">
+
+          <!-- Ballet -->
+          <article class="style-card reveal" id="ballet">
+            <div class="style-card-img">
+              <img src="images/rec-ballet.jpg" alt="Ballet class at Renner Dance" width="600" height="340" loading="lazy">
+            </div>
+            <div class="style-card-body">
+              <h2 class="style-card-name">Ballet</h2>
+              <p class="style-card-desc">Ballet is the foundation of all dance forms, focusing on technique, posture, alignment, and grace. It develops discipline, strength, and musicality, and is essential training for dancers of all levels and styles.</p>
+              <div class="style-card-approach">
+                <strong>Our Teaching Approach</strong>
+                At Renner Dance, ballet is taught with a strong emphasis on both technical precision and artistry — within an environment that values encouragement, effort, and safe progression. We promote healthy technique while helping each dancer build strength, confidence, and focus.
+              </div>
+              <div class="style-card-actions">
+                <a href="trial-class.html" class="btn btn-primary btn-sm" id="ballet-try">Try a Ballet Class</a>
+                <a href="contact.html" class="btn btn-outline btn-sm" id="ballet-register">Register Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Jazz -->
+          <article class="style-card reveal reveal-delay-1" id="jazz">
+            <div class="style-card-img">
+              <img src="images/rec-jazz.jpg" alt="Jazz dance class" width="600" height="340" loading="lazy">
+            </div>
+            <div class="style-card-body">
+              <h2 class="style-card-name">Jazz</h2>
+              <p class="style-card-desc">Jazz dance is high-energy and dynamic, characterized by sharp lines, rhythmic footwork, and stylistic flair. It combines technique with performance quality and is often featured in musical theatre and commercial dance.</p>
+              <div class="style-card-approach">
+                <strong>Our Teaching Approach</strong>
+                Jazz classes at Renner emphasize strong foundational technique, dynamic movement, and musicality. Students learn combinations that challenge their strength, precision, and performance presence — always in a fun and engaging setting.
+              </div>
+              <div class="style-card-actions">
+                <a href="trial-class.html" class="btn btn-primary btn-sm" id="jazz-try">Try a Jazz Class</a>
+                <a href="contact.html" class="btn btn-outline btn-sm" id="jazz-register">Register Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tap -->
+          <article class="style-card reveal" id="tap">
+            <div class="style-card-img">
+              <img src="images/rec-tap.jpg" alt="Tap dance class" width="600" height="340" loading="lazy">
+            </div>
+            <div class="style-card-body">
+              <h2 class="style-card-name">Tap</h2>
+              <p class="style-card-desc">Tap dance is a rhythmic and percussive style where dancers use their feet like instruments. It develops musicality, timing, and coordination through intricate footwork and sound patterns.</p>
+              <div class="style-card-approach">
+                <strong>Our Teaching Approach</strong>
+                Our tap program is built on clarity of sound, musical phrasing, and creativity. We create a positive, upbeat space where dancers of all ages can explore rhythm and expression while learning foundational to advanced tap vocabulary.
+              </div>
+              <div class="style-card-actions">
+                <a href="trial-class.html" class="btn btn-primary btn-sm" id="tap-try">Try a Tap Class</a>
+                <a href="contact.html" class="btn btn-outline btn-sm" id="tap-register">Register Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Hip Hop -->
+          <article class="style-card reveal reveal-delay-1" id="hiphop">
+            <div class="style-card-img">
+              <img src="images/rec-hiphop.jpg" alt="Hip hop dance class" width="600" height="340" loading="lazy">
+            </div>
+            <div class="style-card-body">
+              <h2 class="style-card-name">Hip Hop</h2>
+              <p class="style-card-desc">Hip hop is a high-energy street style rooted in rhythm, freestyle, and individuality. It emphasizes groove, attitude, and self-expression, and often features styles like popping, locking, and breaking.</p>
+              <div class="style-card-approach">
+                <strong>Our Teaching Approach</strong>
+                We provide a supportive, high-energy space where students can build confidence, learn foundational moves, and enjoy the freedom to express themselves. Technique, musicality, and clean execution are reinforced at every level.
+              </div>
+              <div class="style-card-actions">
+                <a href="trial-class.html" class="btn btn-primary btn-sm" id="hiphop-try">Try a Hip Hop Class</a>
+                <a href="contact.html" class="btn btn-outline btn-sm" id="hiphop-register">Register Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Contemporary -->
+          <article class="style-card reveal" id="contemporary">
+            <div class="style-card-img">
+              <img src="images/rec-contemporary.jpg" alt="Contemporary dance class" width="600" height="340" loading="lazy">
+            </div>
+            <div class="style-card-body">
+              <h2 class="style-card-name">Contemporary</h2>
+              <p class="style-card-desc">Contemporary dance blends elements of ballet, jazz, and modern technique to explore fluidity, emotional expression, and musical interpretation. It encourages individuality and personal storytelling through movement.</p>
+              <div class="style-card-approach">
+                <strong>Our Teaching Approach</strong>
+                In contemporary, we focus on helping dancers find their unique voice while building strong technique. Our instructors promote exploration, emotional depth, and a respect for musical nuance — all within a safe, fun, and technically sound environment.
+              </div>
+              <div class="style-card-actions">
+                <a href="trial-class.html" class="btn btn-primary btn-sm" id="contemporary-try">Try a Contemporary Class</a>
+                <a href="contact.html" class="btn btn-outline btn-sm" id="contemporary-register">Register Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Acro -->
+          <article class="style-card reveal reveal-delay-1" id="acro">
+            <div class="style-card-img">
+              <img src="images/rec-acro.jpg" alt="Acro dance class" width="600" height="340" loading="lazy">
+            </div>
+            <div class="style-card-body">
+              <h2 class="style-card-name">Acro</h2>
+              <p class="style-card-desc">Acro dance combines classical dance technique with athletic acrobatic elements. It emphasizes flexibility, strength, balance, and coordination. Dancers learn to seamlessly integrate tricks and tumbling into choreography.</p>
+              <div class="style-card-approach">
+                <strong>Our Teaching Approach</strong>
+                Our acro classes prioritize proper body mechanics, safe spotting, and confidence-building. Students are encouraged to progress at their own pace while developing the strength and flexibility required for more advanced skills.
+              </div>
+              <div class="style-card-actions">
+                <a href="trial-class.html" class="btn btn-primary btn-sm" id="acro-try">Try an Acro Class</a>
+                <a href="contact.html" class="btn btn-outline btn-sm" id="acro-register">Register Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Lyrical -->
+          <article class="style-card reveal" id="lyrical">
+            <div class="style-card-img">
+              <img src="images/rec-lyrical.jpg" alt="Lyrical dance class" width="600" height="340" loading="lazy">
+            </div>
+            <div class="style-card-body">
+              <h2 class="style-card-name">Lyrical</h2>
+              <p class="style-card-desc">Lyrical dance blends elements of ballet and jazz to create emotive, expressive movement that interprets music and lyrics. It's graceful and fluid, often telling a story or conveying feeling through dance.</p>
+              <div class="style-card-approach">
+                <strong>Our Teaching Approach</strong>
+                In lyrical, we focus on connection — to the music, the story, and the audience. Dancers learn to balance emotion with control, strength with softness, and technique with artistry — all in a nurturing and encouraging environment.
+              </div>
+              <div class="style-card-actions">
+                <a href="trial-class.html" class="btn btn-primary btn-sm" id="lyrical-try">Try a Lyrical Class</a>
+                <a href="contact.html" class="btn btn-outline btn-sm" id="lyrical-register">Register Now</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Combo Classes -->
+          <article class="style-card reveal reveal-delay-1" id="combo">
+            <div class="style-card-img">
+              <img src="images/rec-combo.jpg" alt="Combo dance class for young children" width="600" height="340" loading="lazy">
+            </div>
+            <div class="style-card-body">
+              <h2 class="style-card-name">Combo Classes</h2>
+              <p class="style-card-desc">Designed for our youngest dancers, Combo classes introduce multiple styles in a single, fun-filled session. Typical combinations include Tap / Ballet / Tumble and Ballet / Jazz — giving little ones a well-rounded taste of movement, rhythm, and expression all in one class.</p>
+              <div class="style-card-approach">
+                <strong>Our Teaching Approach</strong>
+                Combo classes are taught in a nurturing, playful environment built for short attention spans and big imaginations. Each session rotates between styles to keep energy high and learning joyful — a perfect first step into the world of dance.
+              </div>
+              <div class="style-card-actions">
+                <a href="trial-class.html" class="btn btn-primary btn-sm" id="combo-try">Try a Combo Class</a>
+                <a href="contact.html" class="btn btn-outline btn-sm" id="combo-register">Register Now</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content reveal">
+          <p class="overline" style="color:var(--gold-light)">Spots Fill Fast</p>
+          <h2 class="heading-1 text-white">Ready to Dance?</h2>
+          <p class="lead" style="color:rgba(255,255,255,0.7)">Try your first class free. Find the perfect style for your child.</p>
+          <div class="cta-actions">
+            <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-gold" target="_blank" rel="noopener" id="rec-register-cta">Register Online</a>
+            <a href="trial-class.html" class="btn btn-outline-white" id="rec-try-cta">Try a Free Class</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Renner Dance</div>
+          <div class="footer-brand-sub">Chapel Hill, NC</div>
+          <p class="footer-brand-desc">Premier youth dance education since 2015.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Programs</div>
+          <nav class="footer-links">
+            <a href="recreational.html" class="footer-link">Recreational Classes</a>
+            <a href="company.html" class="footer-link">Company Programs</a>
+            <a href="ballet-academy.html" class="footer-link">Ballet Academy</a>
+            <a href="trial-class.html" class="footer-link">Try a Free Class</a>
+          </nav>
+        </div>
+        <div>
+          <div class="footer-col-title">Studio</div>
+          <nav class="footer-links">
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="about.html#staff" class="footer-link">Our Team</a>
+            <a href="about.html#alumni" class="footer-link">Notable Alumni</a>
+          </nav>
+        </div>
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <nav class="footer-links">
+            <a href="contact.html" class="footer-link">Contact Us</a>
+            <a href="https://www.instagram.com/rennerdance" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Renner Dance Company. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
