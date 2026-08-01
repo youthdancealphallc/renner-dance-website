@@ -587,12 +587,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   border-radius: var(--radius-lg);
   overflow: hidden;
   aspect-ratio: 4/5;
+  background: var(--surface);
 }
 .why-image-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 25%;
   transition: transform 0.6s var(--ease);
+  display: block;
 }
 .why-image-wrap:hover img { transform: scale(1.03); }
 .why-badge {
@@ -682,12 +685,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .program-card-img {
   aspect-ratio: 3/2;
   overflow: hidden;
+  background: var(--surface);
 }
 .program-card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
   transition: transform 0.6s var(--ease);
+  display: block;
 }
 .program-card:hover .program-card-img img { transform: scale(1.05); }
 .program-card-body {
@@ -835,8 +841,16 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-xl);
+  aspect-ratio: 3/4;
+  background: var(--surface);
 }
-.story-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
+.story-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+}
 .story-content { padding-top: var(--space-4); }
 .story-content .overline { margin-bottom: var(--space-4); }
 .story-content .heading-1 { margin-bottom: var(--space-4); color: var(--ink); }
@@ -892,8 +906,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   overflow: hidden;
   box-shadow: var(--shadow-xl);
   aspect-ratio: 3/4;
+  background: var(--surface);
 }
-.faculty-founder-img img { width: 100%; height: 100%; object-fit: cover; }
+.faculty-founder-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 18%;
+  display: block;
+}
 .faculty-founder-content .overline { margin-bottom: var(--space-3); }
 .faculty-founder-content .heading-2 { margin-bottom: 4px; color: var(--ink); }
 .faculty-founder-role {
@@ -960,7 +981,14 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   overflow: hidden;
   background: var(--surface);
 }
-.faculty-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s var(--ease); }
+.faculty-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  transition: transform 0.5s var(--ease);
+  display: block;
+}
 .faculty-card:hover .faculty-card-img img { transform: scale(1.04); }
 .faculty-card-body { padding: var(--space-4) var(--space-4); }
 .faculty-card-name { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; color: var(--ink); margin-bottom: 2px; }
@@ -974,6 +1002,27 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   padding: 2px 8px;
   font-weight: 500;
 }
+
+/* ---- Recreational Style Cards ---- */
+.style-card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: all var(--dur-slow) var(--ease);
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+}
+.style-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); border-color: transparent; }
+.style-card-img { aspect-ratio: 16/9; overflow: hidden; background: var(--surface); }
+.style-card-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.5s var(--ease); display: block; }
+.style-card:hover .style-card-img img { transform: scale(1.04); }
+.style-card-body { padding: var(--space-6); display: flex; flex-direction: column; flex: 1; }
+.style-card-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; color: var(--ink); margin-bottom: var(--space-3); }
+.style-card-desc { font-size: 0.875rem; line-height: 1.7; color: var(--ink-soft); margin-bottom: var(--space-4); flex: 1; }
+.style-card-approach { font-size: 0.85rem; line-height: 1.65; color: var(--ink-muted); padding: var(--space-3) var(--space-4); background: var(--surface); border-radius: var(--radius-md); margin-bottom: var(--space-5); }
+.style-card-approach strong { color: var(--ink-soft); display: block; margin-bottom: 4px; font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.style-card-actions { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: auto; }
 
 /* ---- Alumni ---- */
 .alumni-grid {
@@ -1524,10 +1573,20 @@ footer {
   .nav-cta { display: none; }
 
   /* Layout */
-  .story-grid { grid-template-columns: 1fr; }
-  .story-image-wrap { position: relative; top: 0; max-height: 420px; }
-  .faculty-founder { grid-template-columns: 1fr; }
-  .faculty-founder-img { max-height: 400px; }
+  .story-grid { grid-template-columns: 1fr; gap: var(--space-8); }
+  .story-image-wrap {
+    position: relative;
+    top: 0;
+    max-width: 460px;
+    margin: 0 auto var(--space-6);
+    aspect-ratio: 3/4;
+  }
+  .faculty-founder { grid-template-columns: 1fr; gap: var(--space-6); }
+  .faculty-founder-img {
+    max-width: 440px;
+    margin: 0 auto var(--space-6);
+    aspect-ratio: 3/4;
+  }
   .contact-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 
@@ -1660,6 +1719,13 @@ footer {
   .accomplishment-card { padding: var(--space-4); }
   .contact-form-wrap { padding: var(--space-4); border-radius: var(--radius-lg); }
 
+  /* Image wrappers full-width on phone screens */
+  .why-image-wrap,
+  .story-image-wrap,
+  .faculty-founder-img {
+    max-width: 100%;
+  }
+
   /* Trust items */
   .trust-icon { width: 36px; height: 36px; }
 
@@ -1695,12 +1761,22 @@ footer {
   /* Stat callout: remove fixed layouts */
   .stat-callout { padding: var(--space-6); }
 
-  /* Image aspect ratios: less tall on mobile */
-  .why-image-wrap { aspect-ratio: 3/2; }
-  .faculty-founder-img { aspect-ratio: 4/3; }
-
-  /* Story image: normal flow */
-  .story-image-wrap { max-height: 300px; }
+  /* Responsive image wrapping & framing (Mobile First) */
+  .why-image-wrap {
+    aspect-ratio: 4/5;
+    max-width: 460px;
+    margin: 0 auto var(--space-6);
+  }
+  .story-image-wrap {
+    aspect-ratio: 3/4;
+    max-width: 440px;
+    margin: 0 auto var(--space-6);
+  }
+  .faculty-founder-img {
+    aspect-ratio: 3/4;
+    max-width: 440px;
+    margin: 0 auto var(--space-6);
+  }
 
   /* Bump up gap reduction for inline-gap-heavy layouts */
   [style*="gap:var(--space-10)"] { gap: var(--space-6) !important; }
