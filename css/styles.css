@@ -1534,6 +1534,7 @@ footer {
   /* Inline 2-col grids → single column on tablet */
   .grid-2col { grid-template-columns: 1fr !important; }
   .grid-3col { grid-template-columns: 1fr 1fr !important; }
+  .grid-4col { grid-template-columns: 1fr 1fr !important; }
 
   /* Spacing */
   .section-lg { padding: var(--space-10) 0; }
@@ -1585,6 +1586,7 @@ footer {
   /* Inline grids: force single column */
   .grid-2col  { grid-template-columns: 1fr !important; }
   .grid-3col  { grid-template-columns: 1fr !important; }
+  .grid-4col  { grid-template-columns: 1fr !important; }
 
   /* Universal inline-grid collapse for any remaining inline style grids */
   [style*="grid-template-columns"]:not(.keep-grid) {
