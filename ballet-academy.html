@@ -12,24 +12,30 @@
 </head>
 <body>
 
+    <!-- ======================================================
+       NAVIGATION
+  ====================================================== -->
   <nav id="navbar" class="transparent" role="navigation" aria-label="Main navigation">
     <div class="container">
       <div class="nav-inner">
-        <a href="index.html" class="nav-logo">
+        <a href="index.html" class="nav-logo" aria-label="Renner Dance Company home">
           <span class="nav-logo-name">Renner Dance</span>
           <span class="nav-logo-sub">Chapel Hill, NC</span>
         </a>
-        <div class="nav-links">
-          <div class="nav-dropdown">
+
+        <div class="nav-links" role="menubar">
+          <div class="nav-dropdown" role="menuitem">
             <a href="about.html" class="nav-link">About</a>
             <div class="nav-dropdown-menu">
               <a href="about.html#story" class="nav-dropdown-item">Our Story</a>
+              <a href="about.html#mission" class="nav-dropdown-item">Mission &amp; Culture</a>
               <a href="about.html#accomplishments" class="nav-dropdown-item">Accomplishments</a>
               <a href="about.html#staff" class="nav-dropdown-item">Our Team</a>
               <a href="about.html#alumni" class="nav-dropdown-item">Notable Alumni</a>
+              <a href="about.html#careers" class="nav-dropdown-item">Join Our Faculty</a>
             </div>
           </div>
-          <div class="nav-dropdown">
+          <div class="nav-dropdown" role="menuitem">
             <a href="recreational.html" class="nav-link">Recreational</a>
             <div class="nav-dropdown-menu">
               <div class="nav-dropdown-group-label">Recreational Classes</div>
@@ -47,42 +53,77 @@
               <a href="summer-camps.html" class="nav-dropdown-item nav-dropdown-item--camps">Summer Camps</a>
             </div>
           </div>
-          <div class="nav-dropdown">
+          <div class="nav-dropdown" role="menuitem">
             <a href="company.html" class="nav-link">Company</a>
             <div class="nav-dropdown-menu">
+              <a href="company.html#overview" class="nav-dropdown-item">Overview</a>
               <a href="company.html#excel" class="nav-dropdown-item">Excel</a>
               <a href="company.html#extreme" class="nav-dropdown-item">Extreme</a>
               <a href="company.html#edge" class="nav-dropdown-item">Edge</a>
               <a href="company.html#elite" class="nav-dropdown-item">Elite</a>
             </div>
           </div>
-          <a href="ballet-academy.html" class="nav-link">Ballet Academy</a>
-          <a href="why-dance.html" class="nav-link">Why Dance</a>
-          <a href="contact.html" class="nav-link">Contact</a>
+          <a href="ballet-academy.html" class="nav-link" role="menuitem">Ballet Academy</a>
+          <a href="why-dance.html" class="nav-link" role="menuitem">Why Dance</a>
+          <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
         </div>
-                <div class="nav-cta">
+
+        <div class="nav-cta">
           <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-portal btn-sm" target="_blank" rel="noopener" id="nav-portal-btn">Parent Portal</a>
           <a href="trial-class.html" class="btn btn-gold btn-sm" id="nav-cta-btn">Try a Free Class</a>
         </div>
-        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </nav>
 
-  <nav class="mobile-nav" id="mobileNav">
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
     <a href="index.html" class="mobile-nav-link">Home</a>
-    <a href="about.html" class="mobile-nav-link">About</a>
-    <a href="recreational.html" class="mobile-nav-link">Recreational Classes</a>
-    <a href="summer-camps.html" class="mobile-nav-sub">Summer Camps</a>
-    <a href="company.html" class="mobile-nav-link">Company Programs</a>
+    
+    <div>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="about.html#story" class="mobile-nav-sub">Our Story</a>
+      <a href="about.html#mission" class="mobile-nav-sub">Mission &amp; Culture</a>
+      <a href="about.html#accomplishments" class="mobile-nav-sub">Accomplishments</a>
+      <a href="about.html#staff" class="mobile-nav-sub">Our Team</a>
+      <a href="about.html#alumni" class="mobile-nav-sub">Notable Alumni</a>
+      <a href="about.html#careers" class="mobile-nav-sub">Join Our Faculty</a>
+    </div>
+
+    <div>
+      <a href="recreational.html" class="mobile-nav-link">Recreational Classes</a>
+      <a href="recreational.html#overview" class="mobile-nav-sub">Overview</a>
+      <a href="recreational.html#ballet" class="mobile-nav-sub">Ballet</a>
+      <a href="recreational.html#jazz" class="mobile-nav-sub">Jazz</a>
+      <a href="recreational.html#tap" class="mobile-nav-sub">Tap</a>
+      <a href="recreational.html#hiphop" class="mobile-nav-sub">Hip Hop</a>
+      <a href="recreational.html#contemporary" class="mobile-nav-sub">Contemporary</a>
+      <a href="recreational.html#acro" class="mobile-nav-sub">Acro</a>
+      <a href="recreational.html#lyrical" class="mobile-nav-sub">Lyrical</a>
+      <a href="recreational.html#combo" class="mobile-nav-sub">Combo Classes</a>
+      <a href="summer-camps.html" class="mobile-nav-sub" style="color:var(--gold-dark);font-weight:600">Summer Camps</a>
+    </div>
+
+    <div>
+      <a href="company.html" class="mobile-nav-link">Company Programs</a>
+      <a href="company.html#overview" class="mobile-nav-sub">Overview</a>
+      <a href="company.html#excel" class="mobile-nav-sub">Excel</a>
+      <a href="company.html#extreme" class="mobile-nav-sub">Extreme</a>
+      <a href="company.html#edge" class="mobile-nav-sub">Edge</a>
+      <a href="company.html#elite" class="mobile-nav-sub">Elite</a>
+    </div>
+
     <a href="ballet-academy.html" class="mobile-nav-link">Ballet Academy</a>
     <a href="why-dance.html" class="mobile-nav-link">Why Dance</a>
     <a href="contact.html" class="mobile-nav-link">Contact</a>
-    <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3)">
-      <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-primary" target="_blank" rel="noopener" style="justify-content:center">Parent Portal / Register</a>
+
+    <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3);padding-bottom:var(--space-8)">
       <a href="trial-class.html" class="btn btn-gold" style="justify-content:center">Try a Free Class</a>
+      <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-outline" target="_blank" rel="noopener" style="justify-content:center">Parent Portal / Register</a>
     </div>
   </nav>
 
