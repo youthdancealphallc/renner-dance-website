@@ -1728,6 +1728,123 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   }
 }
 
+/* ---- Scannable Mission Traits & Faculty Style-Level Matrix ---- */
+.mission-traits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+.mission-trait-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--blue);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  padding: var(--space-6) var(--space-5);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease);
+}
+.mission-trait-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-top-color: var(--gold);
+}
+.mission-trait-num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold-dark);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+.mission-trait-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: var(--space-2);
+}
+.mission-trait-desc {
+  font-size: 0.86rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.style-level-matrix {
+  border: 1.5px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  overflow: hidden;
+  margin-top: var(--space-2);
+}
+.style-level-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  background: var(--white);
+}
+.style-level-row:last-child {
+  border-bottom: none;
+}
+.style-level-row:nth-child(even) {
+  background: rgba(245, 244, 241, 0.55);
+}
+.style-level-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  min-width: 110px;
+}
+.style-level-checks {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.style-level-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--white);
+  transition: border-color var(--dur-fast), background var(--dur-fast);
+}
+.style-level-pill:hover {
+  border-color: var(--blue);
+}
+.style-level-pill input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--blue);
+  cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+  .mission-traits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  .mission-traits-grid {
+    grid-template-columns: 1fr;
+  }
+  .style-level-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
 /* ---- Accomplishments ---- */
 .accomplishment-grid {
   display: grid;
