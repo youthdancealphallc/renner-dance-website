@@ -1400,6 +1400,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* ---- Ballet Academy ---- */
+.hero-bg--ballet {
+  background-image: url('../images/ballet-academy.jpg');
+  background-position: center 22%;
+  opacity: 0.48;
+}
 .ballet-hero {
   background: var(--blue-dark);
   padding: 160px 0 var(--space-10);
@@ -1413,11 +1418,240 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background-image: url('../images/ballet-academy.jpg');
   background-size: cover;
   background-position: center 20%;
-  opacity: 0.2;
+  opacity: 0.32;
 }
 .ballet-hero-content { position: relative; z-index: 1; text-align: center; }
 .ballet-hero-content .heading-1 { color: white; margin-bottom: var(--space-4); }
 .ballet-hero-content .lead { color: rgba(255,255,255,0.75); max-width: 580px; margin: 0 auto var(--space-7); }
+
+/* ---- 3-Column Editorial Pillar Grid (Variations Track) ---- */
+.pillar-grid--3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+/* ---- Aligned Ballet Level Cards (Levels A, B, C & D) ---- */
+.ballet-levels-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  align-items: stretch;
+}
+.ballet-level-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--dur-slow) var(--ease), box-shadow var(--dur-slow) var(--ease);
+}
+.ballet-level-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.ballet-level-card .level-card-header {
+  min-height: 132px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-6);
+}
+.ballet-level-tier {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-top: var(--space-2);
+}
+.ballet-level-schedule {
+  display: block;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.78);
+  margin-top: 4px;
+}
+.ballet-level-card .level-card-body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+}
+.ballet-level-desc {
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  line-height: 1.68;
+  margin-bottom: var(--space-5);
+  min-height: 142px;
+}
+.ballet-level-card .level-spec-row {
+  grid-template-columns: 92px 1fr;
+  gap: var(--space-2);
+  padding: 10px 0;
+  font-size: 0.82rem;
+}
+
+/* ---- International Honors & Accolades Banner ---- */
+.honors-banner {
+  margin-top: var(--space-7);
+  background: var(--blue-dark);
+  border-radius: var(--radius-xl);
+  padding: var(--space-7) var(--space-8);
+  color: var(--white);
+  border: 1px solid rgba(201, 168, 76, 0.28);
+  box-shadow: var(--shadow-lg);
+}
+.honors-banner-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1.85fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+.honors-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+.honors-badge-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  text-align: center;
+}
+.honors-badge-org {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: var(--space-2);
+}
+.honors-badge-title {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.honors-badge-sub {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.4;
+}
+
+/* ---- Prestigious Institution Logos Showcase ---- */
+.institution-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+.institution-logo-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 168px;
+  position: relative;
+  transition: transform var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease), border-color var(--dur-base);
+}
+.institution-logo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold);
+}
+.institution-crest {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+  color: var(--blue-dark);
+  transition: color var(--dur-base), transform var(--dur-base);
+}
+.institution-logo-card:hover .institution-crest {
+  color: var(--gold-dark);
+  transform: scale(1.05);
+}
+.institution-crest svg {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.institution-wordmark {
+  font-family: var(--font-display);
+  font-size: 1.22rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+.institution-wordmark--sans {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+.institution-sub {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+
+@media (max-width: 1120px) {
+  .ballet-levels-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .institution-logos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .honors-banner-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+@media (max-width: 768px) {
+  .pillar-grid--3col,
+  .ballet-levels-grid,
+  .honors-badges-grid {
+    grid-template-columns: 1fr;
+  }
+  .ballet-level-desc {
+    min-height: 0;
+  }
+  .ballet-level-card .level-card-header {
+    min-height: 0;
+  }
+  .institution-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+  .institution-logo-card {
+    padding: var(--space-4) var(--space-3);
+    min-height: 140px;
+  }
+  .honors-banner {
+    padding: var(--space-6) var(--space-5);
+  }
+}
+@media (max-width: 480px) {
+  .institution-logos-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /* ---- Accomplishments ---- */
 .accomplishment-grid {
