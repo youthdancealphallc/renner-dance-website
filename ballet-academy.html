@@ -17,830 +17,842 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav id="navbar" role="navigation" aria-label="Main navigation">
+  <!-- ======================================================
+       NAVIGATION
+  ====================================================== -->
+  <nav id="navbar" class="transparent" role="navigation" aria-label="Main navigation">
     <div class="container">
       <div class="nav-inner">
         <a href="index.html" class="nav-logo" aria-label="Renner Dance Home">
-          <img src="images/logo-mark-white.png" data-logo-light="images/logo-mark-white.png" data-logo-dark="images/logo-mark-dark.png" alt="" class="nav-logo-mark" width="110" height="92" decoding="async">
-          <img src="images/logo-wordmark-white.png" data-logo-light="images/logo-wordmark-white.png" data-logo-dark="images/logo-wordmark-dark.png" alt="Renner Dance" class="nav-logo-wordmark" width="200" height="40" decoding="async">
+          <img src="images/logo-mark-white.png" alt="" class="nav-logo-mark nav-logo--light" width="40" height="53">
+          <img src="images/logo-mark-dark.png" alt="" class="nav-logo-mark nav-logo--dark" width="40" height="53">
+          <div class="nav-logo-text">
+            <img src="images/logo-wordmark-white.png" alt="Renner Dance" class="nav-logo-wordmark nav-logo--light" width="140" height="19">
+            <img src="images/logo-wordmark-dark.png" alt="Renner Dance" class="nav-logo-wordmark nav-logo--dark" width="140" height="19">
+            <span class="nav-logo-sub">Chapel Hill, NC</span>
+          </div>
         </a>
-        <div class="nav-links">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="about.html" class="nav-link">About</a>
-          <a href="why-dance.html" class="nav-link">Why Dance</a>
-          <div class="nav-dropdown">
-            <a href="#" class="nav-link active" aria-haspopup="true">Programs &#9662;</a>
-            <div class="nav-dropdown-menu" role="menu">
-              <a href="recreational.html" class="nav-dropdown-item" role="menuitem">
-                <div class="dropdown-item-title">Recreational Dance</div>
-                <div class="dropdown-item-desc">Ages 2 to 18 &middot; All styles &amp; levels</div>
-              </a>
-              <a href="company.html" class="nav-dropdown-item" role="menuitem">
-                <div class="dropdown-item-title">Company Program</div>
-                <div class="dropdown-item-desc">Competitive dance &middot; 4 levels</div>
-              </a>
-              <a href="ballet-academy.html" class="nav-dropdown-item" role="menuitem">
-                <div class="dropdown-item-title">Ballet Academy</div>
-                <div class="dropdown-item-desc">Pre-professional classical ballet</div>
-              </a>
-              <a href="summer-camps.html" class="nav-dropdown-item" role="menuitem">
-                <div class="dropdown-item-title">Summer Camps</div>
-                <div class="dropdown-item-desc">Ages 3 to 12 &middot; Weekly themed camps</div>
-              </a>
+
+        <div class="nav-links" role="menubar">
+          <div class="nav-dropdown" role="menuitem">
+            <a href="about.html" class="nav-link">About</a>
+            <div class="nav-dropdown-menu">
+              <a href="about.html#story" class="nav-dropdown-item">Our Story</a>
+              <a href="about.html#mission" class="nav-dropdown-item">Mission &amp; Culture</a>
+              <a href="about.html#accomplishments" class="nav-dropdown-item">Accomplishments</a>
+              <a href="about.html#staff" class="nav-dropdown-item">Our Team</a>
+              <a href="about.html#alumni" class="nav-dropdown-item">Notable Alumni</a>
+              <a href="about.html#careers" class="nav-dropdown-item">Join Our Faculty</a>
             </div>
           </div>
-          <a href="contact.html" class="nav-link">Contact</a>
+          <div class="nav-dropdown" role="menuitem">
+            <a href="recreational.html" class="nav-link">Recreational</a>
+            <div class="nav-dropdown-menu">
+              <div class="nav-dropdown-group-label">Recreational Classes</div>
+              <a href="recreational.html#overview" class="nav-dropdown-item">Overview</a>
+              <a href="recreational.html#ballet" class="nav-dropdown-item">Ballet</a>
+              <a href="recreational.html#jazz" class="nav-dropdown-item">Jazz</a>
+              <a href="recreational.html#tap" class="nav-dropdown-item">Tap</a>
+              <a href="recreational.html#hiphop" class="nav-dropdown-item">Hip Hop</a>
+              <a href="recreational.html#contemporary" class="nav-dropdown-item">Contemporary</a>
+              <a href="recreational.html#acro" class="nav-dropdown-item">Acro</a>
+              <a href="recreational.html#lyrical" class="nav-dropdown-item">Lyrical</a>
+              <a href="recreational.html#combo" class="nav-dropdown-item">Combo Classes</a>
+              <div class="nav-dropdown-divider"></div>
+              <div class="nav-dropdown-group-label">Summer Programs</div>
+              <a href="summer-camps.html" class="nav-dropdown-item nav-dropdown-item--camps">Summer Camps</a>
+            </div>
+          </div>
+          <div class="nav-dropdown" role="menuitem">
+            <a href="company.html" class="nav-link">Company</a>
+            <div class="nav-dropdown-menu">
+              <a href="company.html#overview" class="nav-dropdown-item">Overview</a>
+              <a href="company.html#excel" class="nav-dropdown-item">Excel</a>
+              <a href="company.html#extreme" class="nav-dropdown-item">Extreme</a>
+              <a href="company.html#edge" class="nav-dropdown-item">Edge</a>
+              <a href="company.html#elite" class="nav-dropdown-item">Elite</a>
+            </div>
+          </div>
+          <a href="ballet-academy.html" class="nav-link" role="menuitem">Ballet Academy</a>
+          <a href="why-dance.html" class="nav-link" role="menuitem">Why Dance</a>
+          <a href="contact.html" class="nav-link" role="menuitem">Contact</a>
         </div>
+
         <div class="nav-cta">
-          <a href="https://app.thestudiodirector.com/rennerdance/portal.sd" class="btn btn-outline-white btn-sm" target="_blank" rel="noopener">Parent Portal</a>
-          <a href="trial-class.html" class="btn btn-gold btn-sm">Book a Trial</a>
+          <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-portal btn-sm" target="_blank" rel="noopener" id="nav-portal-btn">Parent Portal</a>
+          <a href="trial-class.html" class="btn btn-gold btn-sm" id="nav-cta-btn">Try a Free Class</a>
         </div>
-        <button id="menu-toggle" class="nav-mobile-toggle" aria-label="Open navigation menu" aria-expanded="false">
+
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" role="dialog" aria-label="Navigation menu">
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
     <a href="index.html" class="mobile-nav-link">Home</a>
-    <a href="about.html" class="mobile-nav-link">About</a>
-    <a href="why-dance.html" class="mobile-nav-link">Why Dance</a>
-    <a href="recreational.html" class="mobile-nav-link">Recreational</a>
-    <a href="company.html" class="mobile-nav-link">Company</a>
+    
+    <div>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="about.html#story" class="mobile-nav-sub">Our Story</a>
+      <a href="about.html#mission" class="mobile-nav-sub">Mission &amp; Culture</a>
+      <a href="about.html#accomplishments" class="mobile-nav-sub">Accomplishments</a>
+      <a href="about.html#staff" class="mobile-nav-sub">Our Team</a>
+      <a href="about.html#alumni" class="mobile-nav-sub">Notable Alumni</a>
+      <a href="about.html#careers" class="mobile-nav-sub">Join Our Faculty</a>
+    </div>
+
+    <div>
+      <a href="recreational.html" class="mobile-nav-link">Recreational Classes</a>
+      <a href="recreational.html#overview" class="mobile-nav-sub">Overview</a>
+      <a href="recreational.html#ballet" class="mobile-nav-sub">Ballet</a>
+      <a href="recreational.html#jazz" class="mobile-nav-sub">Jazz</a>
+      <a href="recreational.html#tap" class="mobile-nav-sub">Tap</a>
+      <a href="recreational.html#hiphop" class="mobile-nav-sub">Hip Hop</a>
+      <a href="recreational.html#contemporary" class="mobile-nav-sub">Contemporary</a>
+      <a href="recreational.html#acro" class="mobile-nav-sub">Acro</a>
+      <a href="recreational.html#lyrical" class="mobile-nav-sub">Lyrical</a>
+      <a href="recreational.html#combo" class="mobile-nav-sub">Combo Classes</a>
+      <a href="summer-camps.html" class="mobile-nav-sub" style="color:var(--gold-dark);font-weight:600">Summer Camps</a>
+    </div>
+
+    <div>
+      <a href="company.html" class="mobile-nav-link">Company Programs</a>
+      <a href="company.html#overview" class="mobile-nav-sub">Overview</a>
+      <a href="company.html#excel" class="mobile-nav-sub">Excel</a>
+      <a href="company.html#extreme" class="mobile-nav-sub">Extreme</a>
+      <a href="company.html#edge" class="mobile-nav-sub">Edge</a>
+      <a href="company.html#elite" class="mobile-nav-sub">Elite</a>
+    </div>
+
     <a href="ballet-academy.html" class="mobile-nav-link">Ballet Academy</a>
-    <a href="summer-camps.html" class="mobile-nav-link">Summer Camps</a>
+    <a href="why-dance.html" class="mobile-nav-link">Why Dance</a>
     <a href="contact.html" class="mobile-nav-link">Contact</a>
-    <div class="mobile-nav-cta">
-      <a href="trial-class.html" class="btn btn-gold">Book a Trial Class</a>
-      <a href="https://app.thestudiodirector.com/rennerdance/portal.sd" class="btn btn-outline-white" target="_blank" rel="noopener">Parent Portal</a>
-    </div>
-  </div>
 
-  <!-- Hero -->
-  <section class="hero" aria-label="Ballet Academy of Chapel Hill">
-    <div class="hero-bg hero-bg--ballet" role="img" aria-label="Classical ballet dancers performing on stage at the Ballet Academy of Chapel Hill"></div>
-    <div class="hero-overlay"></div>
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-eyebrow">
-          <span class="hero-eyebrow-line"></span>
-          <span class="hero-eyebrow-text">Ballet Academy of Chapel Hill &middot; Under Renner Dance</span>
-        </div>
-        <h1 class="hero-title">
-          Classical Rigor.<br>
-          <em>Timeless Artistry.</em>
-        </h1>
-        <p class="hero-subtitle">
-          A pre-professional classical ballet conservatory for dedicated young dancers, uniting the Italian Cecchetti and Russian Vaganova traditions with Pointe, Variations, and ballet-specific conditioning.
-        </p>
-        <div class="hero-actions">
-          <a href="contact.html" class="btn btn-gold btn-lg">Inquire About Placement</a>
-          <a href="#levels" class="btn btn-outline-white btn-lg">Explore Levels A to D</a>
-        </div>
-      </div>
+    <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3);padding-bottom:var(--space-8)">
+      <a href="trial-class.html" class="btn btn-gold" style="justify-content:center">Try a Free Class</a>
+      <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-outline" target="_blank" rel="noopener" style="justify-content:center">Parent Portal / Register</a>
     </div>
-    <div class="hero-scroll" aria-hidden="true">
-      <div class="hero-scroll-line"></div>
-      <span>Scroll</span>
-    </div>
-  </section>
+  </nav>
 
-  <!-- Ballet Academy Key Metrics Bar -->
-  <section class="stats-bar" aria-label="Ballet Academy at a glance">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-item reveal">
-          <div class="stat-number"><span>4</span></div>
-          <div class="stat-label">Progressive Academy Levels (A to D)</div>
-        </div>
-        <div class="stat-item reveal reveal-delay-1">
-          <div class="stat-number">30<span>+</span></div>
-          <div class="stat-label">Years International Teaching Pedigree</div>
-        </div>
-        <div class="stat-item reveal reveal-delay-2">
-          <div class="stat-number stat-number--text"><span>Cecchetti &amp; Vaganova</span></div>
-          <div class="stat-label">Dual Classical Methodologies</div>
-        </div>
-        <div class="stat-item reveal reveal-delay-3">
-          <div class="stat-number">Up to <span>4</span></div>
-          <div class="stat-label">Nights of Ballet Training Weekly</div>
-        </div>
-        <div class="stat-item reveal reveal-delay-4">
-          <div class="stat-number stat-number--text"><span>YAGP &amp; ADC</span></div>
-          <div class="stat-label">Outstanding Teacher &amp; School Honors</div>
-        </div>
-        <div class="stat-item reveal reveal-delay-5">
-          <div class="stat-number">12<span>+</span></div>
-          <div class="stat-label">World-Class Company &amp; School Placements</div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <main id="content">
 
-  <!-- Program Overview & How It Works (For Parents New to Pre-Professional Ballet) -->
-  <section class="section">
-    <div class="container">
-      <div class="grid-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:center">
-        <div class="reveal">
-          <div class="overline" style="margin-bottom:var(--space-3)">Understanding the Academy</div>
-          <h2 class="heading-1" style="margin-bottom:var(--space-5)">
-            What Is the Ballet Academy?<br><em style="font-style:italic;color:var(--blue)">A Clear Guide for Parents.</em>
-          </h2>
-          <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;margin-bottom:var(--space-5)">
-            If your child has fallen in love with dance in a once-a-week recreational class, you may wonder what serious classical ballet training looks like. The <strong>Ballet Academy of Chapel Hill</strong> is our pre-professional classical conservatory operating under the umbrella of Renner Dance.
-          </p>
-          <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;margin-bottom:var(--space-5)">
-            Rather than learning a single routine for an end-of-year recital, Academy dancers follow a structured, multi-day classical syllabus in <strong>Ballet Technique, Pointe, Classical Variations, and Pilates Conditioning</strong>. Every class builds proper posture, turnout, foot articulation, and musicality step by step.
-          </p>
-          <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;margin-bottom:var(--space-6)">
-            Designed for flexibility, students may enroll exclusively in the Ballet Academy as classical specialists, or pair their Academy training with <strong>Renner Dance Company</strong> to combine conservatory-level ballet with versatility across lyrical, contemporary, jazz, and tap.
-          </p>
-          <div style="display:flex;gap:var(--space-4);flex-wrap:wrap">
-            <a href="contact.html" class="btn btn-primary">Schedule a Placement Evaluation</a>
-            <a href="#faculty" class="btn btn-outline">Meet Our Ballet Faculty</a>
+    <!-- ======================================================
+         FULL-SCREEN HERO
+    ====================================================== -->
+    <section class="hero" aria-label="Ballet Academy of Chapel Hill">
+      <div class="hero-bg hero-bg--ballet" role="img" aria-label="Classical ballet dancers performing on stage at the Ballet Academy of Chapel Hill"></div>
+      <div class="hero-overlay"></div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-eyebrow">
+            <div class="hero-eyebrow-line"></div>
+            <span class="hero-eyebrow-text">Ballet Academy of Chapel Hill &middot; Under Renner Dance</span>
           </div>
-        </div>
-
-        <div class="reveal reveal-delay-2">
-          <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/5;background:var(--surface);box-shadow:var(--shadow-xl)">
-            <img src="images/ballet-academy.jpg" alt="Classical ballet training at the Ballet Academy of Chapel Hill" style="width:100%;height:100%;object-fit:cover;object-position:center 20%" width="600" height="750" loading="lazy">
+          <h1 class="hero-title">
+            Classical Rigor.<br>
+            <em>Timeless Artistry.</em>
+          </h1>
+          <p class="hero-subtitle">
+            A pre-professional classical ballet conservatory for dedicated young dancers, uniting the Italian Cecchetti and Russian Vaganova traditions with Pointe, Variations, and ballet-specific conditioning.
+          </p>
+          <div class="hero-actions">
+            <a href="contact.html" class="btn btn-gold">Inquire About Placement</a>
+            <a href="#levels" class="btn btn-outline-white">Explore Levels A to D</a>
           </div>
         </div>
       </div>
+      <div class="hero-scroll" aria-hidden="true">
+        <div class="hero-scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
 
-      <!-- 4 MECE Pillars of How the Ballet Academy Works -->
-      <div style="margin-top:var(--space-10)">
-        <div class="section-header reveal" style="margin-bottom:var(--space-7)">
-          <div class="overline">Program Architecture</div>
-          <h3 class="heading-1">How the Ballet Academy Works</h3>
-          <p class="lead">Four distinct, complementary pillars that form a complete classical education.</p>
+    <!-- ======================================================
+         BALLET ACADEMY KEY METRICS BAR
+    ====================================================== -->
+    <section class="stats-bar" aria-label="Ballet Academy at a glance">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <div class="stat-number"><span data-count="4">4</span></div>
+            <div class="stat-label">Progressive Academy Levels (A to D)</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-1">
+            <div class="stat-number"><span data-count="30" data-suffix="+">30+</span></div>
+            <div class="stat-label">Years International Teaching Pedigree</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-2">
+            <div class="stat-number stat-number--text"><span>Cecchetti &amp;<br>Vaganova</span></div>
+            <div class="stat-label">Dual Classical Methodologies</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-3">
+            <div class="stat-number"><span data-count="4">4</span></div>
+            <div class="stat-label">Nights / Week Max Ballet Training</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-3">
+            <div class="stat-number stat-number--text"><span>YAGP &amp;<br>ADC</span></div>
+            <div class="stat-label">Outstanding Teacher &amp; School Honors</div>
+          </div>
+          <div class="stat-item reveal reveal-delay-3">
+            <div class="stat-number"><span data-count="12" data-suffix="+">12+</span></div>
+            <div class="stat-label">World-Class Company &amp; School Placements</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PROGRAM OVERVIEW & HOW IT WORKS (FOR PARENTS)
+    ====================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="grid-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-10);align-items:center">
+          <div class="reveal">
+            <div class="overline" style="margin-bottom:var(--space-3)">Understanding the Academy</div>
+            <h2 class="heading-1" style="margin-bottom:var(--space-5)">
+              What Is the Ballet Academy?<br><em style="font-style:italic;color:var(--blue)">A Clear Guide for Parents.</em>
+            </h2>
+            <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;margin-bottom:var(--space-5)">
+              If your child has fallen in love with dance in a once-a-week recreational class, you may wonder what serious classical ballet training looks like. The <strong>Ballet Academy of Chapel Hill</strong> is our pre-professional classical conservatory operating under the umbrella of Renner Dance.
+            </p>
+            <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;margin-bottom:var(--space-5)">
+              Rather than learning a single routine for an end-of-year recital, Academy dancers follow a structured, multi-day classical syllabus in <strong>Ballet Technique, Pointe, Classical Variations, and Pilates Conditioning</strong>. Every class builds proper posture, turnout, foot articulation, and musicality step by step.
+            </p>
+            <p style="font-size:1.0625rem;color:var(--ink-soft);line-height:1.8;margin-bottom:var(--space-6)">
+              Designed for flexibility, students may enroll exclusively in the Ballet Academy as classical specialists, or pair their Academy training with <strong>Renner Dance Company</strong> to combine conservatory-level ballet with versatility across lyrical, contemporary, jazz, and tap.
+            </p>
+            <div style="display:flex;gap:var(--space-4);flex-wrap:wrap">
+              <a href="contact.html" class="btn btn-primary">Schedule a Placement Evaluation</a>
+              <a href="#faculty" class="btn btn-outline">Meet Our Ballet Faculty</a>
+            </div>
+          </div>
+
+          <div class="reveal reveal-delay-2">
+            <div style="border-radius:var(--radius-xl);overflow:hidden;aspect-ratio:4/5;background:var(--surface);box-shadow:var(--shadow-xl)">
+              <img src="images/ballet-academy.jpg" alt="Classical ballet training at the Ballet Academy of Chapel Hill" style="width:100%;height:100%;object-fit:cover;object-position:center 20%" width="600" height="750" loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 MECE Pillars of How the Ballet Academy Works -->
+        <div style="margin-top:var(--space-10)">
+          <div class="section-header reveal" style="margin-bottom:var(--space-7)">
+            <div class="overline">Program Architecture</div>
+            <h3 class="heading-1">How the Ballet Academy Works</h3>
+            <p class="lead">Four distinct, complementary pillars that form a complete classical education.</p>
+          </div>
+
+          <div class="pillar-grid">
+            <!-- 01: Classical Methodology -->
+            <div class="pillar-card reveal">
+              <div>
+                <div class="pillar-header">
+                  <span class="pillar-number">01</span>
+                  <span class="pillar-kicker">Technique &amp; Lineage</span>
+                </div>
+                <h4 class="pillar-title">Cecchetti &amp; Vaganova Methods</h4>
+                <p class="pillar-desc">
+                  Dancers train in two of the world's most respected classical systems. The Italian Cecchetti method develops clean footwork, anatomical purity, and centered balance, while the Russian Vaganova method builds expressive upper-body port de bras, dynamic turns, and powerful elevation.
+                </p>
+              </div>
+              <div class="pillar-meta">Multi-Day Weekly Technique Syllabus</div>
+            </div>
+
+            <!-- 02: Pointe & Classical Repertoire -->
+            <div class="pillar-card reveal reveal-delay-1">
+              <div>
+                <div class="pillar-header">
+                  <span class="pillar-number">02</span>
+                  <span class="pillar-kicker">Strength &amp; Artistry</span>
+                </div>
+                <h4 class="pillar-title">Pointe &amp; Classical Variations</h4>
+                <p class="pillar-desc">
+                  Progression onto pointe is never rushed. Dancers build foundational ankle, foot, and core alignment in Levels A and B before advancing to dedicated weekly Pointe classes and historic classical repertoire variations in Levels C and D under direct faculty supervision.
+                </p>
+              </div>
+              <div class="pillar-meta">Readiness-Based Pointe Advancement</div>
+            </div>
+
+            <!-- 03: Ballet Conditioning & Pilates -->
+            <div class="pillar-card reveal reveal-delay-2">
+              <div>
+                <div class="pillar-header">
+                  <span class="pillar-number">03</span>
+                  <span class="pillar-kicker">Biomechanics &amp; Safety</span>
+                </div>
+                <h4 class="pillar-title">Pilates &amp; Ballet Conditioning</h4>
+                <p class="pillar-desc">
+                  Classical artistry requires athletic durability. Integrated Pilates and ballet-specific floor conditioning strengthen deep core stabilizers, hip turnout muscles, spinal alignment, and safe flexibility so young dancers grow stronger while preventing overuse injuries.
+                </p>
+              </div>
+              <div class="pillar-meta">Built Into Weekly Academy Training</div>
+            </div>
+
+            <!-- 04: Enrollment Pathways -->
+            <div class="pillar-card reveal reveal-delay-3">
+              <div>
+                <div class="pillar-header">
+                  <span class="pillar-number">04</span>
+                  <span class="pillar-kicker">Program Integration</span>
+                </div>
+                <h4 class="pillar-title">Academy-Only or Paired with Company</h4>
+                <p class="pillar-desc">
+                  Students may enroll solely in the Ballet Academy (2 to 3 days per week by level) or combine Academy training with Renner Dance Company. Company members take additional days of Academy ballet alongside their Company classes for up to four nights of ballet weekly.
+                </p>
+              </div>
+              <div class="pillar-meta">Placement by Evaluation with Ms. Rossana</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         WHAT THE BALLET ACADEMY DOES FOR YOUR CHILD (MECE)
+    ====================================================== -->
+    <section class="section section-dark">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="overline" style="color:var(--gold-light)">Why Classical Training Matters</div>
+          <h2 class="heading-1" style="color:white">What the Ballet Academy Does for Your Child</h2>
+          <p class="lead" style="color:rgba(255,255,255,0.75);max-width:680px">
+            Whether your child dreams of a professional ballet career or simply wants to become the strongest, most poised version of themselves, conservatory ballet training delivers lifelong benefits that no other activity replicates.
+          </p>
+        </div>
+
+        <div class="grid-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6)">
+          <!-- Benefit 1: Physical Foundation -->
+          <div class="reveal" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-xl);padding:var(--space-7)">
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:var(--space-2)">01 &middot; Physical Development</div>
+            <h3 class="heading-3" style="color:white;margin-bottom:var(--space-3)">Posture, Alignment &amp; Injury-Free Strength</h3>
+            <p style="font-size:0.9375rem;color:rgba(255,255,255,0.78);line-height:1.78;margin:0">
+              Classical training teaches a child how to hold their spine, engage their core, and align their joints with anatomical precision. Through disciplined barre work and Pilates conditioning, dancers develop remarkable balance, coordination, and body awareness that protect growing bones and muscles.
+            </p>
+          </div>
+
+          <!-- Benefit 2: Technical Engine Across All Dance Styles -->
+          <div class="reveal reveal-delay-1" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-xl);padding:var(--space-7)">
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:var(--space-2)">02 &middot; Cross-Style Mastery</div>
+            <h3 class="heading-3" style="color:white;margin-bottom:var(--space-3)">The Technical Engine for Every Style of Dance</h3>
+            <p style="font-size:0.9375rem;color:rgba(255,255,255,0.78);line-height:1.78;margin:0">
+              Ballet is the universal grammar of movement. A dancer who masters classical line, extension, spotting, and foot articulation in the Ballet Academy immediately elevates their performance in lyrical, contemporary, jazz, and musical theatre, standing out effortlessly in auditions and competitions.
+            </p>
+          </div>
+
+          <!-- Benefit 3: Cognitive & Personal Growth -->
+          <div class="reveal reveal-delay-2" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-xl);padding:var(--space-7)">
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:var(--space-2)">03 &middot; Mind &amp; Character</div>
+            <h3 class="heading-3" style="color:white;margin-bottom:var(--space-3)">Mental Focus, Composure &amp; Quiet Confidence</h3>
+            <p style="font-size:0.9375rem;color:rgba(255,255,255,0.78);line-height:1.78;margin:0">
+              In a world of instant gratification, classical ballet teaches children the deeply rewarding discipline of incremental mastery. Translating complex combinations and classical music into fluid movement sharpens memory, focus, and resilience, building calm poise both on stage and in the classroom.
+            </p>
+          </div>
+
+          <!-- Benefit 4: Pre-Professional & Collegiate Pathways -->
+          <div class="reveal reveal-delay-3" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-xl);padding:var(--space-7)">
+            <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:var(--space-2)">04 &middot; Future Doors Opened</div>
+            <h3 class="heading-3" style="color:white;margin-bottom:var(--space-3)">Preparation for Elite Conservatories, Universities &amp; Companies</h3>
+            <p style="font-size:0.9375rem;color:rgba(255,255,255,0.78);line-height:1.78;margin:0">
+              Training under internationally decorated faculty gives ambitious dancers authentic classical pedigree. Our students are prepared to audition confidently for national summer intensives, university BFA dance programs, collegiate dance teams, and world-renowned professional ballet academies.
+            </p>
+          </div>
+        </div>
+
+        <!-- Stage Photography Showcase Inside Dark Section -->
+        <div class="stage-showcase-grid" style="margin-top:var(--space-8)">
+          <div class="stage-photo-card stage-photo-card--dark reveal">
+            <div class="stage-photo-frame">
+              <img src="images/stage-ballet-ensemble.jpg" alt="Ballet Academy of Chapel Hill classical ensemble performing on stage" width="1500" height="1000" loading="lazy">
+            </div>
+            <div class="stage-photo-caption">
+              <span class="stage-photo-caption-title">Classical Corps &amp; Ensemble Precision</span>
+              <span class="stage-photo-caption-tag">Stage Repertoire</span>
+            </div>
+          </div>
+
+          <div class="stage-photo-card stage-photo-card--dark reveal reveal-delay-1">
+            <div class="stage-photo-frame">
+              <img src="images/ballet-academy.jpg" alt="Classical pointe and variations artistry at the Ballet Academy of Chapel Hill" width="1200" height="800" loading="lazy">
+            </div>
+            <div class="stage-photo-caption">
+              <span class="stage-photo-caption-title">Pointe, Line &amp; Classical Expression</span>
+              <span class="stage-photo-caption-tag">Cecchetti &amp; Vaganova</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         ACADEMY LEVELS A, B, C & D (PREVIOUS DESIGN, PERFECTLY ALIGNED)
+    ====================================================== -->
+    <section id="levels" class="section section-surface">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="overline">Structured Progression</p>
+          <h2 class="heading-1">Levels A, B, C &amp; D</h2>
+          <p class="lead">
+            Dancers are placed into one of four progressive levels based on age, technical readiness, and experience. All placements are determined at Ms. Rossana's discretion, with mid-season evaluations in January.
+          </p>
+        </div>
+
+        <div class="ballet-levels-grid">
+          <!-- Level A -->
+          <div class="level-card reveal">
+            <div class="level-card-header" style="border-top-color:#4ade80">
+              <div class="level-card-name">Level A</div>
+              <div class="level-card-sub">Foundational Academy<br>2 Days / Week</div>
+            </div>
+            <div class="level-card-body">
+              <p class="ballet-level-intro">
+                Our entry-level Academy tier for dancers ready to commit to serious classical training. Builds strong postural alignment, turnout, and foundational barre and center work.
+              </p>
+              <div class="ballet-level-details">
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>2 days per week (Mondays &amp; Fridays)</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Foundational Cecchetti &amp; Vaganova technique</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Pre-pointe foot &amp; ankle strengthening</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Ballet-specific conditioning &amp; alignment</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Nutcracker &amp; Spring Showcase opportunities</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Level B -->
+          <div class="level-card reveal reveal-delay-1">
+            <div class="level-card-header" style="border-top-color:#f59e0b">
+              <div class="level-card-name">Level B</div>
+              <div class="level-card-sub">Intermediate Academy<br>2 Days / Week</div>
+            </div>
+            <div class="level-card-body">
+              <p class="ballet-level-intro">
+                For developing classical dancers advancing in technical complexity, musicality, and strength as they prepare for the demands of upper-level Academy work and pre-pointe readiness.
+              </p>
+              <div class="ballet-level-details">
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>2 days per week (Mondays &amp; Fridays)</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Intermediate classical technique &amp; adagio</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Pre-pointe readiness &amp; ankle articulation</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Ballet-specific Pilates &amp; core conditioning</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Nutcracker &amp; Spring Showcase opportunities</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Level C -->
+          <div class="level-card reveal reveal-delay-2">
+            <div class="level-card-header" style="border-top-color:#38bdf8">
+              <div class="level-card-name">Level C</div>
+              <div class="level-card-sub">Advanced Academy<br>3 Days / Week + Pointe</div>
+            </div>
+            <div class="level-card-body">
+              <p class="ballet-level-intro">
+                Intensive training for advanced dancers ready for extended technique classes and dedicated weekly Pointe work, with deeper focus on classical repertoire and artistry.
+              </p>
+              <div class="ballet-level-details">
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>3 days per week (Mondays, Thursdays &amp; Fridays)</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>1 hr 45 min advanced classical technique classes</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Dedicated weekly Pointe class on Thursdays</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Classical repertoire &amp; conditioning</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Eligible for invitation-only Variations coaching</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Level D -->
+          <div class="level-card reveal reveal-delay-3">
+            <div class="level-card-header" style="border-top-color:var(--gold)">
+              <div class="level-card-name">Level D</div>
+              <div class="level-card-sub">Pre-Professional<br>2 to 3 Days / Week + Pointe</div>
+            </div>
+            <div class="level-card-body">
+              <p class="ballet-level-intro">
+                Our highest pre-professional level for senior and elite classical dancers training at a conservatory standard in technique, pointe, variations, and stage performance.
+              </p>
+              <div class="ballet-level-details">
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Thursdays, Fridays &amp; Company ballet classes</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Pre-professional Cecchetti &amp; Vaganova mastery</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Dedicated weekly Pointe class &amp; solo repertoire</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Classical variations &amp; Pilates conditioning</span></div>
+                <div class="level-card-detail"><span class="level-card-icon">&#10022;</span><span>Priority consideration for YAGP, UBC &amp; ADC</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         PERFORMANCE OPPORTUNITIES
+    ====================================================== -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="overline">Stage Experience</div>
+          <h2 class="heading-1">Performance Opportunities</h2>
+          <p class="lead">
+            Classical training culminates on stage. Every Ballet Academy student is invited to perform in two major classical productions each season, building theatrical presence and confidence in front of live audiences.
+          </p>
         </div>
 
         <div class="pillar-grid">
-          <!-- 01: Classical Methodology -->
+          <!-- December Production: The Nutcracker -->
+          <div class="pillar-card reveal">
+            <div>
+              <div class="pillar-header">
+                <span class="pillar-number">I</span>
+                <span class="pillar-kicker">December &middot; Holiday Tradition</span>
+              </div>
+              <h3 class="pillar-title">The Nutcracker</h3>
+              <p class="pillar-desc" style="margin-bottom:var(--space-5)">
+                Our annual winter production of <em>The Nutcracker</em> gives Ballet Academy dancers the opportunity to perform in one of classical ballet's most beloved full-stage traditions, from corps de ballet ensembles to demi-soloist and principal variations.
+              </p>
+              <div class="level-spec-list">
+                <div class="level-spec-row">
+                  <span class="level-spec-label">Rehearsals</span>
+                  <span class="level-spec-value">Begin the week of August 25; two Saturdays per month (Sept to Dec) plus Thanksgiving week rehearsal</span>
+                </div>
+                <div class="level-spec-row">
+                  <span class="level-spec-label">Eligibility</span>
+                  <span class="level-spec-value">All Ballet Academy levels (Levels A, B, C &amp; D)</span>
+                </div>
+                <div class="level-spec-row">
+                  <span class="level-spec-label">Stage Focus</span>
+                  <span class="level-spec-value">Classical character, corps precision &amp; solo repertoire</span>
+                </div>
+              </div>
+            </div>
+            <div class="pillar-meta">December Stage Production</div>
+          </div>
+
+          <!-- May Production: Spring Academy Showcase -->
+          <div class="pillar-card reveal reveal-delay-1">
+            <div>
+              <div class="pillar-header">
+                <span class="pillar-number">II</span>
+                <span class="pillar-kicker">May &middot; End-of-Season Production</span>
+              </div>
+              <h3 class="pillar-title">Spring Academy Showcase</h3>
+              <p class="pillar-desc" style="margin-bottom:var(--space-5)">
+                Held every May, the Spring Academy Showcase celebrates a full season of technical growth. Dancers present classical repertoire, original choreography, and variations that highlight their progression in technique and pointe work.
+              </p>
+              <div class="level-spec-list">
+                <div class="level-spec-row">
+                  <span class="level-spec-label">Rehearsals</span>
+                  <span class="level-spec-value">Conducted directly during weekly Ballet Academy class time with no extra weekend rehearsals</span>
+                </div>
+                <div class="level-spec-row">
+                  <span class="level-spec-label">Eligibility</span>
+                  <span class="level-spec-value">All Ballet Academy levels (Levels A, B, C &amp; D)</span>
+                </div>
+                <div class="level-spec-row">
+                  <span class="level-spec-label">Stage Focus</span>
+                  <span class="level-spec-value">Classical repertoire, pointe variations &amp; ensemble artistry</span>
+                </div>
+              </div>
+            </div>
+            <div class="pillar-meta">May Stage Production</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         COMPETITIVE VARIATIONS TRACK
+    ====================================================== -->
+    <section class="section section-surface">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="overline">Invitation-Only Opportunity</div>
+          <h2 class="heading-1">Competitive Variations Track</h2>
+          <p class="lead">
+            Select Ballet Academy dancers are evaluated and invited at Ms. Rossana's discretion to learn and compete historic classical variations, contemporary solos, and classical ensemble works on the international stage.
+          </p>
+        </div>
+
+        <!-- 3-Column MECE Editorial Pillars -->
+        <div class="pillar-grid--3col">
+          <!-- 01: Selection -->
           <div class="pillar-card reveal">
             <div>
               <div class="pillar-header">
                 <span class="pillar-number">01</span>
-                <span class="pillar-kicker">Technique &amp; Lineage</span>
+                <span class="pillar-kicker">Evaluation &amp; Selection</span>
               </div>
-              <h4 class="pillar-title">Cecchetti &amp; Vaganova Methods</h4>
+              <h3 class="pillar-title">Invitation by the Ballet Mistress</h3>
               <p class="pillar-desc">
-                Dancers train in two of the world's most respected classical systems. The Italian Cecchetti method develops clean footwork, anatomical purity, and centered balance, while the Russian Vaganova method builds expressive upper-body port de bras, dynamic turns, and powerful elevation.
+                Participation in the Competitive Variations Track is by invitation at Ms. Rossana Nesta's discretion. Dancers are selected based on technical readiness, work ethic in weekly Academy classes, and readiness to represent the Ballet Academy in solo classical variations or ballet ensembles.
               </p>
             </div>
-            <div class="pillar-meta">Multi-Day Weekly Technique Syllabus</div>
+            <div class="pillar-meta">Classical &amp; Contemporary Categories</div>
           </div>
 
-          <!-- 02: Pointe & Classical Repertoire -->
+          <!-- 02: Coaching -->
           <div class="pillar-card reveal reveal-delay-1">
             <div>
               <div class="pillar-header">
                 <span class="pillar-number">02</span>
-                <span class="pillar-kicker">Strength &amp; Artistry</span>
+                <span class="pillar-kicker">Bespoke Mentorship</span>
               </div>
-              <h4 class="pillar-title">Pointe &amp; Classical Variations</h4>
+              <h3 class="pillar-title">Dedicated One-on-One Coaching</h3>
               <p class="pillar-desc">
-                Progression onto pointe is never rushed. Dancers build foundational ankle, foot, and core alignment in Levels A and B before advancing to dedicated weekly Pointe classes and historic classical repertoire variations in Levels C and D under direct faculty supervision.
+                Each variation is tailored to highlight the individual dancer's technical and artistic strengths. Invited soloists receive four guaranteed 30-minute private coaching sessions per month, working closely with both Ms. Rossana Nesta and Ms. Rachel Carr to polish every detail of their repertoire.
               </p>
             </div>
-            <div class="pillar-meta">Readiness-Based Pointe Advancement</div>
+            <div class="pillar-meta">4 Monthly Private Sessions &middot; Dual Faculty Coaching</div>
           </div>
 
-          <!-- 03: Ballet Conditioning & Pilates -->
+          <!-- 03: International Stage -->
           <div class="pillar-card reveal reveal-delay-2">
             <div>
               <div class="pillar-header">
                 <span class="pillar-number">03</span>
-                <span class="pillar-kicker">Biomechanics &amp; Safety</span>
+                <span class="pillar-kicker">Prestigious Platforms</span>
               </div>
-              <h4 class="pillar-title">Pilates &amp; Ballet Conditioning</h4>
+              <h3 class="pillar-title">Premier Ballet Competitions</h3>
               <p class="pillar-desc">
-                Classical artistry requires athletic durability. Integrated Pilates and ballet-specific floor conditioning strengthen deep core stabilizers, hip turnout muscles, spinal alignment, and safe flexibility so young dancers grow stronger while preventing overuse injuries.
+                Dancers compete in both Classical and Contemporary categories at the nation's premier ballet events, including the <strong>Universal Ballet Competition (UBC)</strong>, the invitation-only <strong>Youth America Grand Prix (YAGP)</strong>, and the <strong>American Dance Competition (ADC)</strong>, where top conservatory directors scout talent.
               </p>
             </div>
-            <div class="pillar-meta">Built Into Weekly Academy Training</div>
+            <div class="pillar-meta">UBC &middot; YAGP &middot; ADC &middot; NYCDA</div>
           </div>
+        </div>
 
-          <!-- 04: Enrollment Pathways -->
-          <div class="pillar-card reveal reveal-delay-3">
+        <!-- International Honors & Balanchine Foundation Banner -->
+        <div class="honors-banner reveal">
+          <div class="honors-banner-grid">
             <div>
-              <div class="pillar-header">
-                <span class="pillar-number">04</span>
-                <span class="pillar-kicker">Program Integration</span>
-              </div>
-              <h4 class="pillar-title">Academy-Only or Paired with Company</h4>
-              <p class="pillar-desc">
-                Students may enroll solely in the Ballet Academy (2 to 3 days per week by level) or combine Academy training with Renner Dance Company. Company members take additional days of Academy ballet alongside their Company classes for up to four nights of ballet weekly.
+              <div class="overline" style="color:var(--gold-light);margin-bottom:var(--space-2)">International Recognition</div>
+              <h3 class="heading-2" style="color:white;margin-bottom:var(--space-3)">Award-Winning Classical Pedigree</h3>
+              <p style="font-size:0.9375rem;color:rgba(255,255,255,0.78);line-height:1.75;margin:0">
+                Between 2013 and 2019, Ballet Mistress Rossana Nesta was repeatedly honored at the international finals of <strong>Youth America Grand Prix (YAGP)</strong> and the <strong>American Dance Competition (ADC)</strong>, and received an official license from the <strong>George Balanchine Foundation</strong> in New York to stage iconic New York City Ballet repertoire.
               </p>
             </div>
-            <div class="pillar-meta">Placement by Evaluation with Ms. Rossana</div>
+
+            <div class="honors-badges-grid">
+              <div class="honors-badge-card">
+                <div class="honors-badge-org">YAGP &amp; ADC Honors</div>
+                <div class="honors-badge-title">Outstanding Teacher &amp; Coach</div>
+                <div class="honors-badge-sub">Multiple international coaching &amp; choreography awards</div>
+              </div>
+              <div class="honors-badge-card">
+                <div class="honors-badge-org">YAGP &amp; ADC Honors</div>
+                <div class="honors-badge-title">Outstanding Ballet School</div>
+                <div class="honors-badge-sub">Recognized for excellence in classical conservatory training</div>
+              </div>
+              <div class="honors-badge-card">
+                <div class="honors-badge-org">New York City</div>
+                <div class="honors-badge-title">Balanchine Foundation</div>
+                <div class="honors-badge-sub">Licensed to stage <em>Divertimento No. 15</em>, <em>Who Cares?</em> &amp; <em>Western Symphony</em></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- What the Ballet Academy Does for Your Child (Parent Value Proposition - MECE) -->
-  <section class="section section-dark">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="overline" style="color:var(--gold-light)">Why Classical Training Matters</div>
-        <h2 class="heading-1" style="color:white">What the Ballet Academy Does for Your Child</h2>
-        <p class="lead" style="color:rgba(255,255,255,0.75);max-width:680px">
-          Whether your child dreams of a professional ballet career or simply wants to become the strongest, most poised version of themselves, conservatory ballet training delivers lifelong benefits that no other activity replicates.
-        </p>
-      </div>
-
-      <div class="grid-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-6)">
-        <!-- Benefit 1: Physical Foundation -->
-        <div class="reveal" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-xl);padding:var(--space-7)">
-          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:var(--space-2)">01 &middot; Physical Development</div>
-          <h3 class="heading-3" style="color:white;margin-bottom:var(--space-3)">Posture, Alignment &amp; Injury-Free Strength</h3>
-          <p style="font-size:0.9375rem;color:rgba(255,255,255,0.78);line-height:1.78;margin:0">
-            Classical training teaches a child how to hold their spine, engage their core, and align their joints with anatomical precision. Through disciplined barre work and Pilates conditioning, dancers develop remarkable balance, coordination, and body awareness that protect growing bones and muscles.
+    <!-- ======================================================
+         WHERE OUR FACULTY'S DANCERS HAVE GONE (INSTITUTION LOGOS)
+    ====================================================== -->
+    <section id="placements" class="section">
+      <div class="container">
+        <div class="section-header reveal" style="max-width:720px">
+          <div class="overline">Proven Global Track Record</div>
+          <h2 class="heading-1">Where Our Faculty's Dancers Have Gone</h2>
+          <p class="lead">
+            Dancers trained and mentored by our Ballet Academy faculty have earned contracts, apprenticeships, and places at the world's most prestigious professional ballet companies and academies.
           </p>
         </div>
 
-        <!-- Benefit 2: Technical Engine Across All Dance Styles -->
-        <div class="reveal reveal-delay-1" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-xl);padding:var(--space-7)">
-          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:var(--space-2)">02 &middot; Cross-Style Mastery</div>
-          <h3 class="heading-3" style="color:white;margin-bottom:var(--space-3)">The Technical Engine for Every Style of Dance</h3>
-          <p style="font-size:0.9375rem;color:rgba(255,255,255,0.78);line-height:1.78;margin:0">
-            Ballet is the universal grammar of movement. A dancer who masters classical line, extension, spotting, and foot articulation in the Ballet Academy immediately elevates their performance in lyrical, contemporary, jazz, and musical theatre, standing out effortlessly in auditions and competitions.
+        <div class="institution-logos-grid">
+          <!-- 1. New York City Ballet -->
+          <div class="institution-logo-card reveal">
+            <div class="institution-crest" aria-hidden="true">
+              <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="6" y="8" width="52" height="28" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M16 36V18C16 14.6863 18.6863 12 22 12C25.3137 12 28 14.6863 28 18V36" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M36 36V18C36 14.6863 38.6863 12 42 12C45.3137 12 48 14.6863 48 18V36" stroke="currentColor" stroke-width="1.5"/>
+                <line x1="2" y1="36" x2="62" y2="36" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+            </div>
+            <div class="institution-wordmark institution-wordmark--sans">New York City Ballet</div>
+            <div class="institution-sub">Lincoln Center &middot; New York</div>
+          </div>
+
+          <!-- 2. American Ballet Theatre -->
+          <div class="institution-logo-card reveal reveal-delay-1">
+            <div class="institution-crest" aria-hidden="true">
+              <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="32" cy="22" r="17" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="32" cy="22" r="13.5" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2 2"/>
+                <text x="32" y="26" text-anchor="middle" fill="currentColor" font-family="Cormorant Garamond, Georgia, serif" font-size="13" font-weight="600" letter-spacing="1.5">ABT</text>
+              </svg>
+            </div>
+            <div class="institution-wordmark">American Ballet Theatre</div>
+            <div class="institution-sub">New York City</div>
+          </div>
+
+          <!-- 3. The Royal Ballet London -->
+          <div class="institution-logo-card reveal reveal-delay-2">
+            <div class="institution-crest" aria-hidden="true">
+              <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 30L14 16L24 22L32 10L40 22L50 16L46 30H18Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <line x1="17" y1="34" x2="47" y2="34" stroke="currentColor" stroke-width="1.6"/>
+                <circle cx="32" cy="7" r="1.8" fill="currentColor"/>
+                <circle cx="13" cy="13" r="1.5" fill="currentColor"/>
+                <circle cx="51" cy="13" r="1.5" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="institution-wordmark">The Royal Ballet</div>
+            <div class="institution-sub">Covent Garden &middot; London</div>
+          </div>
+
+          <!-- 4. San Francisco Ballet -->
+          <div class="institution-logo-card reveal reveal-delay-3">
+            <div class="institution-crest" aria-hidden="true">
+              <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 36V10M44 36V10" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M8 32C14 26 20 14 20 14C20 14 25 26 32 26C39 26 44 14 44 14C44 14 50 26 56 32" stroke="currentColor" stroke-width="1.4"/>
+                <line x1="6" y1="32" x2="58" y2="32" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="institution-wordmark institution-wordmark--sans">San Francisco Ballet</div>
+            <div class="institution-sub">San Francisco &middot; California</div>
+          </div>
+
+          <!-- 5. Princess Grace Academy -->
+          <div class="institution-logo-card reveal">
+            <div class="institution-crest" aria-hidden="true">
+              <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="32,6 44,22 32,38 20,22" stroke="currentColor" stroke-width="1.6"/>
+                <polygon points="32,11 39,22 32,33 25,22" stroke="currentColor" stroke-width="1"/>
+                <circle cx="32" cy="22" r="2" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="institution-wordmark">Princess Grace Academy</div>
+            <div class="institution-sub">Monte Carlo &middot; Monaco</div>
+          </div>
+
+          <!-- 6. The Royal Ballet School -->
+          <div class="institution-logo-card reveal reveal-delay-1">
+            <div class="institution-crest" aria-hidden="true">
+              <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 8H44V23C44 31 32 37 32 37C32 37 20 31 20 23V8Z" stroke="currentColor" stroke-width="1.6"/>
+                <line x1="32" y1="8" x2="32" y2="36" stroke="currentColor" stroke-width="1.2"/>
+                <line x1="20" y1="20" x2="44" y2="20" stroke="currentColor" stroke-width="1.2"/>
+              </svg>
+            </div>
+            <div class="institution-wordmark">The Royal Ballet School</div>
+            <div class="institution-sub">White Lodge &middot; London</div>
+          </div>
+
+          <!-- 7. Pittsburgh Ballet Theatre -->
+          <div class="institution-logo-card reveal reveal-delay-2">
+            <div class="institution-crest" aria-hidden="true">
+              <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 34C18 18 26 10 32 10C38 10 46 18 52 34" stroke="currentColor" stroke-width="1.6"/>
+                <path d="M20 34C24 22 28 16 32 16C36 16 40 22 44 34" stroke="currentColor" stroke-width="1.2"/>
+                <line x1="10" y1="34" x2="54" y2="34" stroke="currentColor" stroke-width="1.6"/>
+              </svg>
+            </div>
+            <div class="institution-wordmark">Pittsburgh Ballet Theatre</div>
+            <div class="institution-sub">Pittsburgh &middot; Pennsylvania</div>
+          </div>
+
+          <!-- 8. Houston Ballet -->
+          <div class="institution-logo-card reveal reveal-delay-3">
+            <div class="institution-crest" aria-hidden="true">
+              <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="32,7 35.5,17.5 46.5,17.5 37.5,24 41,34.5 32,28 23,34.5 26.5,24 17.5,17.5 28.5,17.5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="institution-wordmark institution-wordmark--sans">Houston Ballet</div>
+            <div class="institution-sub">Houston &middot; Texas</div>
+          </div>
+
+          <!-- 9. Ballet West -->
+          <div class="institution-logo-card reveal">
+            <div class="institution-crest" aria-hidden="true">
+              <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 34L22 14L31 25L41 10L56 34H8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <path d="M25 34L32 23L41 34" stroke="currentColor" stroke-width="1.1"/>
+              </svg>
+            </div>
+            <div class="institution-wordmark institution-wordmark--sans">Ballet West</div>
+            <div class="institution-sub">Salt Lake City &middot; Utah</div>
+          </div>
+
+          <!-- 10. Carolina Ballet -->
+          <div class="institution-logo-card reveal reveal-delay-1">
+            <div class="institution-crest" aria-hidden="true">
+              <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 30C16 20 24 12 34 12C41 12 46 16 48 22C43 20 37 22 33 27C29 32 22 33 16 30Z" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M14 35H50" stroke="currentColor" stroke-width="1.4"/>
+              </svg>
+            </div>
+            <div class="institution-wordmark">Carolina Ballet</div>
+            <div class="institution-sub">Raleigh &middot; North Carolina</div>
+          </div>
+
+          <!-- 11. Atlanta Ballet -->
+          <div class="institution-logo-card reveal reveal-delay-2">
+            <div class="institution-crest" aria-hidden="true">
+              <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32 34C22 30 14 21 12 11C19 15 26 19 32 26C38 19 45 15 52 11C50 21 42 30 32 34Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                <circle cx="32" cy="13" r="2.2" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="institution-wordmark institution-wordmark--sans">Atlanta Ballet</div>
+            <div class="institution-sub">Atlanta &middot; Georgia</div>
+          </div>
+
+          <!-- 12. Royal Danish Ballet -->
+          <div class="institution-logo-card reveal reveal-delay-3">
+            <div class="institution-crest" aria-hidden="true">
+              <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 31H44L47 18L38 23L32 12L26 23L17 18L20 31Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M32 7V12M29.5 9.5H34.5" stroke="currentColor" stroke-width="1.4"/>
+                <line x1="19" y1="35" x2="45" y2="35" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+            </div>
+            <div class="institution-wordmark">Royal Danish Ballet</div>
+            <div class="institution-sub">Copenhagen &middot; Denmark</div>
+          </div>
+        </div>
+
+        <p class="reveal" style="text-align:center;font-size:0.875rem;color:var(--ink-muted);margin-top:var(--space-6)">
+          Additional alumni placements by our faculty include <strong>English National Ballet School (London)</strong>, <strong>Finnish National Opera and Ballet</strong>, <strong>Richmond Ballet</strong>, <strong>Ballet Austin</strong>, <strong>Nashville Ballet</strong>, and <strong>Ballet Idaho</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         BALLET ACADEMY FACULTY (ROSSANA NESTA, RACHEL CARR & CHAVELI PEÑA)
+    ====================================================== -->
+    <section id="faculty" class="section section-surface">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="overline">World-Class Instruction</div>
+          <h2 class="heading-1">Ballet Academy Faculty</h2>
+          <p class="lead">
+            Led by Ballet Mistress Rossana Nesta alongside Assistant Director Rachel Carr and faculty instructor Chaveli Pe&ntilde;a, our faculty brings authentic European conservatory lineage and professional company experience to Chapel Hill.
           </p>
         </div>
 
-        <!-- Benefit 3: Cognitive & Personal Growth -->
-        <div class="reveal reveal-delay-2" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-xl);padding:var(--space-7)">
-          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:var(--space-2)">03 &middot; Mind &amp; Character</div>
-          <h3 class="heading-3" style="color:white;margin-bottom:var(--space-3)">Mental Focus, Composure &amp; Quiet Confidence</h3>
-          <p style="font-size:0.9375rem;color:rgba(255,255,255,0.78);line-height:1.78;margin:0">
-            In a world of instant gratification, classical ballet teaches children the deeply rewarding discipline of incremental mastery. Translating complex combinations and classical music into fluid movement sharpens memory, focus, and resilience, building calm poise both on stage and in the classroom.
-          </p>
-        </div>
-
-        <!-- Benefit 4: Pre-Professional & Collegiate Pathways -->
-        <div class="reveal reveal-delay-3" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-xl);padding:var(--space-7)">
-          <div style="font-size:0.7rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold-light);margin-bottom:var(--space-2)">04 &middot; Future Doors Opened</div>
-          <h3 class="heading-3" style="color:white;margin-bottom:var(--space-3)">Preparation for Elite Conservatories, Universities &amp; Companies</h3>
-          <p style="font-size:0.9375rem;color:rgba(255,255,255,0.78);line-height:1.78;margin:0">
-            Training under internationally decorated faculty gives ambitious dancers authentic classical pedigree. Our students are prepared to audition confidently for national summer intensives, university BFA dance programs, collegiate dance teams, and world-renowned professional ballet academies.
-          </p>
-        </div>
-      </div>
-
-      <!-- Stage Photography Showcase Inside Dark Section -->
-      <div class="stage-showcase-grid" style="margin-top:var(--space-8)">
-        <div class="stage-photo-card stage-photo-card--dark reveal">
-          <div class="stage-photo-frame">
-            <img src="images/stage-ballet-ensemble.jpg" alt="Ballet Academy of Chapel Hill classical ensemble performing on stage" width="1500" height="1000" loading="lazy">
+        <!-- 1. Rossana Nesta -->
+        <div class="faculty-founder reveal">
+          <div class="faculty-founder-img">
+            <img src="images/faculty-rossana.jpg" alt="Rossana Nesta, Ballet Mistress and Academy Director" width="400" height="533" loading="lazy">
           </div>
-          <div class="stage-photo-caption">
-            <span class="stage-photo-caption-title">Classical Corps &amp; Ensemble Precision</span>
-            <span class="stage-photo-caption-tag">Stage Repertoire</span>
-          </div>
-        </div>
-
-        <div class="stage-photo-card stage-photo-card--dark reveal reveal-delay-1">
-          <div class="stage-photo-frame">
-            <img src="images/ballet-academy.jpg" alt="Classical pointe and variations artistry at the Ballet Academy of Chapel Hill" width="1200" height="800" loading="lazy">
-          </div>
-          <div class="stage-photo-caption">
-            <span class="stage-photo-caption-title">Pointe, Line &amp; Classical Expression</span>
-            <span class="stage-photo-caption-tag">Cecchetti &amp; Vaganova</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Academy Levels A, B, C & D (Aligned Grid & Aligned Text Rows) -->
-  <section id="levels" class="section section-surface">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="overline">Structured Progression</div>
-        <h2 class="heading-1">Academy Levels A, B, C &amp; D</h2>
-        <p class="lead">
-          Dancers are placed into one of four progressive levels at Ms. Rossana's discretion based on technical readiness, physical development, and artistry, with mid-season evaluations each January.
-        </p>
-      </div>
-
-      <div class="ballet-levels-grid">
-        <!-- Level A -->
-        <div class="ballet-level-card reveal">
-          <div class="level-card-header">
-            <div class="level-badge">Level A</div>
-            <span class="ballet-level-tier">Foundational Academy</span>
-            <span class="ballet-level-schedule">2 Days / Week &middot; Mon &amp; Fri</span>
-          </div>
-          <div class="level-card-body">
-            <p class="ballet-level-desc">
-              Builds the essential classical foundation. Dancers develop proper spinal alignment, turnout from the hip, classical positions of the feet and arms, and musical phrasing at the barre and in center.
-            </p>
-            <div class="level-spec-list">
-              <div class="level-spec-row">
-                <span class="level-spec-label">Technique</span>
-                <span class="level-spec-value">Foundational Cecchetti &amp; Vaganova barre &amp; center</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Pointe Prep</span>
-                <span class="level-spec-value">Intrinsic foot, ankle &amp; demi-pointe strengthening</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Conditioning</span>
-                <span class="level-spec-value">Postural alignment, core stability &amp; safe flexibility</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Schedule</span>
-                <span class="level-spec-value">Mondays (90 min) &amp; Fridays (75 min)</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Repertoire</span>
-                <span class="level-spec-value">The Nutcracker &amp; Spring Academy Showcase</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Level B -->
-        <div class="ballet-level-card reveal reveal-delay-1">
-          <div class="level-card-header">
-            <div class="level-badge">Level B</div>
-            <span class="ballet-level-tier">Intermediate Academy</span>
-            <span class="ballet-level-schedule">2 Days / Week &middot; Mon &amp; Fri</span>
-          </div>
-          <div class="level-card-body">
-            <p class="ballet-level-desc">
-              Expands technical vocabulary with longer adagio phrases, pirouette preparation, petit and grand allegro, and rigorous pre-pointe conditioning to prepare dancers for the transition to pointe work.
-            </p>
-            <div class="level-spec-list">
-              <div class="level-spec-row">
-                <span class="level-spec-label">Technique</span>
-                <span class="level-spec-value">Intermediate Cecchetti &amp; Vaganova syllabus</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Pointe Prep</span>
-                <span class="level-spec-value">Pre-pointe readiness evaluation &amp; ankle articulation</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Conditioning</span>
-                <span class="level-spec-value">Ballet-specific Pilates, turnout &amp; back strength</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Schedule</span>
-                <span class="level-spec-value">Mondays (90 min) &amp; Fridays (75 min)</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Repertoire</span>
-                <span class="level-spec-value">Classical ensemble work, Nutcracker &amp; Spring Showcase</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Level C -->
-        <div class="ballet-level-card reveal reveal-delay-2">
-          <div class="level-card-header">
-            <div class="level-badge">Level C</div>
-            <span class="ballet-level-tier">Advanced Academy</span>
-            <span class="ballet-level-schedule">3 Days / Week + Dedicated Pointe</span>
-          </div>
-          <div class="level-card-body">
-            <p class="ballet-level-desc">
-              Intensive classical training for dancers ready for extended 1-hour-45-minute technique classes, dedicated weekly Pointe classes, classical repertoire study, and invitation-only variations coaching.
-            </p>
-            <div class="level-spec-list">
-              <div class="level-spec-row">
-                <span class="level-spec-label">Technique</span>
-                <span class="level-spec-value">Advanced Cecchetti &amp; Vaganova barre, adagio &amp; allegro</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Pointe Work</span>
-                <span class="level-spec-value">Dedicated Thursday Pointe class &amp; center combinations</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Conditioning</span>
-                <span class="level-spec-value">Advanced Pilates, extension control &amp; stamina</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Schedule</span>
-                <span class="level-spec-value">Mon, Thu (+ Pointe) &amp; Fri (1 hr 45 min classes)</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Repertoire</span>
-                <span class="level-spec-value">Classical variations, Nutcracker &amp; competition eligibility</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Level D -->
-        <div class="ballet-level-card reveal reveal-delay-3">
-          <div class="level-card-header">
-            <div class="level-badge">Level D</div>
-            <span class="ballet-level-tier">Pre-Professional Academy</span>
-            <span class="ballet-level-schedule">Advanced Schedule + Pointe</span>
-          </div>
-          <div class="level-card-body">
-            <p class="ballet-level-desc">
-              Our highest conservatory tier for senior and pre-professional dancers. Focuses on virtuosic pointe technique, solo classical variations, artistic maturity, and preparation for professional auditions.
-            </p>
-            <div class="level-spec-list">
-              <div class="level-spec-row">
-                <span class="level-spec-label">Technique</span>
-                <span class="level-spec-value">Pre-professional Vaganova &amp; Cecchetti mastery</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Pointe Work</span>
-                <span class="level-spec-value">Advanced pointe repertoire, turns &amp; solo variations</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Conditioning</span>
-                <span class="level-spec-value">Pre-professional Pilates &amp; performance conditioning</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Schedule</span>
-                <span class="level-spec-value">Thu (Pointe + 1 hr 45 min class), Fri &amp; Company ballet</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Repertoire</span>
-                <span class="level-spec-value">Principal variations, YAGP/UBC/ADC &amp; conservatory prep</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Competitive Variations Track (Modern, Elegant Editorial Design) -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="overline">Invitation-Only Opportunity</div>
-        <h2 class="heading-1">Competitive Variations Track</h2>
-        <p class="lead">
-          Select Ballet Academy dancers are evaluated and invited at Ms. Rossana's discretion to learn and compete historic classical variations, contemporary solos, and classical ensemble works on the international stage.
-        </p>
-      </div>
-
-      <!-- 3-Column MECE Editorial Pillars -->
-      <div class="pillar-grid--3col">
-        <!-- 01: Selection -->
-        <div class="pillar-card reveal">
-          <div>
-            <div class="pillar-header">
-              <span class="pillar-number">01</span>
-              <span class="pillar-kicker">Evaluation &amp; Selection</span>
-            </div>
-            <h3 class="pillar-title">Invitation by the Ballet Mistress</h3>
-            <p class="pillar-desc">
-              Participation in the Competitive Variations Track is by invitation at Ms. Rossana Nesta's discretion. Dancers are selected based on technical readiness, work ethic in weekly Academy classes, and readiness to represent the Ballet Academy in solo classical variations or ballet ensembles.
-            </p>
-          </div>
-          <div class="pillar-meta">Classical &amp; Contemporary Categories</div>
-        </div>
-
-        <!-- 02: Coaching -->
-        <div class="pillar-card reveal reveal-delay-1">
-          <div>
-            <div class="pillar-header">
-              <span class="pillar-number">02</span>
-              <span class="pillar-kicker">Bespoke Mentorship</span>
-            </div>
-            <h3 class="pillar-title">Dedicated One-on-One Coaching</h3>
-            <p class="pillar-desc">
-              Each variation is tailored to highlight the individual dancer's technical and artistic strengths. Invited soloists receive four guaranteed 30-minute private coaching sessions per month, working closely with both Ms. Rossana Nesta and Ms. Rachel Carr to polish every detail of their repertoire.
-            </p>
-          </div>
-          <div class="pillar-meta">4 Monthly Private Sessions &middot; Dual Faculty Coaching</div>
-        </div>
-
-        <!-- 03: International Stage -->
-        <div class="pillar-card reveal reveal-delay-2">
-          <div>
-            <div class="pillar-header">
-              <span class="pillar-number">03</span>
-              <span class="pillar-kicker">Prestigious Platforms</span>
-            </div>
-            <h3 class="pillar-title">Premier Ballet Competitions</h3>
-            <p class="pillar-desc">
-              Dancers compete in both Classical and Contemporary categories at the nation's premier ballet events, including the <strong>Universal Ballet Competition (UBC)</strong>, the invitation-only <strong>Youth America Grand Prix (YAGP)</strong>, and the <strong>American Dance Competition (ADC)</strong>, where top conservatory directors scout talent.
-            </p>
-          </div>
-          <div class="pillar-meta">UBC &middot; YAGP &middot; ADC &middot; NYCDA</div>
-        </div>
-      </div>
-
-      <!-- International Honors & Balanchine Foundation Banner -->
-      <div class="honors-banner reveal">
-        <div class="honors-banner-grid">
-          <div>
-            <div class="overline" style="color:var(--gold-light);margin-bottom:var(--space-2)">International Recognition</div>
-            <h3 class="heading-2" style="color:white;margin-bottom:var(--space-3)">Award-Winning Classical Pedigree</h3>
-            <p style="font-size:0.9375rem;color:rgba(255,255,255,0.78);line-height:1.75;margin:0">
-              Between 2013 and 2019, Ballet Mistress Rossana Nesta was repeatedly honored at the international finals of <strong>Youth America Grand Prix (YAGP)</strong> and the <strong>American Dance Competition (ADC)</strong>, and received an official license from the <strong>George Balanchine Foundation</strong> in New York to stage iconic New York City Ballet repertoire.
-            </p>
-          </div>
-
-          <div class="honors-badges-grid">
-            <div class="honors-badge-card">
-              <div class="honors-badge-org">YAGP &amp; ADC Honors</div>
-              <div class="honors-badge-title">Outstanding Teacher &amp; Coach</div>
-              <div class="honors-badge-sub">Multiple international coaching &amp; choreography awards</div>
-            </div>
-            <div class="honors-badge-card">
-              <div class="honors-badge-org">YAGP &amp; ADC Honors</div>
-              <div class="honors-badge-title">Outstanding Ballet School</div>
-              <div class="honors-badge-sub">Recognized for excellence in classical conservatory training</div>
-            </div>
-            <div class="honors-badge-card">
-              <div class="honors-badge-org">New York City</div>
-              <div class="honors-badge-title">Balanchine Foundation</div>
-              <div class="honors-badge-sub">Licensed to stage <em>Divertimento No. 15</em>, <em>Who Cares?</em> &amp; <em>Western Symphony</em></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Where Our Faculty's Dancers Have Gone (Prestigious Institution Logos Showcase) -->
-  <section id="placements" class="section section-surface">
-    <div class="container">
-      <div class="section-header reveal" style="max-width:720px">
-        <div class="overline">Proven Global Track Record</div>
-        <h2 class="heading-1">Where Our Faculty's Dancers Have Gone</h2>
-        <p class="lead">
-          Dancers trained and mentored by our Ballet Academy faculty have earned contracts, apprenticeships, and places at the world's most prestigious professional ballet companies and academies.
-        </p>
-      </div>
-
-      <div class="institution-logos-grid">
-        <!-- 1. New York City Ballet -->
-        <div class="institution-logo-card reveal">
-          <div class="institution-crest" aria-hidden="true">
-            <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="6" y="8" width="52" height="28" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M16 36V18C16 14.6863 18.6863 12 22 12C25.3137 12 28 14.6863 28 18V36" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M36 36V18C36 14.6863 38.6863 12 42 12C45.3137 12 48 14.6863 48 18V36" stroke="currentColor" stroke-width="1.5"/>
-              <line x1="2" y1="36" x2="62" y2="36" stroke="currentColor" stroke-width="1.8"/>
-            </svg>
-          </div>
-          <div class="institution-wordmark institution-wordmark--sans">New York City Ballet</div>
-          <div class="institution-sub">Lincoln Center &middot; New York</div>
-        </div>
-
-        <!-- 2. American Ballet Theatre -->
-        <div class="institution-logo-card reveal reveal-delay-1">
-          <div class="institution-crest" aria-hidden="true">
-            <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="32" cy="22" r="17" stroke="currentColor" stroke-width="1.5"/>
-              <circle cx="32" cy="22" r="13.5" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2 2"/>
-              <text x="32" y="26" text-anchor="middle" fill="currentColor" font-family="Cormorant Garamond, Georgia, serif" font-size="13" font-weight="600" letter-spacing="1.5">ABT</text>
-            </svg>
-          </div>
-          <div class="institution-wordmark">American Ballet Theatre</div>
-          <div class="institution-sub">New York City</div>
-        </div>
-
-        <!-- 3. The Royal Ballet London -->
-        <div class="institution-logo-card reveal reveal-delay-2">
-          <div class="institution-crest" aria-hidden="true">
-            <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M18 30L14 16L24 22L32 10L40 22L50 16L46 30H18Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-              <line x1="17" y1="34" x2="47" y2="34" stroke="currentColor" stroke-width="1.6"/>
-              <circle cx="32" cy="7" r="1.8" fill="currentColor"/>
-              <circle cx="13" cy="13" r="1.5" fill="currentColor"/>
-              <circle cx="51" cy="13" r="1.5" fill="currentColor"/>
-            </svg>
-          </div>
-          <div class="institution-wordmark">The Royal Ballet</div>
-          <div class="institution-sub">Covent Garden &middot; London</div>
-        </div>
-
-        <!-- 4. San Francisco Ballet -->
-        <div class="institution-logo-card reveal reveal-delay-3">
-          <div class="institution-crest" aria-hidden="true">
-            <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 36V10M44 36V10" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M8 32C14 26 20 14 20 14C20 14 25 26 32 26C39 26 44 14 44 14C44 14 50 26 56 32" stroke="currentColor" stroke-width="1.4"/>
-              <line x1="6" y1="32" x2="58" y2="32" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div class="institution-wordmark institution-wordmark--sans">San Francisco Ballet</div>
-          <div class="institution-sub">San Francisco &middot; California</div>
-        </div>
-
-        <!-- 5. Princess Grace Academy -->
-        <div class="institution-logo-card reveal">
-          <div class="institution-crest" aria-hidden="true">
-            <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="32,6 44,22 32,38 20,22" stroke="currentColor" stroke-width="1.6"/>
-              <polygon points="32,11 39,22 32,33 25,22" stroke="currentColor" stroke-width="1"/>
-              <circle cx="32" cy="22" r="2" fill="currentColor"/>
-            </svg>
-          </div>
-          <div class="institution-wordmark">Princess Grace Academy</div>
-          <div class="institution-sub">Monte Carlo &middot; Monaco</div>
-        </div>
-
-        <!-- 6. The Royal Ballet School -->
-        <div class="institution-logo-card reveal reveal-delay-1">
-          <div class="institution-crest" aria-hidden="true">
-            <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 8H44V23C44 31 32 37 32 37C32 37 20 31 20 23V8Z" stroke="currentColor" stroke-width="1.6"/>
-              <line x1="32" y1="8" x2="32" y2="36" stroke="currentColor" stroke-width="1.2"/>
-              <line x1="20" y1="20" x2="44" y2="20" stroke="currentColor" stroke-width="1.2"/>
-            </svg>
-          </div>
-          <div class="institution-wordmark">The Royal Ballet School</div>
-          <div class="institution-sub">White Lodge &middot; London</div>
-        </div>
-
-        <!-- 7. Pittsburgh Ballet Theatre -->
-        <div class="institution-logo-card reveal reveal-delay-2">
-          <div class="institution-crest" aria-hidden="true">
-            <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 34C18 18 26 10 32 10C38 10 46 18 52 34" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M20 34C24 22 28 16 32 16C36 16 40 22 44 34" stroke="currentColor" stroke-width="1.2"/>
-              <line x1="10" y1="34" x2="54" y2="34" stroke="currentColor" stroke-width="1.6"/>
-            </svg>
-          </div>
-          <div class="institution-wordmark">Pittsburgh Ballet Theatre</div>
-          <div class="institution-sub">Pittsburgh &middot; Pennsylvania</div>
-        </div>
-
-        <!-- 8. Houston Ballet -->
-        <div class="institution-logo-card reveal reveal-delay-3">
-          <div class="institution-crest" aria-hidden="true">
-            <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="32,7 35.5,17.5 46.5,17.5 37.5,24 41,34.5 32,28 23,34.5 26.5,24 17.5,17.5 28.5,17.5" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="institution-wordmark institution-wordmark--sans">Houston Ballet</div>
-          <div class="institution-sub">Houston &middot; Texas</div>
-        </div>
-
-        <!-- 9. Ballet West -->
-        <div class="institution-logo-card reveal">
-          <div class="institution-crest" aria-hidden="true">
-            <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 34L22 14L31 25L41 10L56 34H8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-              <path d="M25 34L32 23L41 34" stroke="currentColor" stroke-width="1.1"/>
-            </svg>
-          </div>
-          <div class="institution-wordmark institution-wordmark--sans">Ballet West</div>
-          <div class="institution-sub">Salt Lake City &middot; Utah</div>
-        </div>
-
-        <!-- 10. Carolina Ballet -->
-        <div class="institution-logo-card reveal reveal-delay-1">
-          <div class="institution-crest" aria-hidden="true">
-            <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M16 30C16 20 24 12 34 12C41 12 46 16 48 22C43 20 37 22 33 27C29 32 22 33 16 30Z" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M14 35H50" stroke="currentColor" stroke-width="1.4"/>
-            </svg>
-          </div>
-          <div class="institution-wordmark">Carolina Ballet</div>
-          <div class="institution-sub">Raleigh &middot; North Carolina</div>
-        </div>
-
-        <!-- 11. Atlanta Ballet -->
-        <div class="institution-logo-card reveal reveal-delay-2">
-          <div class="institution-crest" aria-hidden="true">
-            <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 34C22 30 14 21 12 11C19 15 26 19 32 26C38 19 45 15 52 11C50 21 42 30 32 34Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
-              <circle cx="32" cy="13" r="2.2" fill="currentColor"/>
-            </svg>
-          </div>
-          <div class="institution-wordmark institution-wordmark--sans">Atlanta Ballet</div>
-          <div class="institution-sub">Atlanta &middot; Georgia</div>
-        </div>
-
-        <!-- 12. Royal Danish Ballet -->
-        <div class="institution-logo-card reveal reveal-delay-3">
-          <div class="institution-crest" aria-hidden="true">
-            <svg viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 31H44L47 18L38 23L32 12L26 23L17 18L20 31Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
-              <path d="M32 7V12M29.5 9.5H34.5" stroke="currentColor" stroke-width="1.4"/>
-              <line x1="19" y1="35" x2="45" y2="35" stroke="currentColor" stroke-width="1.5"/>
-            </svg>
-          </div>
-          <div class="institution-wordmark">Royal Danish Ballet</div>
-          <div class="institution-sub">Copenhagen &middot; Denmark</div>
-        </div>
-      </div>
-
-      <p class="reveal" style="text-align:center;font-size:0.875rem;color:var(--ink-muted);margin-top:var(--space-6)">
-        Additional alumni placements by our faculty include <strong>English National Ballet School (London)</strong>, <strong>Finnish National Opera and Ballet</strong>, <strong>Richmond Ballet</strong>, <strong>Ballet Austin</strong>, <strong>Nashville Ballet</strong>, and <strong>Ballet Idaho</strong>.
-      </p>
-    </div>
-  </section>
-
-  <!-- Performance Opportunities (Consistent Editorial Cards) -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="overline">Stage Experience</div>
-        <h2 class="heading-1">Performance Opportunities</h2>
-        <p class="lead">
-          Classical training culminates on stage. Every Ballet Academy student is invited to perform in two major classical productions each season, building theatrical presence and confidence in front of live audiences.
-        </p>
-      </div>
-
-      <div class="pillar-grid">
-        <!-- December Production: The Nutcracker -->
-        <div class="pillar-card reveal">
-          <div>
-            <div class="pillar-header">
-              <span class="pillar-number">I</span>
-              <span class="pillar-kicker">December &middot; Holiday Tradition</span>
-            </div>
-            <h3 class="pillar-title">The Nutcracker</h3>
-            <p class="pillar-desc" style="margin-bottom:var(--space-5)">
-              Our annual winter production of <em>The Nutcracker</em> gives Ballet Academy dancers the opportunity to perform in one of classical ballet's most beloved full-stage traditions, from corps de ballet ensembles to demi-soloist and principal variations.
-            </p>
-            <div class="level-spec-list">
-              <div class="level-spec-row">
-                <span class="level-spec-label">Rehearsals</span>
-                <span class="level-spec-value">Begin the week of August 25; two Saturdays per month (Sept to Dec) plus Thanksgiving week rehearsal</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Eligibility</span>
-                <span class="level-spec-value">All Ballet Academy levels (Levels A, B, C &amp; D)</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Stage Focus</span>
-                <span class="level-spec-value">Classical character, corps precision &amp; solo repertoire</span>
-              </div>
-            </div>
-          </div>
-          <div class="pillar-meta">December Stage Production</div>
-        </div>
-
-        <!-- May Production: Spring Academy Showcase -->
-        <div class="pillar-card reveal reveal-delay-1">
-          <div>
-            <div class="pillar-header">
-              <span class="pillar-number">II</span>
-              <span class="pillar-kicker">May &middot; End-of-Season Production</span>
-            </div>
-            <h3 class="pillar-title">Spring Academy Showcase</h3>
-            <p class="pillar-desc" style="margin-bottom:var(--space-5)">
-              Held every May, the Spring Academy Showcase celebrates a full season of technical growth. Dancers present classical repertoire, original choreography, and variations that highlight their progression in technique and pointe work.
-            </p>
-            <div class="level-spec-list">
-              <div class="level-spec-row">
-                <span class="level-spec-label">Rehearsals</span>
-                <span class="level-spec-value">Conducted directly during weekly Ballet Academy class time with no extra weekend rehearsals</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Eligibility</span>
-                <span class="level-spec-value">All Ballet Academy levels (Levels A, B, C &amp; D)</span>
-              </div>
-              <div class="level-spec-row">
-                <span class="level-spec-label">Stage Focus</span>
-                <span class="level-spec-value">Classical repertoire, pointe variations &amp; ensemble artistry</span>
-              </div>
-            </div>
-          </div>
-          <div class="pillar-meta">May Stage Production</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Ballet Academy Faculty (Rossana Nesta, Rachel Carr & Chaveli Peña) -->
-  <section id="faculty" class="section section-surface">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="overline">World-Class Instruction</div>
-        <h2 class="heading-1">Ballet Academy Faculty</h2>
-        <p class="lead">
-          Led by Ballet Mistress Rossana Nesta alongside Assistant Director Rachel Carr and faculty instructor Chaveli Pe&ntilde;a, our faculty brings authentic European conservatory lineage and professional company experience to Chapel Hill.
-        </p>
-      </div>
-
-      <!-- 1. Rossana Nesta -->
-      <div class="faculty-founder reveal" style="margin-bottom:var(--space-8)">
-        <div class="faculty-founder-img">
-          <img src="images/faculty-rossana.jpg" alt="Rossana Nesta, Ballet Mistress and Academy Director" width="400" height="533" loading="lazy">
-        </div>
-        <div class="faculty-founder-body">
-          <div class="faculty-founder-tag">Ballet Mistress &middot; Ballet Academy Director</div>
-          <h3 class="faculty-founder-name">Rossana Nesta</h3>
-          <div class="faculty-founder-role">Cecchetti &amp; Vaganova Methods &middot; Classical Repertoire &middot; Variations &middot; Pilates</div>
-          <div class="faculty-founder-bio">
+          <div class="faculty-founder-content">
+            <p class="overline">Ballet Mistress &middot; Ballet Academy Director</p>
+            <h3 class="heading-2">Rossana Nesta</h3>
+            <div class="faculty-founder-role">Cecchetti &amp; Vaganova Methods &middot; Classical Repertoire &middot; Variations &middot; Pilates</div>
             <p>
               Born in Rome, Rossana Nesta graduated from the prestigious <strong>Balletto di Roma</strong>, where she taught from 1987 to 1995, and earned her Bachelor in Teaching Ballet in 1989 from the <strong>Accademia Nazionale di Danza</strong> in Rome, the highest level of classical certification sponsored by the Italian Ministry of Public Instruction.
             </p>
@@ -850,89 +862,92 @@
             <p>
               In North Carolina, Ms. Rossana served as Ballet Mistress at Cary Ballet Conservatory, performed professionally with <strong>Carolina Ballet</strong>, and founded the International Ballet Academy, where she received a license from the <strong>George Balanchine Foundation</strong> to stage New York City Ballet repertoire. Since 2019, she has led the <strong>Ballet Academy of Chapel Hill at Renner Dance</strong>, mentoring students with the discipline and care that have propelled her dancers into the world's leading companies.
             </p>
-          </div>
-          <div class="credential-pills">
-            <span class="credential-pill">Balletto di Roma</span>
-            <span class="credential-pill">Accademia Nazionale di Danza</span>
-            <span class="credential-pill">La Scala Pedagogy</span>
-            <span class="credential-pill">Pittsburgh Ballet Theatre</span>
-            <span class="credential-pill">School of American Ballet Partner</span>
-            <span class="credential-pill">Balanchine Foundation Licensee</span>
-            <span class="credential-pill">YAGP &amp; ADC Outstanding Teacher</span>
+            <div class="credential-tags">
+              <span class="credential-tag">Balletto di Roma</span>
+              <span class="credential-tag">Accademia Nazionale di Danza</span>
+              <span class="credential-tag">La Scala Pedagogy</span>
+              <span class="credential-tag">Pittsburgh Ballet Theatre</span>
+              <span class="credential-tag">School of American Ballet Partner</span>
+              <span class="credential-tag">Balanchine Foundation Licensee</span>
+              <span class="credential-tag">YAGP &amp; ADC Outstanding Teacher</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- 2. Rachel Carr -->
-      <div class="faculty-founder reveal" style="margin-bottom:var(--space-8)">
-        <div class="faculty-founder-img">
-          <img src="images/faculty-rachel.jpg" alt="Rachel Carr, Ballet Academy Assistant Director" width="400" height="533" loading="lazy">
-        </div>
-        <div class="faculty-founder-body">
-          <div class="faculty-founder-tag">Ballet Academy Assistant Director</div>
-          <h3 class="faculty-founder-name">Rachel Carr</h3>
-          <div class="faculty-founder-role">Classical Ballet &middot; Pointe &middot; Variations Coaching &middot; Conditioning</div>
-          <div class="faculty-founder-bio">
+        <!-- 2. Rachel Carr -->
+        <div class="faculty-founder reveal">
+          <div class="faculty-founder-img">
+            <img src="images/faculty-rachel.jpg" alt="Rachel Carr, Ballet Academy Assistant Director" width="400" height="533" loading="lazy">
+          </div>
+          <div class="faculty-founder-content">
+            <p class="overline">Ballet Academy Assistant Director</p>
+            <h3 class="heading-2">Rachel Carr</h3>
+            <div class="faculty-founder-role">Classical Ballet &middot; Pointe &middot; Variations Coaching &middot; Conditioning</div>
             <p>
               Rachel Carr grew up training and performing classical repertoire with <strong>The Fairfax Ballet</strong> in Virginia before earning her <strong>Bachelor of Arts in Dance Performance with a concentration in Ballet</strong> from <strong>Point Park University's</strong> acclaimed Conservatory of Performing Arts in Pittsburgh.
             </p>
             <p>
               As Assistant Director of the Ballet Academy of Chapel Hill, Ms. Rachel works hand in hand with Ms. Rossana across every level of the conservatory. She co-directs private variations coaching for our YAGP, UBC, and ADC competitors, teaches weekly Academy technique and pointe classes, choreographs for Academy showcases, and coordinates family communications and scheduling.
             </p>
-          </div>
-          <div class="credential-pills">
-            <span class="credential-pill">B.A. Dance Performance (Ballet)</span>
-            <span class="credential-pill">Point Park University</span>
-            <span class="credential-pill">The Fairfax Ballet</span>
-            <span class="credential-pill">Variations &amp; Pointe Specialist</span>
+            <div class="credential-tags">
+              <span class="credential-tag">B.A. Dance Performance (Ballet)</span>
+              <span class="credential-tag">Point Park University</span>
+              <span class="credential-tag">The Fairfax Ballet</span>
+              <span class="credential-tag">Variations &amp; Pointe Specialist</span>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- 3. Chaveli Peña -->
-      <div class="faculty-founder reveal">
-        <div class="faculty-founder-img">
-          <img src="images/faculty-chaveli.jpg" alt="Chaveli Pe&ntilde;a, Ballet Academy Faculty" width="400" height="533" loading="lazy">
-        </div>
-        <div class="faculty-founder-body">
-          <div class="faculty-founder-tag">Ballet Academy Faculty</div>
-          <h3 class="faculty-founder-name">Chaveli Pe&ntilde;a</h3>
-          <div class="faculty-founder-role">Classical Ballet &middot; Repertoire &middot; Contemporary &amp; Lyrical</div>
-          <div class="faculty-founder-bio">
+        <!-- 3. Chaveli Peña -->
+        <div class="faculty-founder reveal" style="margin-bottom:0;padding-bottom:0;border-bottom:none">
+          <div class="faculty-founder-img">
+            <img src="images/faculty-chaveli.jpg" alt="Chaveli Pe&ntilde;a, Ballet Academy Faculty" width="400" height="533" loading="lazy">
+          </div>
+          <div class="faculty-founder-content">
+            <p class="overline">Ballet Academy Faculty</p>
+            <h3 class="heading-2">Chaveli Pe&ntilde;a</h3>
+            <div class="faculty-founder-role">Classical Ballet &middot; Repertoire &middot; Contemporary &amp; Lyrical</div>
             <p>
               Chaveli Pe&ntilde;a trained directly in the classical conservatory tradition at the <strong>International Ballet Academy</strong> and in the pre-professional division at the <strong>School of Carolina Ballet</strong>, where her technical excellence earned her promotion to <strong>Apprentice with Carolina Ballet</strong>.
             </p>
             <p>
               On stage, Ms. Chaveli has performed leading and featured classical roles in <em>Giselle</em>, <em>The Nutcracker</em>, and <em>Don Quixote</em>, as well as contemporary ballet repertoire by Carolina Ballet Artistic Director <strong>Zalman Raffael</strong>. Having grown up within this exact classical training lineage, she brings both technical precision and inspiring mentorship to our young dancers, helping them bridge rigorous ballet technique with expressive contemporary artistry.
             </p>
-          </div>
-          <div class="credential-pills">
-            <span class="credential-pill">Carolina Ballet Apprentice</span>
-            <span class="credential-pill">School of Carolina Ballet</span>
-            <span class="credential-pill">International Ballet Academy</span>
-            <span class="credential-pill">Classical &amp; Contemporary Repertoire</span>
+            <div class="credential-tags">
+              <span class="credential-tag">Carolina Ballet Apprentice</span>
+              <span class="credential-tag">School of Carolina Ballet</span>
+              <span class="credential-tag">International Ballet Academy</span>
+              <span class="credential-tag">Classical &amp; Contemporary Repertoire</span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="overline reveal">Begin the Classical Journey</div>
-      <h2 class="display-2 reveal">Inquire About the<br><em>Ballet Academy.</em></h2>
-      <p class="lead reveal">
-        Whether your dancer is ready for foundational Academy training in Level A or pre-professional pointe and variations in Levels C and D, we would love to meet your family and arrange a placement evaluation with Ms. Rossana.
-      </p>
-      <div class="cta-actions reveal">
-        <a href="contact.html" class="btn btn-gold btn-lg">Request a Placement Evaluation</a>
-        <a href="trial-class.html" class="btn btn-outline-white btn-lg">Book a Trial Class</a>
+    <!-- ======================================================
+         CTA SECTION
+    ====================================================== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-content reveal">
+          <p class="overline">Begin the Classical Journey</p>
+          <h2 class="heading-1">Inquire About the<br>Ballet Academy.</h2>
+          <p class="lead">
+            Whether your dancer is ready for foundational Academy training in Level A or pre-professional pointe and variations in Levels C and D, we would love to meet your family and arrange a placement evaluation with Ms. Rossana.
+          </p>
+          <div class="cta-actions">
+            <a href="contact.html" class="btn btn-gold">Request a Placement Evaluation</a>
+            <a href="trial-class.html" class="btn btn-outline-white">Try a Free Class</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+  ====================================================== -->
   <footer role="contentinfo">
     <div class="container">
       <div class="footer-grid">
@@ -966,10 +981,10 @@
           <div class="footer-col-title">Studio</div>
           <ul class="footer-links">
             <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="about.html#faculty" class="footer-link">Our Faculty</a></li>
+            <li><a href="about.html#staff" class="footer-link">Our Team</a></li>
             <li><a href="about.html#alumni" class="footer-link">Alumni</a></li>
             <li><a href="contact.html" class="footer-link">Contact</a></li>
-            <li><a href="https://app.thestudiodirector.com/rennerdance/portal.sd" class="footer-link" target="_blank" rel="noopener">Parent Portal</a></li>
+            <li><a href="https://app.gostudiopro.com/online/rennerdance" class="footer-link" target="_blank" rel="noopener">Parent Portal</a></li>
           </ul>
         </div>
         <div>
@@ -983,7 +998,7 @@
         <p class="footer-copy">&copy; 2026 Renner Dance Company. All rights reserved. Chapel Hill, NC.</p>
         <div class="footer-portal">
           <span>Already enrolled?</span>
-          <a href="https://app.thestudiodirector.com/rennerdance/portal.sd" class="footer-portal-link" target="_blank" rel="noopener">Access Parent Portal &rarr;</a>
+          <a href="https://app.gostudiopro.com/online/rennerdance" class="footer-portal-link" target="_blank" rel="noopener">Access Parent Portal &rarr;</a>
         </div>
       </div>
     </div>

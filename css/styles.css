@@ -245,20 +245,23 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   gap: var(--space-3);
 }
 .nav-link {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
   font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--ink-soft);
   position: relative;
-  padding-bottom: 2px;
+  padding: 4px 0;
   white-space: nowrap;
   transition: color var(--dur-fast);
 }
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   right: 0;
   height: 1px;
@@ -274,6 +277,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 .nav-dropdown {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .nav-dropdown-menu {
   position: absolute;
@@ -588,9 +593,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .stat-item {
   text-align: center;
-  padding: var(--space-6) var(--space-5);
+  padding: var(--space-6) var(--space-4);
   background: var(--blue);
   transition: background var(--dur-base);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 .stat-item:hover { background: var(--blue-light); }
 .stat-number {
@@ -599,20 +608,25 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-weight: 300;
   color: white;
   line-height: 1;
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-3);
+  min-height: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .stat-number span { color: var(--gold-light); }
 .stat-number--text span {
-  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-size: clamp(1.25rem, 1.85vw, 1.65rem);
   line-height: 1.15;
   display: block;
 }
 .stat-label {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.65);
+  color: rgba(255,255,255,0.68);
+  line-height: 1.45;
 }
 
 /* ---- Why Renner ---- */
@@ -1043,6 +1057,79 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-weight: 500;
 }
 
+/* ---- Live Dance Studio Pro (DSP) Embedded Schedule ---- */
+.dsp-schedule-shell {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+.dsp-schedule-toolbar {
+  background: var(--blue-dark);
+  padding: var(--space-4) var(--space-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--gold);
+}
+.dsp-schedule-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+.dsp-schedule-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.22);
+  flex-shrink: 0;
+}
+.dsp-schedule-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.dsp-schedule-hint {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+.dsp-schedule-frame-wrap {
+  position: relative;
+  width: 100%;
+  background: #ffffff;
+  min-height: 760px;
+}
+.dsp-schedule-iframe {
+  width: 100%;
+  height: 820px;
+  border: none;
+  display: block;
+  background: #ffffff;
+}
+@media (max-width: 768px) {
+  .dsp-schedule-toolbar {
+    padding: var(--space-4);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dsp-schedule-frame-wrap {
+    min-height: 680px;
+  }
+  .dsp-schedule-iframe {
+    height: 720px;
+  }
+}
+
 /* ---- Recreational Style Cards ---- */
 .style-card {
   border-radius: var(--radius-lg);
@@ -1436,62 +1523,50 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--space-5);
+  margin-top: var(--space-8);
   align-items: stretch;
 }
-.ballet-level-card {
+.ballet-levels-grid .level-card {
   background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-xl);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform var(--dur-slow) var(--ease), box-shadow var(--dur-slow) var(--ease);
 }
-.ballet-level-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-}
-.ballet-level-card .level-card-header {
-  min-height: 132px;
+.ballet-levels-grid .level-card-header {
+  min-height: 116px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: var(--space-6);
 }
-.ballet-level-tier {
-  display: block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--gold-light);
-  margin-top: var(--space-2);
+.ballet-levels-grid .level-card-sub {
+  line-height: 1.45;
+  margin-top: 2px;
 }
-.ballet-level-schedule {
-  display: block;
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.78);
-  margin-top: 4px;
-}
-.ballet-level-card .level-card-body {
-  padding: var(--space-6);
+.ballet-levels-grid .level-card-body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   flex: 1;
 }
-.ballet-level-desc {
+.ballet-level-intro {
   font-size: 0.875rem;
   color: var(--ink-soft);
-  line-height: 1.68;
+  line-height: 1.7;
   margin-bottom: var(--space-5);
-  min-height: 142px;
+  min-height: 148px;
 }
-.ballet-level-card .level-spec-row {
-  grid-template-columns: 92px 1fr;
-  gap: var(--space-2);
-  padding: 10px 0;
-  font-size: 0.82rem;
+.ballet-level-details {
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-4);
+  display: flex;
+  flex-direction: column;
+}
+.ballet-level-details .level-card-detail {
+  min-height: 44px;
+  line-height: 1.45;
+  margin-bottom: var(--space-3);
+}
+.ballet-level-details .level-card-detail:last-child {
+  margin-bottom: 0;
 }
 
 /* ---- International Honors & Accolades Banner ---- */
@@ -1629,10 +1704,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   .honors-badges-grid {
     grid-template-columns: 1fr;
   }
-  .ballet-level-desc {
+  .ballet-level-intro {
     min-height: 0;
   }
-  .ballet-level-card .level-card-header {
+  .ballet-levels-grid .level-card-header {
     min-height: 0;
   }
   .institution-logos-grid {
