@@ -1955,6 +1955,140 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .form-textarea { resize: vertical; min-height: 120px; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
 
+/* ---- Anti-Spam Honeypot & Human Verification Widget ---- */
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+}
+.security-verify-box {
+  background: var(--surface);
+  border: 1.5px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  margin-bottom: var(--space-5);
+  transition: border-color var(--dur-base), background var(--dur-base), box-shadow var(--dur-base);
+}
+.security-verify-box.is-verified {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.05);
+}
+.security-verify-box.has-error {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.04);
+}
+.security-verify-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.security-verify-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.security-check-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  border: 2px solid var(--border-dark);
+  background: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all var(--dur-fast);
+  color: transparent;
+}
+.security-check-btn:hover {
+  border-color: var(--blue);
+}
+.security-verify-box.is-verified .security-check-btn {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: var(--white);
+}
+.security-verify-label {
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+  user-select: none;
+}
+.security-verify-sub {
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+  display: block;
+  font-weight: 400;
+}
+.security-challenge-wrap {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.security-verify-box.is-challenging .security-challenge-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.security-question-text {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue-dark);
+  background: var(--white);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+.security-answer-input {
+  width: 76px;
+  padding: 6px 10px;
+  border: 1.5px solid var(--border-dark);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-align: center;
+  background: var(--white);
+}
+.security-answer-input:focus {
+  outline: none;
+  border-color: var(--blue);
+}
+.security-verify-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.security-verify-box.is-verified .security-verify-badge {
+  color: #16a34a;
+}
+.form-security-msg {
+  font-size: 0.78rem;
+  color: #dc2626;
+  margin-top: 8px;
+  display: none;
+  font-weight: 500;
+}
+.security-verify-box.has-error .form-security-msg {
+  display: block;
+}
+
 /* ---- File Upload ---- */
 .form-file-label {
   display: flex;
