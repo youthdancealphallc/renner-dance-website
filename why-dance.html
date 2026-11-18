@@ -6,6 +6,8 @@
   <title>Why Dance? | The Science-Backed Benefits for Children | Renner Dance Company</title>
   <meta name="description" content="Discover the research-backed benefits of dance for children: improved coordination, memory, musicality, confidence, and academic performance. Plus how dance opens doors to college scholarships and professional careers.">
   <link rel="canonical" href="https://www.rennerdance.com/why-dance">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="apple-touch-icon" href="images/favicon.png">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,8 +70,13 @@
     <div class="container">
       <div class="nav-inner">
         <a href="index.html" class="nav-logo" aria-label="Renner Dance Company home">
-          <span class="nav-logo-name">Renner Dance</span>
-          <span class="nav-logo-sub">Chapel Hill, NC</span>
+          <img src="images/logo-mark-white.png" alt="" class="nav-logo-mark nav-logo--light" width="40" height="53">
+          <img src="images/logo-mark-dark.png" alt="" class="nav-logo-mark nav-logo--dark" width="40" height="53">
+          <div class="nav-logo-text">
+            <img src="images/logo-wordmark-white.png" alt="Renner Dance" class="nav-logo-wordmark nav-logo--light" width="140" height="19">
+            <img src="images/logo-wordmark-dark.png" alt="Renner Dance" class="nav-logo-wordmark nav-logo--dark" width="140" height="19">
+            <span class="nav-logo-sub">Chapel Hill, NC</span>
+          </div>
         </a>
 
         <div class="nav-links" role="menubar">
@@ -307,6 +314,28 @@
           </div>
 
         </div>
+
+        <!-- ON-STAGE PHOTO SHOWCASE -->
+        <div class="stage-showcase-grid" style="margin-top:var(--space-8)">
+          <div class="stage-photo-card reveal">
+            <div class="stage-photo-frame">
+              <img src="images/stage-ballet-ensemble.jpg" alt="Renner Dance students performing classical ballet on stage" width="750" height="500" loading="lazy">
+            </div>
+            <div class="stage-photo-caption">
+              <span class="stage-photo-caption-title">Confidence &amp; Poise on Stage</span>
+              <span class="stage-photo-caption-tag">Classical Performance</span>
+            </div>
+          </div>
+          <div class="stage-photo-card reveal reveal-delay-1">
+            <div class="stage-photo-frame">
+              <img src="images/company-elite.jpg" alt="Renner Dance Company performing together on stage" width="750" height="500" loading="lazy">
+            </div>
+            <div class="stage-photo-caption">
+              <span class="stage-photo-caption-title">Teamwork &amp; Shared Accomplishment</span>
+              <span class="stage-photo-caption-tag">Ensemble Performance</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -396,7 +425,9 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand-name">Renner Dance</div>
+          <a href="index.html" class="footer-logo-link" aria-label="Renner Dance Company home">
+            <img src="images/logo-white.png" alt="Renner Dance Company" class="footer-logo" width="132" height="141" loading="lazy">
+          </a>
           <div class="footer-brand-sub">Chapel Hill, NC</div>
           <p class="footer-brand-desc">Premier youth dance education since 2015. Shaping confident, disciplined, and joyful dancers.</p>
         </div>

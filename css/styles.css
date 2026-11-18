@@ -187,10 +187,39 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .nav-logo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
   line-height: 1;
   flex-shrink: 0;
 }
+.nav-logo-mark {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  transition: transform var(--dur-base) var(--ease), height var(--dur-base) var(--ease);
+}
+#navbar.scrolled .nav-logo-mark {
+  height: 42px;
+}
+.nav-logo:hover .nav-logo-mark {
+  transform: scale(1.04);
+}
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+.nav-logo-wordmark {
+  height: 19px;
+  width: auto;
+  object-fit: contain;
+}
+.nav-logo--light { display: none; }
+.nav-logo--dark  { display: block; }
+#navbar.transparent:not(.mobile-menu-active) .nav-logo--light { display: block; }
+#navbar.transparent:not(.mobile-menu-active) .nav-logo--dark  { display: none; }
 .nav-logo-name {
   font-family: var(--font-display);
   font-size: 1.4rem;
@@ -200,15 +229,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   transition: color var(--dur-fast);
 }
 .nav-logo-sub {
-  font-size: 0.6rem;
+  font-size: 0.58rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
-  margin-top: 2px;
+  color: var(--gold-dark);
+  padding-left: 1px;
 }
-#navbar.transparent .nav-logo-name { color: var(--white); }
-#navbar.transparent .nav-logo-sub { color: var(--gold-light); }
+#navbar.transparent:not(.mobile-menu-active) .nav-logo-name { color: var(--white); }
+#navbar.transparent:not(.mobile-menu-active) .nav-logo-sub { color: var(--gold-light); }
 
 .nav-links {
   display: flex;
@@ -421,6 +450,11 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   opacity: 0.45;
   transform: scale(1.05);
   transition: transform 8s ease;
+}
+.hero-bg--company {
+  background-image: url('../images/competitive-team.jpg');
+  background-position: center 28%;
+  opacity: 0.52;
 }
 .hero.loaded .hero-bg { transform: scale(1); }
 .hero-overlay {
@@ -1169,98 +1203,200 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .level-invite { display: inline-flex; align-items: center; gap: var(--space-2); font-size: 0.75rem; font-weight: 700; color: var(--gold); letter-spacing: 0.06em; text-transform: uppercase; }
 
-/* ---- Company Photo Carousel ---- */
-.company-carousel-section {
-  background: #0a0a0a;
-  line-height: 0; /* remove inline-block gap */
+/* ---- Editorial Pillars (How Company Works) ---- */
+.pillar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
 }
-.company-carousel {
+.pillar-card {
   position: relative;
-  width: 100%;
-  height: 56vw;     /* 16:7 ratio */
-  max-height: 580px;
-  overflow: hidden;
-}
-@media (max-width: 768px) {
-  .company-carousel { height: 75vw; max-height: none; } /* closer to 4:3 on mobile */
-}
-@media (max-width: 480px) {
-  .company-carousel { height: 90vw; }
-}
-.carousel-track {
+  padding: var(--space-7);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--gold);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  box-shadow: var(--shadow-sm);
   display: flex;
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.65s cubic-bezier(0.77, 0, 0.175, 1);
-  will-change: transform;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-5);
+  transition: transform var(--dur-slow) var(--ease), box-shadow var(--dur-slow) var(--ease), border-color var(--dur-base);
 }
-.carousel-slide {
-  flex: 0 0 100%;
-  width: 100%;
-  height: 100%;
+.pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-top-color: var(--blue);
+}
+.pillar-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+.pillar-number {
+  font-family: var(--font-display);
+  font-size: 2.75rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold-dark);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+}
+.pillar-kicker {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+.pillar-title {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: var(--space-3);
+}
+.pillar-desc {
+  font-size: 0.925rem;
+  color: var(--ink-soft);
+  line-height: 1.78;
+  margin: 0;
+}
+.pillar-meta {
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+/* ---- Clean Editorial Specs Inside Level Cards ---- */
+.level-spec-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+.level-spec-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: var(--space-3);
+  padding: 11px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.875rem;
+  align-items: baseline;
+}
+.level-spec-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.level-spec-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+.level-spec-value {
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
+
+/* ---- On-Stage Photography Showcases ---- */
+.stage-showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+.stage-photo-card {
+  position: relative;
+  border-radius: var(--radius-xl);
   overflow: hidden;
+  background: var(--white);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  transition: transform var(--dur-slow) var(--ease), box-shadow var(--dur-slow) var(--ease);
 }
-.carousel-slide img {
+.stage-photo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+.stage-photo-card--dark {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+.stage-photo-card--dark .stage-photo-caption {
+  background: rgba(10, 42, 74, 0.9);
+  border-top-color: rgba(255, 255, 255, 0.12);
+}
+.stage-photo-card--dark .stage-photo-caption-title {
+  color: var(--white);
+}
+.stage-photo-card--dark .stage-photo-caption-tag {
+  color: var(--gold-light);
+}
+.stage-photo-frame {
+  aspect-ratio: 3 / 2;
+  width: 100%;
+  overflow: hidden;
+  background: #0a0a0a;
+}
+.stage-photo-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center center;
   display: block;
+  transition: transform 0.7s var(--ease);
 }
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
-  color: white;
-  border: 1px solid rgba(255,255,255,0.15);
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  font-size: 1.5rem;
-  line-height: 1;
-  cursor: pointer;
+.stage-photo-card:hover .stage-photo-frame img {
+  transform: scale(1.03);
+}
+.stage-photo-caption {
+  padding: var(--space-4) var(--space-5);
+  background: var(--white);
   display: flex;
   align-items: center;
-  justify-content: center;
-  transition: background 0.2s, border-color 0.2s;
-  z-index: 10;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  justify-content: space-between;
+  gap: var(--space-3);
+  border-top: 1px solid var(--border);
 }
-.carousel-btn:hover { background: rgba(0,0,0,0.8); border-color: rgba(255,255,255,0.4); }
-.carousel-prev { left: 16px; }
-.carousel-next { right: 16px; }
-@media (max-width: 480px) {
-  .carousel-btn { width: 36px; height: 36px; font-size: 1.2rem; }
-  .carousel-prev { left: 10px; }
-  .carousel-next { right: 10px; }
+.stage-photo-caption-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--ink);
 }
-.carousel-dots {
-  position: absolute;
-  bottom: 14px;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  z-index: 10;
+.stage-photo-caption-tag {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  white-space: nowrap;
 }
-.carousel-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  border: none;
-  background: rgba(255,255,255,0.35);
-  cursor: pointer;
-  transition: background 0.25s, transform 0.25s;
-  padding: 0;
-}
-.carousel-dot.active {
-  background: white;
-  transform: scale(1.3);
+@media (max-width: 768px) {
+  .pillar-grid,
+  .stage-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+  .pillar-card {
+    padding: var(--space-5);
+  }
+  .level-spec-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+  .stage-photo-caption {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
 }
 
 /* ---- Ballet Academy ---- */
@@ -1491,6 +1627,20 @@ footer {
   gap: var(--space-8);
   margin-bottom: var(--space-9);
 }
+.footer-logo-link {
+  display: inline-block;
+  margin-bottom: var(--space-3);
+  transition: opacity var(--dur-fast), transform var(--dur-base) var(--ease);
+}
+.footer-logo-link:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+.footer-logo {
+  width: 132px;
+  height: auto;
+  display: block;
+}
 .footer-brand-name {
   font-family: var(--font-display);
   font-size: 1.5rem;
@@ -1498,7 +1648,7 @@ footer {
   color: white;
   margin-bottom: 4px;
 }
-.footer-brand-sub { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: var(--space-4); }
+.footer-brand-sub { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: var(--space-4); }
 .footer-brand-desc { font-size: 0.85rem; line-height: 1.65; max-width: 280px; }
 .footer-col-title {
   font-size: 0.7rem;
@@ -1737,6 +1887,10 @@ footer {
 
   /* Mobile nav link size */
   .mobile-nav-link { font-size: 1.5rem; }
+  .nav-logo-mark { height: 40px; }
+  #navbar.scrolled .nav-logo-mark { height: 38px; }
+  .nav-logo-wordmark { height: 16px; }
+  .nav-logo { gap: 10px; }
 
   /* Ensure touch targets */
   .btn { min-height: 44px; }
