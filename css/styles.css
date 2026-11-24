@@ -3491,3 +3491,12 @@ body.has-hiring-topbar .mobile-nav {
     padding: var(--space-6);
   }
 }
+@media (max-width: 480px) {
+  .style-card-actions {
+    flex-direction: column;
+  }
+  .style-card-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

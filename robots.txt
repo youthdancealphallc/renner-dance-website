@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /_archive/
+Disallow: /images/_originals/
+
+Sitemap: https://www.rennerdance.com/sitemap.xml
