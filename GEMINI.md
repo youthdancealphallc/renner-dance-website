@@ -22,3 +22,12 @@
      4. *Open Communication*: Proactive communication with our staff regarding schedules or absences so we can partner with your family and keep rehearsals running smoothly.
      5. *Studio Policies*: Following studio policies and dress codes creates a focused, distraction-free environment where every student is set up to succeed.
      6. *Team-First Mindset*: Supporting teammates and celebrating their accomplishments as genuinely as your own. At Renner Dance, a rising tide lifts all boats.
+
+   - **Original Company Hero Background (Saved for Revert)**:
+     - Image file: `images/competitive-team.jpg` (preserved in `images/`)
+     - CSS class: `.hero-bg--company` (`background-image: url('../images/competitive-team.jpg'); background-position: center 28%; opacity: 0.52;`) with `.hero-overlay`
+     - HTML: `<div class="hero-bg hero-bg--company" role="img" aria-label="Renner Dance Company performing on stage under spotlights"></div><div class="hero-overlay"></div>`
+
+4. **Archived / Saved Content ("Ready to Dance?" CTA background, all pages)**:
+   - Previous background (saved for revert): `.cta-section::before { background-image: url('../images/competitive-team.jpg'); background-size: cover; background-position: center; opacity: 0.15; }` on `.cta-section { background: var(--blue-dark); }`.
+   - Current version: pure-CSS "empty stage" (spotlights, gold stage lip, velvet wings) defined in `css/styles.css` under `/* ---- CTA Section: "Empty Stage" ... */`.

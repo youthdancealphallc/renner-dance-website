@@ -152,6 +152,37 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ---- Careers page: role pre-selection & dynamic teaching fields ----
+  const roleSelect = document.getElementById('fac-role');
+  const teachingFields = document.getElementById('teaching-fields-group');
+  const trackSelect = document.getElementById('fac-program-track');
+  const syncRoleFields = () => {
+    if (!roleSelect || !teachingFields) return;
+    const isOpsOnly = roleSelect.value === 'Studio Operations';
+    teachingFields.classList.toggle('is-hidden', isOpsOnly);
+    if (trackSelect) {
+      if (roleSelect.value === 'Recreational Dance Teacher' && !trackSelect.value) {
+        trackSelect.value = 'Recreational Students';
+      } else if (roleSelect.value === 'Advanced & Company Faculty' && !trackSelect.value) {
+        trackSelect.value = 'Competitive Students';
+      } else if (roleSelect.value === 'Both Recreational & Advanced Teaching' && !trackSelect.value) {
+        trackSelect.value = 'Both Recreational & Competitive';
+      }
+    }
+  };
+  if (roleSelect) {
+    roleSelect.addEventListener('change', syncRoleFields);
+    syncRoleFields();
+  }
+  document.querySelectorAll('[data-apply-role]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (!roleSelect) return;
+      const desired = btn.getAttribute('data-apply-role');
+      roleSelect.value = desired;
+      syncRoleFields();
+    });
+  });
+
   // ---- Faculty form: file upload display ----
   const resumeInput = document.getElementById('fac-resume');
   const resumeName  = document.getElementById('fac-resume-name');
@@ -381,7 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
             '<div style="text-align:center;padding:var(--space-8) 0">' +
               '<div style="font-size:2.5rem;margin-bottom:var(--space-4);color:#22c55e">&#10003;</div>' +
               '<h4 style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:var(--space-3)">Application Received</h4>' +
-              '<p style="color:var(--ink-soft);font-size:0.95rem;line-height:1.7">Thank you for your interest in joining the Renner Dance faculty. We will review your application and be in touch soon.</p>' +
+              '<p style="color:var(--ink-soft);font-size:0.95rem;line-height:1.7">Thank you for your interest in joining the Renner Dance team. Our leadership will review your application and be in touch soon.</p>' +
             '</div>';
         } else if (form.id === 'interest-form') {
           form.innerHTML =

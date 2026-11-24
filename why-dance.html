@@ -61,7 +61,29 @@
     .scholarship-body { font-size: 0.875rem; color: var(--ink-soft); line-height: 1.65; }
   </style>
 </head>
-<body>
+<body class="has-hiring-topbar">
+
+  <!-- ======================================================
+       ALWAYS HIRING TOP BAR
+  ====================================================== -->
+  <a href="careers.html" class="hiring-topbar" aria-label="Renner Dance is always hiring. Explore open roles and apply.">
+    <div class="hiring-topbar-inner">
+      <span class="hiring-badge">
+        <span class="hiring-badge-dot" aria-hidden="true"></span>
+        Always Hiring
+      </span>
+      <span class="hiring-topbar-text hiring-topbar-text--desktop">
+        <strong>We are always on the lookout for great dance teachers &amp; studio leaders.</strong>
+      </span>
+      <span class="hiring-topbar-text hiring-topbar-text--mobile">
+        <strong>Hiring great teachers &amp; studio staff</strong>
+      </span>
+      <span class="hiring-topbar-cta">
+        Explore Open Roles <span class="hiring-topbar-arrow" aria-hidden="true">&rarr;</span>
+      </span>
+    </div>
+  </a>
+
 
     <!-- ======================================================
        NAVIGATION
@@ -88,7 +110,7 @@
               <a href="about.html#accomplishments" class="nav-dropdown-item">Accomplishments</a>
               <a href="about.html#staff" class="nav-dropdown-item">Our Team</a>
               <a href="about.html#alumni" class="nav-dropdown-item">Notable Alumni</a>
-              <a href="about.html#careers" class="nav-dropdown-item">Join Our Faculty</a>
+              <a href="careers.html" class="nav-dropdown-item">Careers &amp; Hiring</a>
             </div>
           </div>
           <div class="nav-dropdown" role="menuitem">
@@ -239,78 +261,72 @@
           <p class="lead">Every benefit below is grounded in published research. Dance is not just an art form; it's one of the most complete developmental tools available to children.</p>
         </div>
 
-        <div class="grid-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-5)">
+        <div class="pillar-grid--3col">
 
-          <div class="benefit-card reveal">
-            <div class="benefit-icon" style="background:rgba(15,61,107,0.08)">🧠</div>
-            <div class="benefit-title">Brain Development</div>
-            <div class="benefit-lead">Dance is a full-brain workout.</div>
-            <p class="benefit-body">Learning choreography activates the hippocampus (memory), motor cortex (movement), and prefrontal cortex (planning and focus) simultaneously. Research confirms that children who dance show faster cognitive processing, stronger attention spans, and improved problem-solving ability.</p>
-            <div class="benefit-source">Sources: Frontiers in Psychology, Harvard Medical School</div>
+          <div class="pillar-card reveal">
+            <div>
+              <div class="pillar-header">
+                <span class="pillar-kicker">Cognitive Development</span>
+              </div>
+              <h3 class="pillar-title">Brain Growth &amp; Working Memory</h3>
+              <p class="pillar-desc">Learning and performing choreography activates the hippocampus, motor cortex, and prefrontal cortex simultaneously. Research confirms dancers show faster cognitive processing, stronger working memory, and sharper academic focus.</p>
+            </div>
+            <div class="pillar-meta">Frontiers in Psychology &middot; Harvard Medical School</div>
           </div>
 
-          <div class="benefit-card reveal reveal-delay-1">
-            <div class="benefit-icon" style="background:rgba(201,168,76,0.1)">🎵</div>
-            <div class="benefit-title">Musicality</div>
-            <div class="benefit-lead">Rhythm lives in the body.</div>
-            <p class="benefit-body">Dancing to music enhances auditory processing and rhythmic synchronization. Children learn to internalize beat, phrasing, and dynamics, skills proven to correlate with higher performance in reading, mathematics, and language arts. Musical intelligence developed through dance transfers directly to academic settings.</p>
-            <div class="benefit-source">Sources: NYU, National Endowment for the Arts</div>
+          <div class="pillar-card reveal reveal-delay-1">
+            <div>
+              <div class="pillar-header">
+                <span class="pillar-kicker">Auditory &amp; Academic Transfer</span>
+              </div>
+              <h3 class="pillar-title">Musicality &amp; Pattern Recognition</h3>
+              <p class="pillar-desc">Internalizing beat, phrasing, and tempo strengthens auditory processing and rhythmic synchronization, skills directly linked to stronger performance in reading, mathematics, and language arts.</p>
+            </div>
+            <div class="pillar-meta">NYU &middot; National Endowment for the Arts</div>
           </div>
 
-          <div class="benefit-card reveal reveal-delay-2">
-            <div class="benefit-icon" style="background:rgba(34,197,94,0.08)">⚖️</div>
-            <div class="benefit-title">Coordination &amp; Motor Skills</div>
-            <div class="benefit-lead">Precise, purposeful movement.</div>
-            <p class="benefit-body">Through structured movement such as leaping, balancing, and turning, children develop both gross and fine motor skills. Studies show dance students demonstrate significantly improved balance, proprioception, and sensorimotor synchronization. These gains support everything from sports performance to everyday physical confidence.</p>
-            <div class="benefit-source">Sources: Kinvent Research, CDC, ACSM</div>
+          <div class="pillar-card reveal reveal-delay-2">
+            <div>
+              <div class="pillar-header">
+                <span class="pillar-kicker">Physical Mastery</span>
+              </div>
+              <h3 class="pillar-title">Coordination &amp; Low-Impact Fitness</h3>
+              <p class="pillar-desc">Dance builds cardiovascular endurance, core strength, balance, and flexibility without the injury rates of contact sports, supporting healthy posture and joint stability as children grow.</p>
+            </div>
+            <div class="pillar-meta">American Heart Association &middot; ACSM &middot; CDC</div>
           </div>
 
-          <div class="benefit-card reveal">
-            <div class="benefit-icon" style="background:rgba(239,68,68,0.08)">💪</div>
-            <div class="benefit-title">Low-Impact Fitness</div>
-            <div class="benefit-lead">Strong body, healthy joints.</div>
-            <p class="benefit-body">Dance is one of the few activities that builds cardiovascular fitness, muscle strength, and flexibility without the high injury rates of contact sports. The American Heart Association recognizes dance as an excellent aerobic activity for children. It supports healthy weight, posture, and bone density without unnecessary impact on developing joints.</p>
-            <div class="benefit-source">Sources: American Heart Association, American College of Sports Medicine</div>
+          <div class="pillar-card reveal">
+            <div>
+              <div class="pillar-header">
+                <span class="pillar-kicker">Personal Growth</span>
+              </div>
+              <h3 class="pillar-title">Confidence &amp; Composure</h3>
+              <p class="pillar-desc">Rehearsing and performing builds self-confidence rooted in earned mastery. Stage experience teaches children how to channel nerves into focus and carry themselves with poise under pressure.</p>
+            </div>
+            <div class="pillar-meta">University of Maryland &middot; Santa Monica College</div>
           </div>
 
-          <div class="benefit-card reveal reveal-delay-1">
-            <div class="benefit-icon" style="background:rgba(168,85,247,0.08)">🧩</div>
-            <div class="benefit-title">Memory &amp; Focus</div>
-            <div class="benefit-lead">Choreography trains the mind.</div>
-            <p class="benefit-body">Memorizing and performing sequences of steps is a cognitive exercise comparable to learning a second language. Regular dance practice strengthens working memory and long-term retention. Children who dance have been shown to retain information more effectively in academic settings and demonstrate superior concentration and mental stamina.</p>
-            <div class="benefit-source">Sources: Frontiers in Psychology, University of South Carolina</div>
+          <div class="pillar-card reveal reveal-delay-1">
+            <div>
+              <div class="pillar-header">
+                <span class="pillar-kicker">Community &amp; Empathy</span>
+              </div>
+              <h3 class="pillar-title">Social Skills &amp; Teamwork</h3>
+              <p class="pillar-desc">Ensemble classes develop cooperation, trust, active listening, and shared accountability, creating lasting friendships and a genuine sense of belonging.</p>
+            </div>
+            <div class="pillar-meta">Ashokan Center &middot; CASEL</div>
           </div>
 
-          <div class="benefit-card reveal reveal-delay-2">
-            <div class="benefit-icon" style="background:rgba(6,182,212,0.08)">🌟</div>
-            <div class="benefit-title">Confidence &amp; Self-Esteem</div>
-            <div class="benefit-lead">Mastery builds character.</div>
-            <p class="benefit-body">The process of learning, rehearsing, and performing builds genuine self-confidence, the kind that comes from earned accomplishment. Research from the University of Maryland and Santa Monica College confirms that dance students demonstrate higher self-esteem, emotional intelligence, and resilience. Performance experience teaches children how to handle pressure with poise.</p>
-            <div class="benefit-source">Sources: University of Maryland, Santa Monica College</div>
-          </div>
-
-          <div class="benefit-card reveal">
-            <div class="benefit-icon" style="background:rgba(249,115,22,0.08)">🤝</div>
-            <div class="benefit-title">Social Skills &amp; Teamwork</div>
-            <div class="benefit-lead">Community through movement.</div>
-            <p class="benefit-body">Group classes and ensemble work develop cooperation, trust, empathy, and non-verbal communication. Children learn to listen, share space, and support one another, skills that carry directly into school and adult life. Dance studios create lasting friendships and a sense of belonging that is rare in other extracurricular activities.</p>
-            <div class="benefit-source">Sources: Ashokan Center, Tandfonline</div>
-          </div>
-
-          <div class="benefit-card reveal reveal-delay-1">
-            <div class="benefit-icon" style="background:rgba(236,72,153,0.08)">🎭</div>
-            <div class="benefit-title">Creative Expression</div>
-            <div class="benefit-lead">A language beyond words.</div>
-            <p class="benefit-body">Dance gives children a vocabulary for emotions they may not yet have words for. Creative movement fosters self-awareness, emotional regulation, and artistic identity. Research shows that children who regularly engage in creative arts demonstrate stronger empathy, greater problem-solving flexibility, and richer inner lives.</p>
-            <div class="benefit-source">Sources: National Endowment for the Arts, CASEL</div>
-          </div>
-
-          <div class="benefit-card reveal reveal-delay-2">
-            <div class="benefit-icon" style="background:rgba(15,61,107,0.08)">🎓</div>
-            <div class="benefit-title">Discipline &amp; Work Ethic</div>
-            <div class="benefit-lead">The habits that last a lifetime.</div>
-            <p class="benefit-body">Dance training requires consistent practice, attention to detail, and the ability to receive and respond to correction. These habits of showing up, trying again, and improving incrementally build a work ethic that translates to academic achievement, career success, and personal resilience. Dance teaches children that excellence is earned, not given.</p>
-            <div class="benefit-source">Sources: US Department of Education Arts Integration Research</div>
+          <div class="pillar-card reveal reveal-delay-2">
+            <div>
+              <div class="pillar-header">
+                <span class="pillar-kicker">Character &amp; Artistry</span>
+              </div>
+              <h3 class="pillar-title">Discipline &amp; Creative Expression</h3>
+              <p class="pillar-desc">Consistent practice and constructive feedback cultivate resilience and work ethic, while creative movement gives children a healthy vocabulary for self-expression and emotional regulation.</p>
+            </div>
+            <div class="pillar-meta">US Dept. of Education Arts Research</div>
           </div>
 
         </div>
@@ -395,7 +411,61 @@
 
                 <blockquote style="font-family:var(--font-display);font-size:1.15rem;font-style:italic;color:rgba(255,255,255,0.85);line-height:1.55;border-top:1px solid rgba(255,255,255,0.15);padding-top:var(--space-5)">
                   "Dance is the only art form in which the instrument and the artist are the same."
-                  <footer style="font-size:0.75rem;color:rgba(255,255,255,0.5);margin-top:var(--space-3);font-style:normal;letter-spacing:0.06em;text-transform:uppercase">Martha Graham</footer>
+<footer role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <img src="images/logo-white.png" alt="Renner Dance Company" class="footer-brand-logo">
+          <div class="footer-brand-sub">Chapel Hill, NC</div>
+          <p class="footer-brand-desc">
+            Premier youth dance education founded by former Radio City Rockette Summer Renner Disher. Shaping confident, disciplined, and joyful dancers since 2015.
+          </p>
+        </div>
+        <div>
+          <div class="footer-col-title">Programs</div>
+          <nav class="footer-links" aria-label="Programs">
+            <a href="recreational.html" class="footer-link">Recreational Classes</a>
+            <a href="company.html" class="footer-link">Company Programs</a>
+            <a href="ballet-academy.html" class="footer-link">Ballet Academy</a>
+            <a href="summer-camps.html" class="footer-link">Summer Camps</a>
+            <a href="trial-class.html" class="footer-link">Try a Free Class</a>
+          </nav>
+        </div>
+        <div>
+          <div class="footer-col-title">Studio</div>
+          <nav class="footer-links" aria-label="Studio pages">
+            <a href="about.html" class="footer-link">About Us</a>
+            <a href="about.html#staff" class="footer-link">Our Team</a>
+            <a href="about.html#alumni" class="footer-link">Notable Alumni</a>
+            <a href="why-dance.html" class="footer-link">Why Dance</a>
+            <a href="careers.html" class="footer-link">Careers &amp; Hiring</a>
+          </nav>
+        </div>
+        <div>
+          <div class="footer-col-title">Connect</div>
+          <nav class="footer-links" aria-label="Contact and social">
+            <a href="contact.html" class="footer-link">Contact Us</a>
+            <a href="https://app.gostudiopro.com/online/rennerdance" class="footer-link" target="_blank" rel="noopener">Register / Parent Portal</a>
+            <a href="tel:+19192405120" class="footer-link">(919) 240-5120</a>
+            <a href="mailto:admin@rennerdance.com" class="footer-link">admin@rennerdance.com</a>
+            <a href="https://www.instagram.com/rennerdance" class="footer-link" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.facebook.com/rennerdance" class="footer-link" target="_blank" rel="noopener">Facebook</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Renner Dance Company. All rights reserved.</span>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/rennerdance" class="footer-social" target="_blank" rel="noopener" aria-label="Follow us on Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/rennerdance" class="footer-social" target="_blank" rel="noopener" aria-label="Follow us on Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
                 </blockquote>
               </div>
             </div>
