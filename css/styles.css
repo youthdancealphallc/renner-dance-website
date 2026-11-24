@@ -3456,3 +3456,33 @@ body.has-hiring-topbar .mobile-nav {
     animation: none;
   }
 }
+
+/* Full-width horizontal feature style card (7th card in 2-col grid: Combo Classes) */
+.style-card--featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  align-items: stretch;
+}
+.style-card--featured .style-card-img {
+  height: 100%;
+  min-height: 320px;
+}
+.style-card--featured .style-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-7);
+}
+@media (max-width: 900px) {
+  .style-card--featured {
+    grid-template-columns: 1fr;
+  }
+  .style-card--featured .style-card-img {
+    min-height: 240px;
+    height: 240px;
+  }
+  .style-card--featured .style-card-body {
+    padding: var(--space-6);
+  }
+}
