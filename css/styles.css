@@ -275,6 +275,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .nav-link:hover::after { transform: scaleX(1); }
 #navbar.transparent .nav-link { color: rgba(255,255,255,0.85); }
 #navbar.transparent .nav-link:hover { color: white; }
+.nav-hiring-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e11d48;
+  box-shadow: 0 0 6px rgba(225, 29, 72, 0.7);
+  margin-right: 6px;
+  flex-shrink: 0;
+}
 
 .nav-dropdown {
   position: relative;
@@ -3105,7 +3114,6 @@ body.has-hiring-topbar .mobile-nav {
 }
 
 .career-role-ideal {
-  margin-top: auto;
   padding-top: var(--space-4);
   border-top: 1px solid var(--border);
   font-size: 0.83rem;
@@ -3121,7 +3129,12 @@ body.has-hiring-topbar .mobile-nav {
 
 .career-role-card .btn {
   width: 100%;
+  margin-top: auto;
   justify-content: center;
+  text-align: center;
+  padding: 13px 20px;
+  font-size: 0.78rem;
+  white-space: normal;
 }
 
 /* Conditional teaching fields container */
