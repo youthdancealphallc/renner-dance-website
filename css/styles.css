@@ -1821,11 +1821,17 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .ballet-hero-content .heading-1 { color: white; margin-bottom: var(--space-4); }
 .ballet-hero-content .lead { color: rgba(255,255,255,0.75); max-width: 580px; margin: 0 auto var(--space-7); }
 
-/* ---- 3-Column Editorial Pillar Grid (Variations Track) ---- */
+/* ---- 3-Column Editorial Pillar Grid (Variations Track, Why Dance, Careers) ---- */
 .pillar-grid--3col {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
+}
+@media (max-width: 960px) {
+  .pillar-grid--3col {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
 }
 
 /* ---- Aligned Ballet Level Cards (Levels A, B, C & D) ---- */
@@ -3134,8 +3140,17 @@ body.has-hiring-topbar .mobile-nav {
 }
 
 @media (max-width: 768px) {
+  html, body {
+    overflow-x: clip;
+  }
   body.has-hiring-topbar {
     --topbar-h: 38px;
+  }
+  body.has-hiring-topbar .page-header {
+    padding-top: calc(108px + var(--topbar-h));
+  }
+  body.has-hiring-topbar .hero-content {
+    padding-top: calc(104px + var(--topbar-h));
   }
   .hiring-topbar {
     padding: 0 var(--space-3);
@@ -3161,5 +3176,102 @@ body.has-hiring-topbar .mobile-nav {
   }
   .career-role-card {
     padding: var(--space-6);
+  }
+  /* Prevent iOS Safari auto-zoom on form focus */
+  .form-input,
+  .form-select,
+  .form-textarea,
+  .security-answer-input {
+    font-size: 16px;
+  }
+  /* Improved mobile touch targets */
+  .style-level-pill {
+    padding: 7px 11px;
+    min-height: 36px;
+    font-size: 0.82rem;
+  }
+  .security-check-btn {
+    width: 28px;
+    height: 28px;
+  }
+  .mobile-nav {
+    padding: 76px var(--space-5) var(--space-8);
+  }
+  .mobile-nav.open {
+    gap: var(--space-3);
+  }
+  .mobile-nav-link {
+    font-size: 1.25rem;
+    padding: 8px 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .mobile-nav-cta {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+  }
+  .mobile-nav-cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  body.has-hiring-topbar .page-header {
+    padding-top: calc(92px + var(--topbar-h));
+    padding-bottom: 44px;
+  }
+  body.has-hiring-topbar .hero-content {
+    padding-top: calc(92px + var(--topbar-h));
+    padding-bottom: 48px;
+  }
+  .hiring-topbar-inner {
+    justify-content: space-between;
+    gap: 6px;
+  }
+  .hiring-topbar-text--mobile {
+    font-size: 0.7rem;
+  }
+  .hiring-topbar-cta {
+    padding: 3px 8px;
+    font-size: 0.58rem;
+    letter-spacing: 0.06em;
+  }
+  .dsp-schedule-toolbar-actions {
+    width: 100%;
+  }
+  .dsp-schedule-toolbar-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .dsp-schedule-frame-wrap {
+    min-height: 600px;
+  }
+  .dsp-schedule-iframe {
+    height: 620px;
+  }
+  .institution-logos-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3);
+  }
+  .institution-logo-card {
+    padding: var(--space-4) var(--space-3);
+  }
+  /* Compact pricing table padding on narrow phones */
+  #pricing [style*="padding:var(--space-5) var(--space-7)"] {
+    padding: var(--space-4) var(--space-4) !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .hiring-topbar-cta {
+    display: none;
+  }
+  .hiring-topbar-inner {
+    justify-content: center;
+    gap: 8px;
   }
 }
