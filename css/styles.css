@@ -3793,3 +3793,180 @@ body .mobile-nav {
 @media (prefers-reduced-motion: reduce) {
   .xmas-ornament, .xmas-garland::before { animation: none; }
 }
+
+/* ======================================================
+   COMPANY MEMBER PORTAL (company.html)
+====================================================== */
+.hero-portal-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: var(--space-5);
+  padding: 9px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.8rem;
+  flex-wrap: wrap;
+}
+.hero-portal-strip svg {
+  color: var(--gold-light);
+  flex-shrink: 0;
+}
+.hero-portal-strip a {
+  color: var(--gold-light);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(232, 204, 133, 0.45);
+  padding-bottom: 1px;
+  transition: color var(--dur-fast), border-color var(--dur-fast);
+}
+.hero-portal-strip a:hover {
+  color: var(--white);
+  border-bottom-color: var(--white);
+}
+
+.company-portal-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: var(--space-8);
+  align-items: center;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 28px 64px -24px rgba(0, 0, 0, 0.55);
+}
+.company-portal-shell::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold-light), var(--gold-dark));
+}
+
+.company-portal-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  background: rgba(212, 175, 55, 0.14);
+  border: 1px solid rgba(212, 175, 55, 0.38);
+  color: var(--gold-light);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+.company-portal-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.2);
+}
+
+.company-portal-info .heading-1 {
+  margin-bottom: var(--space-4);
+}
+.company-portal-desc {
+  font-size: 0.96rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.75;
+  margin-bottom: var(--space-6);
+}
+.company-portal-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+.company-portal-host {
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.portal-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+.portal-feature-card {
+  background: rgba(6, 20, 38, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  transition: border-color var(--dur-base) var(--ease), transform var(--dur-base) var(--ease), background var(--dur-base) var(--ease);
+}
+.portal-feature-card:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+  background: rgba(10, 32, 60, 0.72);
+  transform: translateY(-2px);
+}
+.portal-feature-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(212, 175, 55, 0.14);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+.portal-feature-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+.portal-feature-desc {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .company-portal-shell {
+    grid-template-columns: 1fr;
+    padding: var(--space-6);
+    gap: var(--space-6);
+  }
+}
+@media (max-width: 520px) {
+  .hero-portal-strip {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 14px;
+    border-radius: var(--radius-lg);
+  }
+  .company-portal-shell {
+    padding: var(--space-5);
+  }
+  .company-portal-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .company-portal-host {
+    width: 100%;
+    text-align: center;
+  }
+  .portal-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
