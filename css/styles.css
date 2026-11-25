@@ -68,6 +68,9 @@
 /* ---- Reset ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antialiased; }
+/* Keep linked sections clear of the fixed hiring bar + header */
+[id] { scroll-margin-top: calc(var(--topbar-h, 0px) + 96px); }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
   font-family: var(--font-body);
   background: var(--white);
@@ -393,9 +396,17 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hamburger {
   display: none;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 5px;
-  padding: 4px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px;
+  margin: -10px;
+  background: transparent;
+  border: 0;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 .hamburger span {
   display: block;
@@ -418,8 +429,9 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   inset: 0;
   z-index: 999;
   background: var(--white);
-  padding: 90px var(--space-6) var(--space-8);
+  padding: 104px var(--space-6) var(--space-8);
   overflow-y: auto;
+  overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
 }
 .mobile-nav.open { display: flex; flex-direction: column; gap: var(--space-4); }
@@ -436,11 +448,13 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .mobile-nav-link:hover { color: var(--blue); }
 .mobile-nav-sub {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--ink-soft);
-  padding: 5px 0 5px var(--space-4);
-  display: block;
+  padding: 8px 0 8px var(--space-4);
+  min-height: 40px;
+  display: flex;
+  align-items: center;
   border-left: 2px solid var(--border);
   margin-left: var(--space-2);
   transition: border-color var(--dur-fast), color var(--dur-fast);
@@ -2870,25 +2884,30 @@ footer {
   60%      { box-shadow: 0 0 0 6px rgba(255, 92, 108, 0); }
 }
 
-body.has-hiring-topbar {
-  --topbar-h: 42px;
+/* Fixed announcement bars stack: hiring bar + seasonal promo bar. --topbar-h = their total height. */
+body {
+  --hiring-h: 0px;
+  --promo-h: 0px;
+  --topbar-h: calc(var(--hiring-h) + var(--promo-h));
 }
+body.has-hiring-topbar { --hiring-h: 42px; }
+body.has-promo-bar { --promo-h: 38px; }
 
-body.has-hiring-topbar .page-header {
+body .page-header {
   padding-top: calc(140px + var(--topbar-h));
 }
 
-body.has-hiring-topbar .hero-content {
+body .hero-content {
   padding-top: calc(140px + var(--topbar-h));
 }
 
 @media (max-width: 1024px) {
-  body.has-hiring-topbar .page-header {
+  body .page-header {
     padding-top: calc(110px + var(--topbar-h));
   }
 }
 
-body.has-hiring-topbar .mobile-nav {
+body .mobile-nav {
   top: var(--topbar-h);
 }
 
@@ -2897,7 +2916,7 @@ body.has-hiring-topbar .mobile-nav {
   top: 0;
   left: 0;
   right: 0;
-  height: var(--topbar-h, 42px);
+  height: var(--hiring-h, 42px);
   z-index: 1002;
   display: flex;
   align-items: center;
@@ -3168,13 +3187,12 @@ body.has-hiring-topbar .mobile-nav {
   html, body {
     overflow-x: clip;
   }
-  body.has-hiring-topbar {
-    --topbar-h: 38px;
-  }
-  body.has-hiring-topbar .page-header {
+  body.has-hiring-topbar { --hiring-h: 38px; }
+  body.has-promo-bar { --promo-h: 34px; }
+  body .page-header {
     padding-top: calc(108px + var(--topbar-h));
   }
-  body.has-hiring-topbar .hero-content {
+  body .hero-content {
     padding-top: calc(104px + var(--topbar-h));
   }
   .hiring-topbar {
@@ -3220,7 +3238,7 @@ body.has-hiring-topbar .mobile-nav {
     height: 28px;
   }
   .mobile-nav {
-    padding: 76px var(--space-5) var(--space-8);
+    padding: 96px var(--space-5) var(--space-8);
   }
   .mobile-nav.open {
     gap: var(--space-3);
@@ -3245,11 +3263,11 @@ body.has-hiring-topbar .mobile-nav {
 }
 
 @media (max-width: 480px) {
-  body.has-hiring-topbar .page-header {
+  body .page-header {
     padding-top: calc(92px + var(--topbar-h));
     padding-bottom: 44px;
   }
-  body.has-hiring-topbar .hero-content {
+  body .hero-content {
     padding-top: calc(92px + var(--topbar-h));
     padding-bottom: 48px;
   }
@@ -3533,4 +3551,245 @@ body.has-hiring-topbar .mobile-nav {
 @media (max-width: 768px) {
   .careers-cta { flex-direction: column; align-items: flex-start; padding: var(--space-6); }
   .careers-cta .btn { width: 100%; justify-content: center; }
+}
+
+
+/* ======================================================
+   SEASONAL: NUTCRACKER PROMO BAR  (remove after Dec 18)
+====================================================== */
+.promo-bar {
+  position: fixed;
+  top: var(--hiring-h, 0px);
+  left: 0;
+  right: 0;
+  height: var(--promo-h, 38px);
+  z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 var(--space-4);
+  text-decoration: none;
+  background: linear-gradient(90deg, #3d0a14 0%, #6e1224 50%, #3d0a14 100%);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.5);
+  overflow: hidden;
+}
+.promo-bar::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(232, 204, 133, 0.16) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity var(--dur-base) var(--ease);
+  pointer-events: none;
+}
+.promo-bar:hover::before, .promo-bar:focus-visible::before { opacity: 1; }
+.promo-bar:focus-visible { outline: 2px solid var(--gold-light); outline-offset: -3px; }
+.promo-bar-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.promo-bar-icon { width: 15px; height: 15px; color: var(--gold-light); flex-shrink: 0; }
+.promo-bar-text {
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.promo-bar-text strong {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--gold-light);
+  letter-spacing: 0.01em;
+}
+.promo-bar-sep { margin: 0 8px; color: rgba(232, 204, 133, 0.7); }
+.promo-bar-text--mobile { display: none; }
+.promo-bar-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(232, 204, 133, 0.6);
+  background: rgba(232, 204, 133, 0.12);
+  color: var(--gold-light);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background var(--dur-base) var(--ease), color var(--dur-base) var(--ease), border-color var(--dur-base) var(--ease);
+}
+.promo-bar-arrow { display: inline-block; transition: transform var(--dur-base) var(--ease); }
+.promo-bar:hover .promo-bar-cta, .promo-bar:focus-visible .promo-bar-cta { background: var(--gold); border-color: var(--gold); color: var(--ink); }
+.promo-bar:hover .promo-bar-arrow, .promo-bar:focus-visible .promo-bar-arrow { transform: translateX(3px); }
+
+@media (max-width: 768px) {
+  .promo-bar { padding: 0 var(--space-3); }
+  .promo-bar-inner { gap: 8px; }
+  .promo-bar-text--desktop { display: none; }
+  .promo-bar-text--mobile { display: inline; font-size: 0.74rem; }
+  .promo-bar-text strong { font-size: 0.95rem; }
+  .promo-bar-sep { margin: 0 6px; }
+  .promo-bar-cta { padding: 3px 9px; font-size: 0.6rem; }
+}
+@media (max-width: 360px) {
+  .promo-bar-icon { display: none; }
+  .promo-bar-sep { margin: 0 4px; }
+}
+
+/* ---- Nutcracker section + ticket embed (Ballet Academy page) ---- */
+.nutcracker-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  max-width: 760px;
+  margin: 0 auto var(--space-7);
+}
+.nutcracker-fact {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 3px solid #6e1224;
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-5);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.nutcracker-fact-label {
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+.nutcracker-fact-value {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.dsp-schedule-dot--soon {
+  background: #f5b942;
+  box-shadow: 0 0 0 4px rgba(245, 185, 66, 0.22);
+}
+.dsp-tickets-frame-wrap { min-height: 640px; }
+.dsp-tickets-iframe { height: 700px; }
+@media (max-width: 768px) {
+  .nutcracker-facts { gap: var(--space-2); margin-bottom: var(--space-6); }
+  .nutcracker-fact { padding: var(--space-3) var(--space-2); }
+  .nutcracker-fact-value { font-size: 1.05rem; }
+  .dsp-tickets-frame-wrap { min-height: 560px; }
+  .dsp-tickets-iframe { height: 600px; }
+}
+@media (max-width: 380px) {
+  .nutcracker-facts { grid-template-columns: 1fr; }
+}
+
+/* ======================================================
+   SEASONAL: CHRISTMAS ORNAMENTS  (remove after the holidays)
+   Purely decorative, never blocks clicks.
+====================================================== */
+.xmas-garland {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 0;
+  z-index: 1003;
+  pointer-events: none;
+}
+/* string of mini lights along the very top edge */
+.xmas-garland::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(90deg,
+    #e8394d 0 5px, transparent 5px 18px,
+    #f5c84c 18px 23px, transparent 23px 36px,
+    #3fbf7a 36px 41px, transparent 41px 54px,
+    #ffffff 54px 59px, transparent 59px 72px);
+  opacity: 0.9;
+  animation: xmasTwinkle 2.4s ease-in-out infinite alternate;
+}
+@keyframes xmasTwinkle { from { opacity: 0.55; } to { opacity: 1; } }
+
+.xmas-ornament {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: top center;
+  animation: xmasSway 4.5s ease-in-out infinite;
+  --len: 10px;
+  --size: 13px;
+}
+.xmas-ornament::before {
+  content: '';
+  width: 1px;
+  height: var(--len);
+  background: rgba(232, 204, 133, 0.85);
+}
+.xmas-ornament::after {   /* cap */
+  content: '';
+  order: 1;
+  width: 5px;
+  height: 3px;
+  border-radius: 1px 1px 0 0;
+  background: linear-gradient(180deg, #f3dc94, #b8912c);
+}
+.xmas-ornament i {
+  order: 2;
+  display: block;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 30%, rgba(255,255,255,0.95) 0 9%, var(--c1) 34%, var(--c2) 100%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35), 0 0 8px var(--glow);
+}
+@keyframes xmasSway { 0%, 100% { transform: rotate(-6deg); } 50% { transform: rotate(6deg); } }
+
+.xo-red    { --c1: #e8394d; --c2: #8c0f1f; --glow: rgba(232, 57, 77, 0.45); }
+.xo-gold   { --c1: #f5d27a; --c2: #a77b17; --glow: rgba(245, 210, 122, 0.5); }
+.xo-green  { --c1: #3fbf7a; --c2: #0f5a34; --glow: rgba(63, 191, 122, 0.4); }
+.xo-silver { --c1: #f1f4f8; --c2: #8a96a8; --glow: rgba(241, 244, 248, 0.45); }
+
+/* positions: clusters at both outer edges, clear of the centered bar text */
+.xo-1 { left: 1.2%;  --len: 12px; --size: 14px; animation-delay: -0.4s; }
+.xo-2 { left: 3.8%;  --len: 20px; --size: 11px; animation-delay: -1.8s; }
+.xo-3 { left: 6.4%;  --len: 8px;  --size: 15px; animation-delay: -2.9s; }
+.xo-4 { left: 9.2%;  --len: 16px; --size: 12px; animation-delay: -1.1s; }
+.xo-5 { right: 9.2%; --len: 16px; --size: 12px; animation-delay: -2.2s; }
+.xo-6 { right: 6.4%; --len: 8px;  --size: 15px; animation-delay: -0.7s; }
+.xo-7 { right: 3.8%; --len: 20px; --size: 11px; animation-delay: -3.3s; }
+.xo-8 { right: 1.2%; --len: 12px; --size: 14px; animation-delay: -1.5s; }
+
+@media (max-width: 1200px) {
+  .xo-4, .xo-5 { display: none; }
+}
+@media (max-width: 1024px) {
+  .xo-3, .xo-6 { display: none; }
+}
+/* phones: two tiny ornaments tucked in the corners + the light string */
+@media (max-width: 768px) {
+  .xo-2, .xo-7 { display: none; }
+  .xo-1 { left: 3px;  --len: 6px; --size: 9px; }
+  .xo-8 { right: 3px; --len: 6px; --size: 9px; }
+  .xmas-garland::before { height: 2px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .xmas-ornament, .xmas-garland::before { animation: none; }
 }

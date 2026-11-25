@@ -63,7 +63,20 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="has-hiring-topbar">
+<body class="has-hiring-topbar has-promo-bar">
+
+  <!-- SEASONAL: Christmas ornaments. Delete this block (and the "SEASONAL" CSS) after the holidays. -->
+  <div class="xmas-garland" aria-hidden="true">
+    <span class="xmas-ornament xo-1 xo-red"><i></i></span>
+    <span class="xmas-ornament xo-2 xo-gold"><i></i></span>
+    <span class="xmas-ornament xo-3 xo-green"><i></i></span>
+    <span class="xmas-ornament xo-4 xo-silver"><i></i></span>
+    <span class="xmas-ornament xo-5 xo-gold"><i></i></span>
+    <span class="xmas-ornament xo-6 xo-red"><i></i></span>
+    <span class="xmas-ornament xo-7 xo-silver"><i></i></span>
+    <span class="xmas-ornament xo-8 xo-green"><i></i></span>
+  </div>
+
 
   <!-- ======================================================
        ALWAYS HIRING TOP BAR
@@ -86,6 +99,15 @@
     </div>
   </a>
 
+  <!-- SEASONAL: The Nutcracker announcement bar. Delete after December 18. -->
+  <a href="#nutcracker" class="promo-bar" aria-label="The Nutcracker: Friday, December 18 at 7:30 PM. View ticket information.">
+    <span class="promo-bar-inner">
+      <svg class="promo-bar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M12 2v20M4.9 6l14.2 12M19.1 6 4.9 18M9.5 3.5 12 6l2.5-2.5M9.5 20.5 12 18l2.5 2.5"/></svg>
+      <span class="promo-bar-text promo-bar-text--desktop"><strong>The Nutcracker</strong><span class="promo-bar-sep">&middot;</span>Friday, December 18<span class="promo-bar-sep">&middot;</span>7:30 PM</span>
+      <span class="promo-bar-text promo-bar-text--mobile"><strong>The Nutcracker</strong><span class="promo-bar-sep">&middot;</span>Dec 18<span class="promo-bar-sep">&middot;</span>7:30 PM</span>
+      <span class="promo-bar-cta">Tickets <span class="promo-bar-arrow" aria-hidden="true">&rarr;</span></span>
+    </span>
+  </a>
 
   <!-- ======================================================
        NAVIGATION
@@ -266,6 +288,59 @@
           <div class="stat-item reveal reveal-delay-3">
             <div class="stat-number"><span data-count="12" data-suffix="+">12+</span></div>
             <div class="stat-label">Professional Company &amp; School Placements</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         SEASONAL: THE NUTCRACKER + TICKETS (Dance Studio Pro embed)
+         Update the status text when sales open; remove after December 18.
+    ====================================================== -->
+    <section class="section section-surface nutcracker-section" id="nutcracker" aria-labelledby="nutcracker-title">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="overline">Holiday Performance</p>
+          <h2 class="heading-1" id="nutcracker-title">The Nutcracker</h2>
+          <p class="lead">Celebrate the season with our dancers in this holiday classic on Friday, December 18 at 7:30 PM.</p>
+        </div>
+
+        <div class="nutcracker-facts reveal">
+          <div class="nutcracker-fact">
+            <span class="nutcracker-fact-label">Date</span>
+            <span class="nutcracker-fact-value">Friday, December 18</span>
+          </div>
+          <div class="nutcracker-fact">
+            <span class="nutcracker-fact-label">Curtain</span>
+            <span class="nutcracker-fact-value">7:30 PM</span>
+          </div>
+          <div class="nutcracker-fact">
+            <span class="nutcracker-fact-label">Tickets</span>
+            <span class="nutcracker-fact-value">On sale soon</span>
+          </div>
+        </div>
+
+        <div class="dsp-schedule-shell dsp-tickets-shell reveal">
+          <div class="dsp-schedule-toolbar">
+            <div class="dsp-schedule-status">
+              <span class="dsp-schedule-dot dsp-schedule-dot--soon" aria-hidden="true"></span>
+              <span>Ticket Sales Opening Soon &middot; Dance Studio Pro</span>
+            </div>
+            <div class="dsp-schedule-toolbar-actions">
+              <span class="dsp-schedule-hint">Tickets appear here as soon as sales open</span>
+              <a href="https://app.gostudiopro.com/tickets/index.php?id=zaqlxajd29jd25583fe7ec2db409jasdklj21dx5583fe7ec2e2c" id="nutcracker-tickets-external" class="btn btn-gold btn-sm" target="_blank" rel="noopener">Open Ticket Window &rarr;</a>
+            </div>
+          </div>
+          <div class="dsp-schedule-frame-wrap dsp-tickets-frame-wrap">
+            <iframe
+              id="nutcracker-tickets-iframe"
+              class="dsp-schedule-iframe dsp-tickets-iframe"
+              title="The Nutcracker tickets on Dance Studio Pro"
+              src="https://app.gostudiopro.com/tickets/index.php?id=zaqlxajd29jd25583fe7ec2db409jasdklj21dx5583fe7ec2e2c"
+              loading="lazy"
+              allow="payment"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>

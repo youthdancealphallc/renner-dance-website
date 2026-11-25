@@ -145,7 +145,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(anchor.getAttribute('href'));
       if (target) {
         e.preventDefault();
-        const offset = 80;
+        const header = document.getElementById('navbar');
+        const offset = (header ? header.getBoundingClientRect().bottom : 80) + 16;
         const top = target.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top, behavior: 'smooth' });
       }
