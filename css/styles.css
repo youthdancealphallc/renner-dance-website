@@ -2706,14 +2706,14 @@ footer {
   .accomplishment-grid { grid-template-columns: 1fr; }
   .story-values      { grid-template-columns: 1fr; }
 
-  /* Inline grids: force single column */
-  .grid-2col  { grid-template-columns: 1fr !important; }
-  .grid-3col  { grid-template-columns: 1fr !important; }
-  .grid-4col  { grid-template-columns: 1fr !important; }
+  /* Inline grids: force single column without min-content blowout */
+  .grid-2col  { grid-template-columns: minmax(0, 1fr) !important; }
+  .grid-3col  { grid-template-columns: minmax(0, 1fr) !important; }
+  .grid-4col  { grid-template-columns: minmax(0, 1fr) !important; }
 
   /* Universal inline-grid collapse for any remaining inline style grids */
   [style*="grid-template-columns"]:not(.keep-grid) {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: minmax(0, 1fr) !important;
   }
   /* When a parent grid collapses, grid-column:span instructions become irrelevant */
   [style*="grid-column:1/-1"] {
@@ -2732,10 +2732,18 @@ footer {
   /* Tables: horizontal scroll */
   .company-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; }
 
-  /* CTA buttons: stack nicely */
+  /* CTA buttons: stack nicely and never overflow mobile screens */
+  .btn {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    justify-content: center;
+    line-height: 1.35;
+    overflow-wrap: break-word;
+  }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .cta-actions  { flex-direction: column; align-items: center; }
-  .cta-actions .btn { width: auto; min-width: 240px; justify-content: center; }
+  .cta-actions .btn { width: auto; min-width: 240px; max-width: 100%; justify-content: center; }
 }
 
 /* ---- 480px: Phone ---- */
@@ -2800,8 +2808,16 @@ footer {
   .nav-logo-wordmark { height: 16px; }
   .nav-logo { gap: 10px; }
 
-  /* Ensure touch targets */
-  .btn { min-height: 44px; }
+  /* Ensure touch targets and comfortable mobile button sizing */
+  .btn {
+    min-height: 44px;
+    padding: 13px 20px;
+    font-size: 0.82rem;
+  }
+  .btn-sm {
+    padding: 10px 16px;
+    font-size: 0.76rem;
+  }
   .nav-dropdown-item { min-height: 44px; display: flex; align-items: center; }
   .slider-btn { width: 44px; height: 44px; }
 }
