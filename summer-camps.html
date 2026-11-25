@@ -462,8 +462,69 @@
       </div>
     </section>
 
+    <!-- LIVE CAMP SCHEDULE (DANCE STUDIO PRO EMBED) -->
+    <section class="section" id="schedule" aria-labelledby="camp-schedule-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="overline">Registration Opens December 15</p>
+          <h2 class="heading-1" id="camp-schedule-heading">Live Camp Schedule</h2>
+          <p class="lead">Summer camp registration opens December 15. Browse live openings below and register directly through Dance Studio Pro as soon as camps go live.</p>
+        </div>
+
+        <div class="dsp-schedule-shell reveal">
+          <div class="dsp-schedule-toolbar">
+            <div class="dsp-schedule-status">
+              <span class="dsp-schedule-dot dsp-schedule-dot--soon" aria-hidden="true"></span>
+              <span>Registration Opens Dec 15 &middot; Synced with Dance Studio Pro</span>
+            </div>
+            <div class="dsp-schedule-toolbar-actions">
+              <span class="dsp-schedule-hint">Camps appear here automatically on December 15</span>
+              <a href="https://app.gostudiopro.com/apps/api_classes.php?id=zaqlxajd29jd25583fe7ec2db409jasdklj21dx5583fe7ec2e2c" id="dsp-camp-schedule-external" class="btn btn-gold btn-sm" target="_blank" rel="noopener">Open Full Window &rarr;</a>
+            </div>
+          </div>
+          <div class="dsp-schedule-frame-wrap">
+            <iframe
+              id="dsp-camp-schedule-iframe"
+              class="dsp-schedule-iframe"
+              title="Renner Dance Live Summer Camp Schedule"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+
+        <script>
+          (function () {
+            var DESKTOP_URL = "https://app.gostudiopro.com/apps/api_classes.php?id=zaqlxajd29jd25583fe7ec2db409jasdklj21dx5583fe7ec2e2c";
+            var MOBILE_URL = "https://app.gostudiopro.com/apps/api_classes_resp.php?id=zaqlxajd29jd25583fe7ec2db409jasdklj21dx5583fe7ec2e2c";
+            var iframe = document.getElementById("dsp-camp-schedule-iframe");
+            var extLink = document.getElementById("dsp-camp-schedule-external");
+            if (!iframe) return;
+
+            var mq = window.matchMedia("(max-width: 768px)");
+            function syncScheduleSource() {
+              var targetUrl = mq.matches ? MOBILE_URL : DESKTOP_URL;
+              if (iframe.getAttribute("src") !== targetUrl) {
+                iframe.setAttribute("src", targetUrl);
+              }
+              if (extLink) {
+                extLink.setAttribute("href", targetUrl);
+              }
+            }
+
+            syncScheduleSource();
+            if (mq.addEventListener) {
+              mq.addEventListener("change", syncScheduleSource);
+            } else if (mq.addListener) {
+              mq.addListener(syncScheduleSource);
+            }
+          })();
+        </script>
+      </div>
+    </section>
+
     <!-- MULTI-WEEK DISCOUNT -->
-    <section class="section">
+    <section class="section section-surface">
       <div class="container">
         <div class="grid-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8);align-items:center">
           <div class="reveal-left">
@@ -471,15 +532,15 @@
             <h2 class="heading-1" style="margin-bottom:var(--space-4)">Multi-Week Discounts</h2>
             <p class="body-lg" style="margin-bottom:var(--space-6)">Can't choose just one week? Register for several and save.</p>
             <div style="display:flex;flex-direction:column;gap:var(--space-3)">
-              <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-4);background:var(--surface);border-radius:var(--radius-md);border:1px solid var(--border)">
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-4);background:var(--white);border-radius:var(--radius-md);border:1px solid var(--border)">
                 <span style="font-size:0.9rem;font-weight:500">1 camp week</span>
                 <span style="font-family:var(--font-display);font-size:1.2rem;color:var(--ink)">Full price</span>
               </div>
-              <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-4);background:var(--surface);border-radius:var(--radius-md);border:1px solid var(--border)">
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-4);background:var(--white);border-radius:var(--radius-md);border:1px solid var(--border)">
                 <span style="font-size:0.9rem;font-weight:500">2 camp weeks</span>
                 <span style="font-family:var(--font-display);font-size:1.2rem;color:var(--blue)">5% off</span>
               </div>
-              <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-4);background:var(--surface);border-radius:var(--radius-md);border:1px solid var(--gold)">
+              <div style="display:flex;justify-content:space-between;align-items:center;padding:var(--space-4);background:var(--white);border-radius:var(--radius-md);border:1px solid var(--gold)">
                 <span style="font-size:0.9rem;font-weight:500">3+ camp weeks</span>
                 <span style="font-family:var(--font-display);font-size:1.2rem;color:var(--gold-dark)">10% off</span>
               </div>
@@ -499,7 +560,7 @@
     </section>
 
     <!-- FAQs -->
-    <section class="section section-surface">
+    <section class="section">
       <div class="container" style="max-width:720px">
         <div class="section-header reveal" style="text-align:left;max-width:none">
           <p class="overline">Common Questions</p>
