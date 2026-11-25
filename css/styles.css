@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* ---- Google Fonts ---- */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap');
+/* Fonts loaded via <link> in each page <head> for faster rendering */
 
 /* ---- Design Tokens ---- */
 :root {
@@ -279,8 +279,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #e11d48;
-  box-shadow: 0 0 6px rgba(225, 29, 72, 0.7);
+  background: #d92638;
+  box-shadow: 0 0 6px rgba(217, 38, 56, 0.7);
   margin-right: 6px;
   flex-shrink: 0;
 }
@@ -2486,6 +2486,8 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   background: radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.12) 0%, transparent 60%);
 }
 .page-header-content { position: relative; z-index: 1; }
+/* Interior page headers have no load animation, so their CTA rows must always be visible */
+.page-header-content .hero-actions { opacity: 1; transform: none; }
 .page-header-content .overline { margin-bottom: var(--space-3); color: var(--gold-light); }
 .page-header-content .display-2 { color: white; margin-bottom: var(--space-4); }
 .page-header-content .lead { color: rgba(255,255,255,0.7); max-width: 560px; }
@@ -2536,6 +2538,7 @@ footer {
   color: white;
   margin-bottom: 4px;
 }
+.footer-brand-logo { width: 120px; height: auto; margin-bottom: var(--space-3); }
 .footer-brand-sub { font-size: 0.65rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: var(--space-4); }
 .footer-brand-desc { font-size: 0.85rem; line-height: 1.65; max-width: 280px; }
 .footer-col-title {
@@ -2610,11 +2613,14 @@ footer {
    ============================================================ */
 
 /* ---- 1024px: Tablet landscape ---- */
-@media (max-width: 1024px) {
-  /* Nav */
+/* Collapse the desktop nav before it runs out of room (7 links + 2 buttons) */
+@media (max-width: 1200px) {
   .nav-links { display: none; }
   .hamburger { display: flex; }
   .nav-cta { display: none; }
+}
+
+@media (max-width: 1024px) {
 
   /* Layout */
   .story-grid { grid-template-columns: 1fr; gap: var(--space-8); }
@@ -2873,7 +2879,13 @@ body.has-hiring-topbar .page-header {
 }
 
 body.has-hiring-topbar .hero-content {
-  padding-top: calc(var(--space-12) + var(--topbar-h));
+  padding-top: calc(140px + var(--topbar-h));
+}
+
+@media (max-width: 1024px) {
+  body.has-hiring-topbar .page-header {
+    padding-top: calc(110px + var(--topbar-h));
+  }
 }
 
 body.has-hiring-topbar .mobile-nav {
@@ -2895,7 +2907,7 @@ body.has-hiring-topbar .mobile-nav {
   border-bottom: 1px solid rgba(212, 175, 55, 0.42);
   padding: 0 var(--space-4);
   overflow: hidden;
-  transition: border-color var(--dur-normal) var(--ease), background var(--dur-normal) var(--ease);
+  transition: border-color var(--dur-base) var(--ease), background var(--dur-base) var(--ease);
 }
 
 .hiring-topbar::before {
@@ -2904,7 +2916,7 @@ body.has-hiring-topbar .mobile-nav {
   inset: 0;
   background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.14) 50%, transparent 100%);
   opacity: 0;
-  transition: opacity var(--dur-normal) var(--ease);
+  transition: opacity var(--dur-base) var(--ease);
   pointer-events: none;
 }
 
@@ -2993,12 +3005,12 @@ body.has-hiring-topbar .mobile-nav {
   text-transform: uppercase;
   white-space: nowrap;
   flex-shrink: 0;
-  transition: background var(--dur-normal) var(--ease), color var(--dur-normal) var(--ease), border-color var(--dur-normal) var(--ease);
+  transition: background var(--dur-base) var(--ease), color var(--dur-base) var(--ease), border-color var(--dur-base) var(--ease);
 }
 
 .hiring-topbar-arrow {
   display: inline-block;
-  transition: transform var(--dur-normal) var(--ease);
+  transition: transform var(--dur-base) var(--ease);
 }
 
 .hiring-topbar:hover .hiring-topbar-cta,
@@ -3031,7 +3043,7 @@ body.has-hiring-topbar .mobile-nav {
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: transform var(--dur-normal) var(--ease), box-shadow var(--dur-normal) var(--ease), border-color var(--dur-normal) var(--ease);
+  transition: transform var(--dur-base) var(--ease), box-shadow var(--dur-base) var(--ease), border-color var(--dur-base) var(--ease);
 }
 
 .career-role-card::before {
@@ -3499,4 +3511,26 @@ body.has-hiring-topbar .mobile-nav {
     width: 100%;
     justify-content: center;
   }
+}
+
+
+/* ---- About page: compact "Join Our Faculty" CTA ---- */
+.careers-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius-xl);
+  padding: var(--space-7);
+  box-shadow: var(--shadow-sm);
+}
+.careers-cta-text .lead { margin: 0; max-width: 620px; }
+.careers-cta-text .heading-1 { margin-bottom: var(--space-3); }
+.careers-cta .btn { flex-shrink: 0; }
+@media (max-width: 768px) {
+  .careers-cta { flex-direction: column; align-items: flex-start; padding: var(--space-6); }
+  .careers-cta .btn { width: 100%; justify-content: center; }
 }

@@ -129,9 +129,10 @@
   </script>
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link rel="apple-touch-icon" href="images/favicon.png">
-  <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -210,16 +211,45 @@
   <!-- Mobile Nav -->
   <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
     <a href="index.html" class="mobile-nav-link">Home</a>
-    <a href="about.html" class="mobile-nav-link">About</a>
-    <a href="recreational.html" class="mobile-nav-link">Recreational Classes</a>
-    <a href="summer-camps.html" class="mobile-nav-link">Summer Camps</a>
-    <a href="company.html" class="mobile-nav-link">Company Programs</a>
+
+    <div>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="about.html#story" class="mobile-nav-sub">Our Story</a>
+      <a href="about.html#mission" class="mobile-nav-sub">Mission &amp; Culture</a>
+      <a href="about.html#accomplishments" class="mobile-nav-sub">Accomplishments</a>
+      <a href="about.html#staff" class="mobile-nav-sub">Our Team</a>
+      <a href="about.html#alumni" class="mobile-nav-sub">Notable Alumni</a>
+    </div>
+
+    <div>
+      <a href="recreational.html" class="mobile-nav-link">Recreational Classes</a>
+      <a href="recreational.html#overview" class="mobile-nav-sub">Overview</a>
+      <a href="recreational.html#ballet" class="mobile-nav-sub">Ballet</a>
+      <a href="recreational.html#jazz" class="mobile-nav-sub">Jazz</a>
+      <a href="recreational.html#tap" class="mobile-nav-sub">Tap</a>
+      <a href="recreational.html#hiphop" class="mobile-nav-sub">Hip Hop</a>
+      <a href="recreational.html#acro" class="mobile-nav-sub">Acro</a>
+      <a href="recreational.html#lyrical" class="mobile-nav-sub">Lyrical</a>
+      <a href="recreational.html#combo" class="mobile-nav-sub">Combo Classes</a>
+      <a href="summer-camps.html" class="mobile-nav-sub" style="color:var(--gold-dark);font-weight:600">Summer Camps</a>
+    </div>
+
+    <div>
+      <a href="company.html" class="mobile-nav-link">Company Programs</a>
+      <a href="company.html#overview" class="mobile-nav-sub">Overview</a>
+      <a href="company.html#excel" class="mobile-nav-sub">Excel</a>
+      <a href="company.html#extreme" class="mobile-nav-sub">Extreme</a>
+      <a href="company.html#edge" class="mobile-nav-sub">Edge</a>
+      <a href="company.html#elite" class="mobile-nav-sub">Elite</a>
+    </div>
+
     <a href="ballet-academy.html" class="mobile-nav-link">Ballet Academy</a>
-    <a href="careers.html" class="mobile-nav-link">Careers &amp; Hiring</a>
+    <a href="careers.html" class="mobile-nav-link">Now Hiring</a>
     <a href="contact.html" class="mobile-nav-link">Contact</a>
-    <div class="mobile-nav-cta">
-      <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-portal" target="_blank" rel="noopener">Parent Portal</a>
-      <a href="trial-class.html" class="btn btn-gold">Try a Free Class</a>
+
+    <div style="margin-top:var(--space-4);display:flex;flex-direction:column;gap:var(--space-3);padding-bottom:var(--space-8)">
+      <a href="trial-class.html" class="btn btn-gold" style="justify-content:center">Try a Free Class</a>
+      <a href="https://app.gostudiopro.com/online/rennerdance" class="btn btn-outline" target="_blank" rel="noopener" style="justify-content:center">Parent Portal / Register</a>
     </div>
   </nav>
 
@@ -229,13 +259,12 @@
          PAGE HEADER
     ====================================================== -->
     <header class="page-header">
-      <div class="page-header-bg"></div>
       <div class="container">
         <div class="page-header-content">
           <p class="overline">Careers at Renner Dance &middot; Always Hiring</p>
-          <h1 class="display-2 text-white">Great Studios Are Built by <em style="font-style:italic;color:var(--gold-light)">Great People.</em></h1>
+          <h1 class="display-2">Great Studios Are Built by<br><em style="color:var(--gold-light)">Great People.</em></h1>
           <p class="lead">
-            Renner Dance is always on the lookout for passionate teachers and organized, welcoming studio professionals. Whether you lead a front desk, spark a child's first love of dance, or mentor pre-professional dancers for the national stage, we want to meet you.
+            We are always looking for skilled dance teachers and organized, welcoming studio staff, from the front desk to pre-professional faculty.
           </p>
           <div class="hero-actions" style="margin-top:var(--space-6)">
             <a href="#roles" class="btn btn-gold" id="careers-explore-btn">Explore Open Roles</a>
@@ -286,7 +315,7 @@
         <div class="section-header reveal">
           <p class="overline">Always Accepting Applications</p>
           <h2 class="heading-1">Three Key Roles at Renner Dance</h2>
-          <p class="lead">We review applications year-round across three essential tracks. Even when a season's schedule is set, we make room for standout talent.</p>
+          <p class="lead">We review applications year-round for three roles and make room for standout candidates even after a season's schedule is set.</p>
         </div>
 
         <div class="career-roles-grid">
@@ -296,7 +325,7 @@
             <div class="career-role-kicker">Operations &amp; Family Experience</div>
             <h3 class="career-role-title">Studio Operations</h3>
             <p class="career-role-summary">
-              The welcoming heartbeat of Renner Dance. You keep daily studio operations running smoothly, greet families with warmth, coordinate schedules and studio events, and ensure teachers and parents feel supported every day.
+              You keep the studio running day to day: greeting families, coordinating schedules and events, and supporting teachers and parents.
             </p>
             <div class="career-role-subheading">What You Will Own</div>
             <ul class="career-role-list">
@@ -306,7 +335,7 @@
               <li>Event, recital, summer camp, and competition logistics coordination</li>
             </ul>
             <div class="career-role-ideal">
-              <strong>Who thrives here:</strong> Organized, warm, proactive communicators who love working with families and enjoy keeping a vibrant studio humming behind the scenes.
+              <strong>Who thrives here:</strong> Organized, warm, proactive communicators who enjoy working with families and running a busy studio behind the scenes.
             </div>
             <a href="#apply" class="btn btn-primary" data-apply-role="Studio Operations">Apply for This Role &rarr;</a>
           </article>
@@ -316,7 +345,7 @@
             <div class="career-role-kicker">Foundations &amp; Joy &middot; Ages 2 to 18</div>
             <h3 class="career-role-title">Recreational Dance Teacher</h3>
             <p class="career-role-summary">
-              Spark a lifelong love of movement. You teach engaging, technically sound weekly classes across styles like Ballet, Jazz, Tap, Hip Hop, Acro, Lyrical, Contemporary, or Preschool Combo in a joyful, structured classroom.
+              Teach engaging, technically sound weekly classes in Ballet, Jazz, Tap, Hip Hop, Acro, Lyrical, Contemporary, or Preschool Combo in a joyful, structured classroom.
             </p>
             <div class="career-role-subheading">What You Will Own</div>
             <ul class="career-role-list">
@@ -326,7 +355,7 @@
               <li>Communicating warmly with parents and celebrating student milestones</li>
             </ul>
             <div class="career-role-ideal">
-              <strong>Who thrives here:</strong> Energetic, patient, deeply caring dance educators who light up a room and know how to make foundational training both disciplined and fun.
+              <strong>Who thrives here:</strong> Energetic, patient, caring dance educators who make foundational training both disciplined and fun.
             </div>
             <a href="#apply" class="btn btn-primary" data-apply-role="Recreational Dance Teacher">Apply for This Role &rarr;</a>
           </article>
@@ -336,7 +365,7 @@
             <div class="career-role-kicker">Company &amp; Pre-Professional &middot; Elite Training</div>
             <h3 class="career-role-title">Advanced &amp; Company Faculty</h3>
             <p class="career-role-summary">
-              Train, choreograph for, and mentor our most dedicated competitive Company and pre-professional Ballet Academy dancers. You bring conservatory-grade rigor, artistic vision, and real-world industry perspective.
+              Train, choreograph for, and mentor our competitive Company and pre-professional Ballet Academy dancers, bringing conservatory-level rigor, artistic vision, and real industry experience.
             </p>
             <div class="career-role-subheading">What You Will Own</div>
             <ul class="career-role-list">
@@ -346,7 +375,7 @@
               <li>Mentoring serious young artists in discipline, artistry, and resilience</li>
             </ul>
             <div class="career-role-ideal">
-              <strong>Who thrives here:</strong> Accomplished choreographers, conservatory-trained educators, and working or former professionals who hold high standards with genuine care.
+              <strong>Who thrives here:</strong> Accomplished choreographers, conservatory-trained educators, and working or former professionals who pair high standards with real care.
             </div>
             <a href="#apply" class="btn btn-primary" data-apply-role="Advanced &amp; Company Faculty">Apply for This Role &rarr;</a>
           </article>
@@ -367,14 +396,14 @@
             <p class="overline">Instant Application</p>
             <h2 class="heading-1" style="margin-bottom:var(--space-5)">Apply in Minutes</h2>
             <p style="font-size:1rem;color:var(--ink-soft);line-height:1.8;margin-bottom:var(--space-6)">
-              Every application is reviewed directly by our studio leadership. Tell us which role fits you best, share your experience, and attach your resume if you have one handy.
+              Studio leadership reviews every application. Pick your role, share your experience, and attach a resume if you have one.
             </p>
 
             <div class="why-editorial-list" style="margin-bottom:var(--space-6)">
               <div class="why-editorial-item">
                 <span class="why-editorial-kicker">Step 1</span>
                 <h3 class="why-editorial-title">Submit Your Application</h3>
-                <p class="why-editorial-desc">Choose your role below and share your background, availability, and teaching styles (if applying to teach).</p>
+                <p class="why-editorial-desc">Share your background, availability, and (for teachers) the styles you teach.</p>
               </div>
               <div class="why-editorial-item">
                 <span class="why-editorial-kicker">Step 2</span>
@@ -588,7 +617,7 @@
         <div class="cta-content reveal">
           <p class="overline" style="color:var(--gold-light)">Questions Before Applying?</p>
           <h2 class="heading-1 text-white">We Would Love to Hear From You.</h2>
-          <p class="lead" style="color:rgba(255,255,255,0.72)">Whether you are relocating to the Triangle, looking for a few weekly classes, or exploring a studio operations role, send us a note anytime.</p>
+          <p class="lead" style="color:rgba(255,255,255,0.72)">Email us anytime about relocating to the Triangle, teaching a few weekly classes, or joining studio operations.</p>
           <div class="cta-actions">
             <a href="mailto:admin@rennerdance.com" class="btn btn-gold" id="careers-cta-email">Email Our Team</a>
             <a href="about.html#staff" class="btn btn-outline-white" id="careers-cta-team">Meet Our Faculty</a>
@@ -603,10 +632,10 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <img src="images/logo-white.png" alt="Renner Dance Company" class="footer-brand-logo">
+          <img src="images/logo-white.png" alt="Renner Dance Company" class="footer-brand-logo" width="600" height="640" loading="lazy">
           <div class="footer-brand-sub">Chapel Hill, NC</div>
           <p class="footer-brand-desc">
-            Premier youth dance education founded by former Radio City Rockette Summer Renner Disher. Shaping confident, disciplined, and joyful dancers since 2015.
+            Youth dance education founded by former Radio City Rockette Summer Renner Disher. Shaping confident, disciplined, and joyful dancers since 2015.
           </p>
         </div>
         <div>
