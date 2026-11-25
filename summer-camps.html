@@ -155,9 +155,71 @@
     .camp-card-ages { display: inline-block; background: var(--blue); color: white; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; padding: 4px 12px; border-radius: var(--radius-full); margin-bottom: 0; }
     .camp-card-body { padding: var(--space-3) var(--space-6) var(--space-6); flex: 1; display: flex; flex-direction: column; }
     .camp-card-desc { font-size: 0.88rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: var(--space-4); flex: 1; }
-    .camp-price-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
-    .camp-price { font-family: var(--font-display); font-size: 1.85rem; font-weight: 500; color: var(--blue-dark); line-height: 1; }
-    .camp-early-badge { display: inline-block; background: rgba(201, 168, 76, 0.18); border: 1px solid rgba(201, 168, 76, 0.55); color: var(--gold-dark); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border-radius: var(--radius-full); }
+    .camp-earlybird-banner {
+      margin: var(--space-6) auto 0;
+      max-width: 780px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+      padding: 16px 24px;
+      border-radius: var(--radius-lg);
+      background: linear-gradient(135deg, #07182d 0%, #0f3d6b 100%);
+      border: 1.5px solid var(--gold);
+      box-shadow: 0 14px 32px -12px rgba(10, 42, 74, 0.42);
+      color: var(--white);
+      text-align: left;
+    }
+    .camp-earlybird-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, #d92638 0%, #a81523 100%);
+      border: 1px solid rgba(255, 148, 158, 0.45);
+      box-shadow: 0 0 14px rgba(217, 38, 56, 0.42);
+      color: var(--white);
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .camp-earlybird-copy {
+      font-size: 0.92rem;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.92);
+    }
+    .camp-earlybird-copy strong {
+      color: var(--gold-light);
+      font-weight: 700;
+    }
+    .camp-price-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+    .camp-price { font-family: var(--font-display); font-size: 2rem; font-weight: 600; color: var(--blue-dark); line-height: 1; }
+    .camp-early-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: linear-gradient(135deg, #d92638 0%, #a81523 100%);
+      color: var(--white);
+      font-size: 0.64rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      box-shadow: 0 4px 12px rgba(217, 38, 56, 0.28);
+    }
+    @media (max-width: 600px) {
+      .camp-earlybird-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 16px 18px;
+        gap: 10px;
+      }
+    }
     .camp-price-note { font-size: 0.75rem; color: var(--ink-muted); margin-bottom: var(--space-4); line-height: 1.5; }
     .camp-card--featured {
       grid-column: 1 / -1;
@@ -438,8 +500,9 @@
           <p class="overline">Summer 2027 Lineup &middot; June 14 to August 13</p>
           <h2 class="heading-1">Seven Themed Camp Weeks</h2>
           <p class="lead">Every week brings a fresh theme and new choreography. Attend one week or mix and match across the summer.</p>
-          <div style="margin-top:var(--space-5);background:rgba(201,168,76,0.12);border:1px solid var(--gold);border-radius:var(--radius-md);padding:var(--space-3) var(--space-5);display:inline-block">
-            <span style="font-size:0.85rem;color:var(--ink-soft)"><strong style="color:var(--ink)">Early Bird Pricing: $190/week</strong> through February 28, 2027. Registration opens December 15 on Dance Studio Pro.</span>
+          <div class="camp-earlybird-banner">
+            <span class="camp-earlybird-pill">Early Bird Special</span>
+            <span class="camp-earlybird-copy"><strong>$190/week</strong> when you register by <strong>February 28, 2027</strong> &middot; Registration opens December 15</span>
           </div>
         </div>
 
