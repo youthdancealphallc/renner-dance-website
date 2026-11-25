@@ -3793,44 +3793,42 @@ body .mobile-nav {
 .xo-7 { right: 3.8%; --len: 20px; --size: 11px; animation-delay: -3.3s; }
 .xo-8 { right: 1.2%; --len: 12px; --size: 14px; animation-delay: -1.5s; }
 
-/* Cute English Bulldog in a Santa hat ornament */
+/* Realistic chunky English Bulldog in a Santa hat (sits naturally in the top bar, not a hanging ornament) */
 .xo-bulldog {
   left: 12.2%;
-  --len: 6px;
-  animation-duration: 5.2s;
-  animation-delay: -0.9s;
+  top: 3px;
+  animation: none;
 }
+.xo-bulldog::before,
 .xo-bulldog::after { display: none; }
 .xo-bulldog img {
-  order: 2;
   display: block;
-  width: 42px;
-  height: 43px;
-  margin-top: -1px;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.42));
+  width: auto;
+  height: 46px;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.45));
 }
 
 @media (max-width: 1200px) {
   .xo-4, .xo-5 { display: none; }
   .xo-bulldog { left: 9%; }
-  .xo-bulldog img { width: 38px; height: 39px; }
+  .xo-bulldog img { height: 42px; }
 }
 @media (max-width: 1024px) {
   .xo-3, .xo-6 { display: none; }
   .xo-bulldog { left: 6.5%; }
-  .xo-bulldog img { width: 34px; height: 35px; }
+  .xo-bulldog img { height: 40px; }
 }
-/* phones: cute English Bulldog tucked in top-left corner + tiny ornament on right + light string */
+/* phones: realistic English Bulldog tucked in top-left corner + tiny ornament on right + light string */
 @media (max-width: 768px) {
   .xo-1, .xo-2, .xo-7 { display: none; }
-  .xo-bulldog { left: 2px; --len: 2px; }
-  .xo-bulldog img { width: 27px; height: 28px; }
+  .xo-bulldog { left: 3px; top: 3px; }
+  .xo-bulldog img { height: 32px; }
   .xo-8 { right: 3px; --len: 6px; --size: 9px; }
   .xmas-garland::before { height: 2px; }
 }
 @media (max-width: 390px) {
-  .xo-bulldog { left: 1px; --len: 1px; }
-  .xo-bulldog img { width: 23px; height: 24px; }
+  .xo-bulldog { left: 2px; top: 4px; }
+  .xo-bulldog img { height: 28px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .xmas-ornament, .xmas-garland::before { animation: none; }
