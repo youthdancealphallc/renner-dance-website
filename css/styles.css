@@ -3793,16 +3793,38 @@ body .mobile-nav {
 .xo-7 { right: 3.8%; --len: 20px; --size: 11px; animation-delay: -3.3s; }
 .xo-8 { right: 1.2%; --len: 12px; --size: 14px; animation-delay: -1.5s; }
 
+/* Cute bulldog in a Santa hat ornament */
+.xo-bulldog {
+  left: 12.2%;
+  --len: 8px;
+  animation-duration: 5.2s;
+  animation-delay: -0.9s;
+}
+.xo-bulldog::after { display: none; }
+.xo-bulldog svg {
+  order: 2;
+  display: block;
+  width: 34px;
+  height: 38px;
+  margin-top: -1px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.38));
+}
+
 @media (max-width: 1200px) {
   .xo-4, .xo-5 { display: none; }
+  .xo-bulldog { left: 9%; }
+  .xo-bulldog svg { width: 31px; height: 35px; }
 }
 @media (max-width: 1024px) {
   .xo-3, .xo-6 { display: none; }
+  .xo-bulldog { left: 6.5%; }
+  .xo-bulldog svg { width: 29px; height: 32px; }
 }
-/* phones: two tiny ornaments tucked in the corners + the light string */
+/* phones: cute bulldog tucked in top-left corner + tiny ornament on right + light string */
 @media (max-width: 768px) {
-  .xo-2, .xo-7 { display: none; }
-  .xo-1 { left: 3px;  --len: 6px; --size: 9px; }
+  .xo-1, .xo-2, .xo-7 { display: none; }
+  .xo-bulldog { left: 2px; --len: 3px; }
+  .xo-bulldog svg { width: 22px; height: 25px; }
   .xo-8 { right: 3px; --len: 6px; --size: 9px; }
   .xmas-garland::before { height: 2px; }
 }
